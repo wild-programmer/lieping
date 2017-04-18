@@ -7,6 +7,9 @@
 .lp_xiala{
     display: block !important;
 }
+.linehight{
+    line-height: 40px;
+}
 .marginBottom_35px{
     margin-bottom:35px;
 }
@@ -30,6 +33,10 @@
 .floatLeft{
     display: block;
     float: left;
+}
+.floatright{
+    display: block;
+    float: right !important;
 }
 .margin0{
     margin: 0 !important;
@@ -598,15 +605,24 @@
             }
             .serUp_jiaoyuT{
                 margin-top: 25px;
+                .setUp_contqz_xiala2{
+                    float:right; 
+                    margin-right: 142px;
+                }
                 input{
                     width: 200px;
                     height: 40px;
                     border: 1px solid @bar;
                     margin-left: -4px;
                 }   
+
                 .serUp_jiaoyuT_input{
                     margin-right: 47px;
-                }            
+                }   
+                .serUp_jiaoyuT_input2{
+                    
+                    margin-right: 126px;
+                }         
                 .serUp_jingyanT_input{
                     margin-right: 163px;
                 }            
@@ -615,6 +631,7 @@
                 margin-top: 25px;
                 .serUp_jiaoyuC_span,.setUp_juchecd{
                     margin: 0 10px;
+                    margin-top: 10px;
                 }
                 .serUp_jiaoyuC_l{
                     
@@ -1055,7 +1072,7 @@
 .pingjia_content{
     margin-top: 40px;
     padding-bottom: 35px;
-    border-bottom: 1px solid @colcor;
+    border-bottom: 1px solid @bar;
     font-size: 14px;
     color:#666; 
     .pingjia_contentT{
@@ -1115,6 +1132,9 @@
         .pingjia_contentB2{
             width:900px;
         }
+        .pingjia_contentB3{
+            width:855px;
+        }
     }
 }
 
@@ -1162,9 +1182,57 @@
             }
         }
 }
-        
 
-
+.pingjia_contentF{
+    display: none;
+    padding:0 20px;
+    border: 1px solid @bar;
+    .pingjia_contentB2{
+        width: 863px !important;
+    }
+    .pingjia_contentFB{
+        p{
+            color: @colcor;
+            float: right;
+            margin-right: 45px;
+            font-size: 14px;
+            span{
+                display: block;
+                margin-top: 4px;
+                margin-left: 4px;
+                float: right;
+                width: 17px;
+                height: 11px;
+                background-image: url('../../images/jiantou1.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .pingjia_contentFF{
+        height: 280px;
+        background: url('../../images/jiazai.png') no-repeat 50% 50%;
+        position: relative;
+        p{  
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}   
+.serUp_jiaoyuTR{
+    float: left;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.serUp_jiaoyuTL{
+    float: left;
+    margin-bottom: 20px;
+}
+.shulianxy{
+   display: inline-block;
+}
+ 
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -1187,4 +1255,83 @@
   .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2){
       margin-left: 12px;
   }
+  .content .ceb_nav .ceb_sanjiao{
+          border-width: 100px 81px 0;
+  }
+  .content .col-sm-10padding .setUp_contdep span:first-child::before{
+          left: 184px
+  }
+  .content .col-sm-10padding .setUp_cont .setUp_contboxr{
+      margin-right: 50px;
+  }
+  .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_qw .setUp_contqz_xialar{
+      margin-right: 370px;
+      margin-top: 20px;
+      m{
+          margin-left: -3px;
+      }
+      i{
+          margin-right: 19px;
+      }
+      input{
+          margin-left: -2px;
+          position: relative;
+          left: -7px;
+      }
+  }
+  .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_pj textarea{
+      width: 555px;
+  }
+  .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_pj p{
+      padding-right: 22px;
+  }
+  .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_qw .gongzuoleixing{
+        position: relative;
+        left: 350px;
+        top: -60px;
+  }
+  .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_qw{
+      margin-bottom: 0px;
+  }
+  .content .col-sm-10padding .setUp_contjiaoyu1 .serUp_jiaoyuB textarea, 
+  .content .col-sm-10padding .setUp_contxiangmu1 .serUp_jiaoyuB textarea, 
+  .content .col-sm-10padding .setUp_contjineng1 .serUp_jiaoyuB textarea, 
+  .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuB textarea{
+      width: 552px;
+  }
+  .content .col-sm-10padding .setUp_contjiaoyu1 .serUp_jiaoyuT .serUp_jingyanT_input,
+  .content .col-sm-10padding .setUp_contxiangmu1 .serUp_jiaoyuT .serUp_jingyanT_input,
+  .content .col-sm-10padding .setUp_contjineng1 .serUp_jiaoyuT .serUp_jingyanT_input, 
+  .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuT .serUp_jingyanT_input{
+      margin-right: 77px;
+  }
+  .serUp_jiaoyuTR{
+      float: left;
+      margin-right: 100px;
+  }
+ .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuT .setUp_contqz_xiala{
+     margin-right: 22px !important;
+ }
+.content .col-sm-10padding .setUp_contjiaoyu1 .serUp_jiaoyuT .serUp_jiaoyuT_input2,
+ .content .col-sm-10padding .setUp_contxiangmu1 .serUp_jiaoyuT .serUp_jiaoyuT_input2,
+ .content .col-sm-10padding .setUp_contjineng1 .serUp_jiaoyuT .serUp_jiaoyuT_input2,
+  .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuT .serUp_jiaoyuT_input2{
+      margin-right: 10px;
+  }
+  .content .col-sm-10padding .setUp_contjiaoyu1 .serUp_jiaoyuT .setUp_contqz_xiala2, 
+  .content .col-sm-10padding .setUp_contxiangmu1 .serUp_jiaoyuT .setUp_contqz_xiala2, 
+  .content .col-sm-10padding .setUp_contjineng1 .serUp_jiaoyuT .setUp_contqz_xiala2, 
+  .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuT .setUp_contqz_xiala2{
+    margin-right: 40px;
+  }
+  .content .col-sm-10padding .setUp_contjingyan1 .serUp_jiaoyuT .serUp_jiaoyuT_input{
+    margin-right: 126px;
+}
+
+.pingjia_content .pingjia_contentB .pingjia_contentB2{
+    width: 695px ;
+}
+.pingjia_content .pingjia_contentB .pingjia_contentB3{
+    width: 655px;
+}
 }

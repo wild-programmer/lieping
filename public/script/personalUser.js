@@ -322,10 +322,6 @@ console.log($('#xial_qiw_show'));
         $('#xiala_qiw_show2').toggle();
     })
     $("#xiala_qiw_show2 li").each(function(i, el) {
-        // var xiala_qiw_show = $(this).parent();
-        // xiala_qiw_show.value = 0;
-        // console.log(xiala_qiw_show)
-        // el.querySelector('span');
         el.style.zIndex = $('#xiala_qiw_show2 li').length * 1000 - i * 1000;
         $(el).on('click', function() {
             if (tag < 3) {
@@ -381,18 +377,7 @@ $('.xiala').each(function(i, el) {
             $(el).on('click', function() {
                 // console.log($(that).siblings(i));
                 var xiala_show_i = $(that).siblings(i)[0];
-                // $(xiala_show_i).index($(this).html());
-                // var value = $(this).html();
-                // var value = escape($(this).html());
-                // console.log(xiala_show_i);
                 xiala_show_i.innerText = $(this).html();
-                // if (value == '年薪') {
-                //     xiala_show_i.innerText = '年薪';
-                // } else if (value == '月薪') {
-                //     xiala_show_i.innerText = '月薪';
-                // } else {
-                //     return false
-                // }
                 $($el)[0].style.display = 'none';
                 $('.xialaspan').get(k);
                 $($elspan).css({
@@ -477,11 +462,12 @@ $('.pingjia_topRB li').each(function(i, el) {
 // 个人申诉
 $('.shensu_table').each(function(i, el) {
     $(el).on('click', function() {
-        $('.lp_tousu').css('display', 'block')
+        $('.lp_tousu').css('display', 'block');
     })
 })
 $('.lp_tousu_tj').click(function() {
-    $('.lp_tousu').css('display', 'none')
+    $('.lp_tousu').css('display', 'none');
+    $('.pingjia_contentF').css('display', 'block')
 })
 
 
