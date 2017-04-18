@@ -1,0 +1,198 @@
+@import 'base.css';
+@import 'common.css';
+@colcor:#e95513 ;
+@black:black;
+@bar: #dcdcdc;
+@000:#000000;
+@333:#333;
+.header{
+    padding-bottom: 20px;
+    margin-top: 40px;
+    border-bottom: 1px solid @bar;
+    .header_left{
+        img{
+            float: left;
+            width: 140px;
+        }
+         ul{
+            span{
+                display: block;
+                float: left;
+            }
+            li{
+                float: left;
+                font-family: 'SimSun';
+                font-size: 18px;
+                color: @333;
+                cursor: pointer;
+            }
+            li:last-child{
+                font-size: 24px;
+                font-family: "MicrosoftYaHei", "微软雅黑";
+                color: @000;
+            }
+         }
+    }
+    .header_right{
+       float: right;
+       ul{
+           li{               
+            color: @333;
+            font-size: 18px;
+            cursor: pointer;
+           }
+       }
+    }
+}
+.zc_content{
+    width: 100%;
+    height: 900px;
+    background: url("../uploade/zc_back.png") no-repeat;
+    background-size: 100%;
+    background-position: 0px 400px;
+    .zc_contenter{
+        background-color: white;
+        border: 1px solid @bar;
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 800px;
+        height: 700px;
+        .zc_contenter_l{
+             border-top: 10px solid #E95413 ;
+             border-right: 1px dashed @bar;
+            float: left;
+            width: 240px;
+            padding-top: 15px;
+            height: 640px;
+            ul{
+                text-align: center;
+                li{
+                    margin-top: 88px;
+                    span{
+                        display: block;
+                        position: relative;
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                        color: @000;
+                    }
+                    i{
+                        font-size: 14px;
+                        color: #666 ;
+                    }
+                    span::before{
+                        display: block;
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        left: 60px;
+                        top: 0px;
+                    }
+                    .zcnth-child-1::before{
+                        background: url("../../images/gjm.png") no-repeat;
+                    }
+                    .zcnth-child-2::before{
+                        background: url("../../images/gzs.png") no-repeat;
+                    }
+                    .zcnth-child-3::before{
+                       background: url("../../images/gfx.png") no-repeat;
+                    }
+                    .zcnth-child-4::before{
+                       background: url("../../images/ggx.png") no-repeat;
+                    }
+                }
+            }
+        }
+        .zc_contenter_r{
+            padding-left: 50px;
+            border-top: 10px solid #F29B76;
+            margin-left: 240px;
+            color: #666;
+            li:first-child{
+                margin: 30px 0;
+                text-align: center;
+                font-size: 24px;
+                color:@colcor;
+                margin-bottom: 60px;
+            }
+            li{
+                font-size: 18px;
+                color: @000;
+            }
+            .zcinput_lang{
+                width: 460px;
+                height: 40px;
+                margin: 15px 0 20px 0;
+            }
+            input{
+                border: 1px solid @bar;
+                font-size: 14px;
+            }
+            
+            input[type='button']{
+                width: 460px;
+                height: 40px;
+                background-color:@colcor;
+                color: #fff ;
+                font-size: 18px;
+                margin: 20px 0 50px;
+            }
+            .zcinput_zidong{
+                width: 460px;
+                input[type='checkbox']{
+                    width: 14px;
+                    height: 14px;
+                    float: left;
+                    margin-top: 5px;
+                    margin-right: 10px;
+                }
+                i{
+                    display: block;
+                    float: left;
+                }
+                m{
+                    display: block;
+                    float: right;
+                    a{
+                        color: @colcor;
+                    }
+                }
+            }
+           
+            .zc_conr_foot{
+                text-align: center;
+                i{
+                text-align: center;
+                }
+                a{
+                    color: @colcor;
+                }
+                m{
+                    display: inline-block;
+                    width: 9px;
+                    height: 13px;
+                    background-image: url("../../images/zcSj.png");
+                    margin-left: 10px;
+                }
+            }
+            .zc_conr_footTs{
+                margin-top: 50px;
+                padding-top: 20px;
+                border-top: 1px dashed @bar;
+                width: 460px;
+                p{
+                    font-size: 12px;
+                    color: #666; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+    
+
+}

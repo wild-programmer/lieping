@@ -1,0 +1,391 @@
+@import 'base.css';
+@import 'common.css';
+@colcor:#e95513 ;
+@black:black;
+@bar: #dcdcdc;
+@000:#000000;
+
+.dImage .img_box {
+    border-top: 2px solid #e95513;
+}
+
+.active{    
+     border-bottom: 2px solid @colcor;
+}
+.outsidep{
+    padding-left: 20px;
+    font-family: MicrosoftYaHei;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    color: @000;
+    border-left: 4px solid @colcor;
+}
+.content_top{
+    margin-top: 38px;
+    font-family: MicrosoftYaHei;
+    font-family: "微软雅黑";
+    border: 1px solid @bar;
+    .content_img{
+        width: 200px;
+        height: 200px;
+        background: url("../uploade/rongzhijia.png") no-repeat;
+        background-size: 200px;
+        float: left;
+        border: 1px solid @bar;
+        border-top:0;
+        border-bottom: 0; 
+    }
+    .content_topr{
+        padding-top: 20px;
+        margin-left: 200px;
+        p:first-child{
+            display: inline-block;
+            margin-left: 30px;
+            font-size: 24px;
+            color: @000;
+            margin-right: 65px;
+        }
+        p:first-child + button{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 14px;
+            color:  #fff ;
+            background-color: @colcor;
+            m{
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url("../../images/renz.png") no-repeat;
+                margin-right: 2px;
+                vertical-align: bottom;
+            }
+        }
+        .content_topp{
+            font-size: 18px;
+            color:  #333;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        ul{
+            width: 100%;
+            height: 70px;
+            // line-height: 70px;
+            text-align: center;
+            margin-top: 35px;
+            background-color: #e5e5e5;
+            li{
+                width: 180px;
+                height: 100%;
+                border-right: 1px solid @bar;
+                float: left;
+                s,i{
+                    display: block;
+                }
+                s{
+                    font-size: 18px;
+                    color: @000;
+                    margin-top: 15px;
+                }
+                i{
+                    font-size: 14px;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.continer_nav{
+    ul{
+        li{
+            float: left;
+            height: 85px;
+            line-height: 85px;
+            margin-right: 85px;
+            font-size: 20px;
+            color: @000;
+        }
+    }
+    margin-bottom: 32px;
+}
+.continer_jstext{
+    margin-top: 35px;
+    width: 100%;
+    .continer_img{
+          float: left;
+          width: 280px;
+          height: 320px;
+          background-color: pink;
+    }      
+    .continer_imgtext{
+        margin-left: 300px;
+        height: 280px;
+        font-size: 14px;
+        color: #333;
+        p{
+            letter-spacing:2px;
+            text-indent: 8px;
+        }
+    }
+    margin-bottom: 60px;
+}
+
+.continer_zpzw{
+    p{
+        float: left;
+    }
+    span{
+        display: block;
+        float: right;
+        font-size: 18px;
+        color: #666 ;
+        cursor: pointer;
+    }
+}
+
+.continer_zpzwshow{
+    margin-top: 30px;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    border: 1px solid @bar;
+    span{
+        display: inline-block;
+        margin: 0 16px;
+        font-size: 14px;
+        color: #333333;
+        cursor: pointer;
+    }
+    .zpzw_active{
+        margin: 0;
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #f29b76;
+    }
+    margin-bottom: 30px;
+}
+
+.col-md-padding{
+        padding-left: 0;
+        padding-bottom: 15px;
+    .continer_zwdetails{
+        width: 100%;
+        height: 100px;
+        border: 1px solid @bar;
+        padding: 22px;
+        .continer_zwdetails_top{
+            width: 100%;
+            span{
+                font-size: 18px;
+                display: block;
+                float: left;
+            }
+            i{
+                font-size: 14px;
+                display: block;
+                float: right;
+            }
+        }
+        .continer_zwdetails_jies{
+            margin-top: 10px;
+            span{
+                display: inline-block;
+                margin-right: 30px;
+            }
+        }
+    }
+    .continer_zwdetails:hover{
+        background-color: #eee ;
+        cursor: pointer;
+    }
+}
+.mians_pingj{
+    width: 100%;
+    margin-top: 40px;
+    .continer_zhpj{
+        margin: 25px 0;
+        padding-left: 20px;
+        .continer_zhpjT{
+            margin-top: 20px;
+            height: 20px;
+            line-height: 20px;
+            .wxpingjh6{
+                font-size: 14px;
+                color: #333;
+                vertical-align: top;
+                margin-right: 20px;
+            }
+            .wx_back{
+                display: inline-block;
+                width: 150px;
+                height: 20px;
+                background: url("../../images/stark2.png");
+                background-size: 31px;
+                margin-right: 25px;
+                .wx2_back{
+                    display: inline-block;
+                    width: 109px;
+                    height: 20px;
+                    background: url("../../images/stars2.png");
+                    background-size: 31px;
+                    z-index: 999;
+                }
+            }
+            .wx_back2{
+                height: 19px;
+                background-size: 29px;
+                .wx2_back{
+                    height: 19px;
+                    background-size: 29px;     
+                    width: 111px;               
+                }
+                .wx_back3{
+                    width: 134px;  
+                }
+            }
+            s{
+                vertical-align: top;
+                font-size: 14px;
+                color: #333;
+            }
+            .wx_pf{
+                font-size: 20px;
+                color: #eb3737 ;
+            } 
+            .wx_bar{
+                display: inline-block;
+                height: 20px;
+                width: 1px;
+                background-color: @bar;
+                margin: 0 27px;
+            }
+            
+        }
+    }
+    
+    .continer_pingjcont{
+        width: 100%;
+        border: 1px solid @bar;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        .continer_pingjimg{
+            width: 120px;
+            height: 120px;
+            float: left;
+            margin-top: 25px;
+        }
+        .continer_pingjtext{
+            margin-left: 150px;
+            margin-top: 25px;
+            .continer_pingjtop{
+                    height: 30px;
+                    line-height: 30px;
+                .continer_pingjtopl{
+                    float: left;
+                    span:first-child{
+                        font-size: 18px;
+                        color: @000;
+                        display: inline-block;
+                        margin-right: 25px;
+                    }
+                    .wxpingjh6{
+                        font-size: 14px;
+                        color: #333;
+                        vertical-align: top;
+                        margin-right: 20px;
+                    }
+                    .wx_back{
+                        display: inline-block;
+                        width: 150px;
+                        background: url("../../images/stark2.png");
+                        height: 19px;
+                        background-size: 29px;
+                        margin-right: 25px;
+                        .wx2_back{
+                            display: inline-block;
+                            width: 109px;
+                            background: url("../../images/stars2.png");
+                            height: 19px;
+                            background-size: 29px;
+                            z-index: 999;
+                        }
+                    }
+                }
+               
+                 .continer_pingjtopr{
+                     font-size: 14px;
+                     float: right;
+                     letter-spacing: 1px;
+                 } 
+            }
+             .continer_pingjbtn{
+                 height: 30px;
+                 margin-top: 25px;
+                    button{
+                        float: left;
+                        width: 140px;
+                        height: 30px;
+                        font-size: 12px;
+                        color: #666;
+                        border-radius: 5px;
+                        margin-right: 20px;
+                    }
+                   
+                }
+            .continer_pingjbotom{
+                margin:25px 0;
+                p{
+                    width: 680px;
+                    float: left;
+                    line-height: 25px;
+                }
+                .continer_pingzan{
+                    float: right;
+                    span{
+                        display: inline-block;
+                        margin-left: 60px;
+                        position: relative;
+                    }
+                    span::before{
+                        content: '';
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        top:0px;
+                        left: -32px;
+                    }
+                    .zans::before{
+                        background-image: url("../../images/zans.png");
+                        background-size: 18px;
+                    }
+                    .zanx::before{
+                        height: 17px;
+                        background-image: url("../../images/zanx.png");
+                        background-size: 18px;
+                        // background-position: 1px 1px ;
+                    }
+                }
+            }
+        }
+    }
+    .continer_bordert{
+        border-top: 1px solid @bar;
+    }
+}
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+    .header ul li {
+        float: left;
+        margin: 0 13px;
+    }
+
+  
+}

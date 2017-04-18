@@ -1,0 +1,252 @@
+@import 'base.css';
+@import 'common.css';
+@colcor:#e95513 ;
+@black:black;
+@bar: #dcdcdc;
+.content{
+    font-family: "微软雅黑";
+    .ceb_nav{
+        position: relative;
+        background-color: #eee ;
+        text-align: center;
+        height: 1200px;
+        margin-bottom: 100px;
+        ul{
+            li{
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                border-bottom:  1px dashed #999 ;
+                font-size: 20px;
+                position: relative;
+                .ceb_navbar{
+                    display: block;
+                    width: 3px;
+                    height: 60px;
+                    position: absolute;
+                    left: -14px;
+                    background-color: @colcor ;
+                }
+            }
+        }
+        .ceb_sanjiao{            
+            width: 0;
+            height: 0;
+            border-width: 100px 100px 0;
+            border-style: solid;
+            border-color: #eee transparent transparent;
+            /*灰 透明 透明 */
+            // margin: 40px auto;
+            position: absolute;
+            left: 0px;
+            bottom:-100px;
+        }
+    }
+    .col-sm-10padding{
+        padding: 0px;
+        .nav_result{
+            padding-bottom: 130px;
+            position: relative;
+            margin-left:40px;
+            .sousuo_kuang{           
+                height: 40px;
+                margin-top: 30px;
+                margin-bottom: 50px;
+                input{
+                    float: left;
+                    color:  #666 ;
+                    width: 625px;
+                    height: 40px;
+                    border: 1px solid #666 ;
+                    // text-indent: 35px;
+                }
+                .sousuo_xiala{
+                    width: 200px;
+                    line-height: 38px;
+                    float: left;
+                    text-align: center;
+                    span:nth-child(2){
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 38px;
+                        transform: rotate(45deg);
+                        position: relative;
+                        border: 1px solid #666;
+                    }
+                    span:nth-child(2)::before{
+                        content:'';
+                        display: block;
+                        width: 13px;
+                        height: 10px;
+                        background-color:white ;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        left: -6px;
+                        top: -4px;
+                    }
+                    border: 1px solid #666 ;
+                    border-right:0px;
+                    border-left:0px; 
+                }
+                .sousuo_xiala:hover{
+                    cursor: pointer;
+                }
+                .sousuo_button{
+                    width: 100px;
+                    height: 40px;
+                    background-color: @colcor ;
+                    float: left;
+                    span{
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        background: url("../../images/sousuo.png");
+                        margin: 0 auto;
+                        margin-top: 5px;
+                    }
+                }
+                .sousuo_button:hover{
+                    cursor: pointer;
+                }
+            }
+            // 搜索内容结果
+            .col-sm-padding{
+                padding-left: 0px;
+                padding-right: 30px;
+                margin: 15px 0;
+                .sousuo_content{
+                    border: 1px solid @bar ;
+                    padding-top: 40px;
+                    img{
+                        float: left;
+                        margin-left: 40px;
+                        border: 1px solid @bar;
+                    }
+                    .sousuo_firm{
+                        float: left;
+                        margin-left: 40px;
+                        p{
+                            font-size: 18px;
+                            color: #333 ;
+                            margin-bottom: 10px;
+                        }
+                        p:nth-child(1){
+                            font-size: 20px;
+                            color: #000 ;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .sousuo_jiehao{
+                        padding-top: 20px;
+                        margin: 0 40px; 
+                    p{
+                        font-size: 14px;
+                        color:  #333 ;
+                    }
+                    }
+                    .sousuo_foot{
+                        height: 57px;
+                        line-height: 57px;
+                        width: 100%;
+                        background-color: #dcdcdc ;
+                        margin-top: 25px;
+                        padding: 0 40px;
+                        div:nth-child(1){
+                            float: left;
+                            margin-left: 30px;
+                            position: relative ;
+                        }
+                        div:nth-child(1):before{
+                            content: '';
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            background-image: url("../../images/fenlei.png");
+                            position: absolute;
+                            left: -28px;
+                            top:20px;
+                        }
+                        div:nth-child(2){
+                            float: right;
+                            position: relative ;
+                        }
+                        div:nth-child(2):before{
+                            content: '';
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            background-image: url("../../images/dizhi.png");
+                            position: absolute;
+                            left: -29px;
+                            top:19px;
+                        }
+                    }
+                }
+            }
+
+            // fenye
+            // .fenye{
+            //             width: 100%;
+            //             margin-top: 130px;
+            //         position: absolute;
+            //         bottom: 0px;
+            //         ul{
+            //             width: 595px;
+            //             margin: 0 auto;
+            //             span{
+            //                 display: inline-block;
+            //                 width: 100px;
+            //                 height: 40px;
+            //                 line-height: 40px;
+            //             }
+            //             li{
+            //                 width: 40px;
+            //                 height: 40px;
+            //                 line-height: 40px;
+            //             }
+            //             li , span{
+            //                 float: left;
+            //                 text-align: center;
+            //                 margin-right: 15px;
+            //                 border: 1px solid @bar;
+            //                 cursor: pointer;
+            //             }
+            //             .fy_doudian{
+            //                 border: none;
+            //                 font-size: 30px;
+            //                 a{
+            //                     display: block;
+            //                     margin-top: -10px;;
+            //                 }
+            //             }
+            //         }
+            //         }
+         
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+    .header ul li {
+        float: left;
+        margin: 0 13px;
+    }
+
+  
+  .content .col-sm-10padding .nav_result .sousuo_kuang input{
+      width: 533px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala{
+      width: 120px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_button{
+      width: 85px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2){
+      margin-left: 12px;
+  }
+}

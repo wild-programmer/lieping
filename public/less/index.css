@@ -1,0 +1,228 @@
+/*图片里的登录框*/
+
+.dImage {
+    position: relative;
+}
+
+.dImage_dl {
+    text-align: center;
+    width: 353px;
+    border: 1px solid #dcdcdc;
+    position: absolute;
+    left: 67%;
+    top: 2vh;
+    background-color: #E3E3E3;
+    z-index: 999;
+}
+
+.dImage_dl p:first-child {
+    color: #e95513;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.dImage_dl .imgdl_input {
+    width: 280px;
+    height: 6vh;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.dImage_dl .imgdl_yanz {
+    width: 120px;
+    height: 6vh;
+    border: 1px solid #ccc;
+}
+
+.dImage_dl .imgdl_yanz+button {
+    width: 140px;
+    height: 6vh;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+.dImage_dl input[type="button"] {
+    display: block;
+    width: 280px;
+    height: 6vh;
+    background-color: #e95513;
+    color: white;
+    font-family: MicrosoftYaHei;
+    font-family: '微软雅黑';
+    font-size: 21px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.dImage_dl p:last-child {
+    display: block;
+    height: 7vh;
+    line-height: 7vh;
+    margin-top: 18px;
+    background-color: #959595;
+    font-family: MicrosoftYaHei;
+    font-family: '微软雅黑';
+    font-size: 21px;
+}
+
+.dImage_dl p:last-child a {
+    color: #0471EB;
+}
+
+.dimag_img {
+    width: 100%;
+    height: 500px;
+    background: url("../uploade/16sucai_201403151248.png") no-repeat;
+    background-size: 100%;
+}
+
+
+/*用户介绍*/
+
+.user .continer {
+    margin-top: 50px;
+}
+
+.user .continer .l .user_img {
+    width: 200px;
+    height: 169px;
+    float: left;
+}
+
+.user .continer .l .user_firm {
+    margin-left: 200px;
+    margin-right: 20px;
+}
+
+.user .continer .l .user_firm,
+.user .continer .r .user_firm {
+    font-family: MicrosoftYaHei;
+    font-family: '微软雅黑';
+    height: 169px;
+    padding-left: 25px;
+    width: 55%;
+}
+
+.user .continer .l .user_firm h2,
+.user .continer .r .user_firm h2 {
+    font-size: 30px;
+}
+
+.user .continer .l .user_firm p,
+.user .continer .r .user_firm p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.user .continer .l .user_firm input,
+.user .continer .r .user_firm input {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e95513;
+    border: none;
+    margin-top: 15px;
+    color: white;
+}
+
+.user .continer .r .user_img {
+    float: right;
+}
+
+.user .continer .r .user_firm {
+    float: right;
+}
+
+.user .continer .l {
+    border-right: 1px solid #dcdcdc;
+}
+
+.back_ccc {
+    margin-top: 36px;
+    width: 100%;
+    height: 20px;
+    background-color: #EEEEEE;
+}
+
+
+/*核心功能*/
+
+.hxFunc .continer .hx_text {
+    padding-top: 30px;
+}
+
+.cxFirm .continer .cx_text {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 700;
+}
+
+.cxFirm .continer .cx_text .cx_bar {
+    width: 60px;
+    height: 4px;
+    background-color: #e95513;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.cxFirm .continer .cx_text .cx_firm {
+    margin: 30px 0;
+}
+
+.cxFirm .continer .cx_text .cx_firm img {
+    float: left;
+    margin: 10px;
+}
+
+.cxFirm .continer .cx_text span {
+    font-weight: 500;
+}
+
+.cxFirm .continer .cx_text input {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e95513;
+    display: block;
+    color: white;
+    border: 0;
+    margin: 30px auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+    .header ul li {
+        float: left;
+        margin: 0 13px;
+    }
+    .dImage_dl {
+        top: 10px;
+    }
+    .dImage_dl p:first-child {
+        margin-top: 8px;
+    }
+    .dImage_dl .imgdl_input {
+        height: 37px;
+    }
+    .dImage_dl .imgdl_yanz {
+        height: 37px;
+    }
+    .dImage_dl .imgdl_yanz+button {
+        height: 37px;
+    }
+    .dImage_dl input[type="button"] {
+        height: 37px;
+    }
+    .dImage_dl p:last-child {
+        height: 50px;
+        line-height: 50px;
+    }
+}

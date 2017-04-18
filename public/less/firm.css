@@ -1,0 +1,202 @@
+@import 'base.css';
+@import 'common.css';
+.content {
+  font-family: "微软雅黑";
+}
+.content .ceb_nav {
+  position: relative;
+  background-color: #eee ;
+  text-align: center;
+  height: 1200px;
+  margin-bottom: 100px;
+}
+.content .ceb_nav ul li {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px dashed #999 ;
+  font-size: 20px;
+  position: relative;
+}
+.content .ceb_nav ul li .ceb_navbar {
+  display: block;
+  width: 3px;
+  height: 60px;
+  position: absolute;
+  left: -14px;
+  background-color: #e95513;
+}
+.content .ceb_nav .ceb_sanjiao {
+  width: 0;
+  height: 0;
+  border-width: 100px 100px 0;
+  border-style: solid;
+  border-color: #eee transparent transparent;
+  /*灰 透明 透明 */
+  position: absolute;
+  left: 0px;
+  bottom: -100px;
+}
+.content .col-sm-10padding {
+  padding: 0px;
+}
+.content .col-sm-10padding .nav_result {
+  padding-bottom: 130px;
+  position: relative;
+  margin-left: 40px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang {
+  height: 40px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang input {
+  float: left;
+  color: #666 ;
+  width: 625px;
+  height: 40px;
+  border: 1px solid #666 ;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala {
+  width: 200px;
+  line-height: 38px;
+  float: left;
+  text-align: center;
+  border: 1px solid #666 ;
+  border-right: 0px;
+  border-left: 0px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2) {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 38px;
+  transform: rotate(45deg);
+  position: relative;
+  border: 1px solid #666;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2)::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 10px;
+  background-color: white ;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -6px;
+  top: -4px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala:hover {
+  cursor: pointer;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_button {
+  width: 100px;
+  height: 40px;
+  background-color: #e95513;
+  float: left;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_button span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../../images/sousuo.png");
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_button:hover {
+  cursor: pointer;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding {
+  padding-left: 0px;
+  padding-right: 30px;
+  margin: 15px 0;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content {
+  border: 1px solid #dcdcdc;
+  padding-top: 40px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content img {
+  float: left;
+  margin-left: 40px;
+  border: 1px solid #dcdcdc;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_firm {
+  float: left;
+  margin-left: 40px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_firm p {
+  font-size: 18px;
+  color: #333 ;
+  margin-bottom: 10px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_firm p:nth-child(1) {
+  font-size: 20px;
+  color: #000 ;
+  margin-bottom: 20px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_jiehao {
+  padding-top: 20px;
+  margin: 0 40px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_jiehao p {
+  font-size: 14px;
+  color: #333 ;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_foot {
+  height: 57px;
+  line-height: 57px;
+  width: 100%;
+  background-color: #dcdcdc ;
+  margin-top: 25px;
+  padding: 0 40px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_foot div:nth-child(1) {
+  float: left;
+  margin-left: 30px;
+  position: relative ;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_foot div:nth-child(1):before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("../../images/fenlei.png");
+  position: absolute;
+  left: -28px;
+  top: 20px;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_foot div:nth-child(2) {
+  float: right;
+  position: relative ;
+}
+.content .col-sm-10padding .nav_result .col-sm-padding .sousuo_content .sousuo_foot div:nth-child(2):before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/dizhi.png");
+  position: absolute;
+  left: -29px;
+  top: 19px;
+}
+@media (max-width: 1240px) {
+  .continer {
+    width: 970px;
+  }
+  .header ul li {
+    float: left;
+    margin: 0 13px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang input {
+    width: 533px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala {
+    width: 120px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_button {
+    width: 85px;
+  }
+  .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2) {
+    margin-left: 12px;
+  }
+}

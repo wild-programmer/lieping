@@ -1,0 +1,118 @@
+body {
+    min-width: 970px;
+}
+
+.continer {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.header ul {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.header ul li {
+    float: left;
+    margin: 0 20px;
+}
+
+.header ul span {
+    display: inline-block;
+    float: left;
+    color: #dcdcdc;
+}
+
+
+/*//大图片*/
+
+.dImage .img_box {
+    border-top: 4px solid #e95513;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dImage .img_box img {
+    margin-top: -2px;
+}
+
+
+/*分页*/
+
+.fenye {
+    width: 100%;
+    margin-top: 130px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.fenye ul {
+    width: 595px;
+    margin: 0 auto;
+}
+
+.fenye ul span {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.fenye ul li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.fenye ul li,
+.fenye ul span {
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+}
+
+.fenye ul .fy_doudian {
+    border: none;
+    font-size: 30px;
+}
+
+.fenye ul .fy_doudian a {
+    display: block;
+    margin-top: -10px;
+}
+
+
+/*底部*/
+
+.foot_our .continer {
+    padding-top: 58px;
+}
+
+.foot_our .continer dl {
+    padding-left: 35%;
+}
+
+.foot_our .continer dt {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.foot_our .continer dt dd {
+    font-size: 14px;
+    color: #333;
+}
+
+.foot {
+    margin-top: 30px;
+    width: 100%;
+    border-top: 1px solid #dcdcdc;
+    text-align: center;
+    padding-top: 38px;
+}

@@ -1,0 +1,289 @@
+@import 'base.css';
+@import 'common.css';
+@colcor:#e95513 ;
+@black:black;
+@bar: #dcdcdc;
+@000:#000000;
+
+.content{    
+                font-family: MicrosoftYaHei;
+                font-family: "微软雅黑";
+    .continer{
+        .search_text_r{
+                width: 97px;
+                text-align: right;
+                color: @000;
+                font-size: 18px;
+            }
+            .search_position{
+                position: relative;
+            }
+             .check_icon::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 3px;
+                right: 1px;
+                width: 14px;
+                height: 14px;
+                border: 1px solid @bar;
+                border-radius: 50%;
+                
+            }
+            .checkd_icon::before{
+                background: url("../../images/XZ.png") no-repeat;
+                background-size: 10px;
+                background-position: 1px 1px;
+            }
+            .checkd_1_icon::before{
+                border-radius: 0;
+            }
+            .checkd1_icon::before{
+                border: 0px;                
+                background: url("../../images/XZ1.png") no-repeat;
+                background-size: 14px;
+            }
+        .top{
+            margin-top: 45px;
+            margin-bottom: 7px;
+            line-height: 20px;
+            span{
+                display: block;
+                float: left;
+                width: 5px;
+                height: 20px;
+                background-color: @colcor;
+                margin-right: 12px;
+            }
+            p{                
+                float: left;
+                font-size: 20px;
+                color: @000;
+            }
+        }
+        .search_fanwei{
+            line-height: 25px;
+            margin-top: 27px;            
+            span{
+                display: block;
+                float: left;
+            }
+            span:nth-child(even){
+                position: relative;
+                margin-right: 17px;
+               input{
+                   width: 14px;
+                   height: 14px;
+                   opacity: 0;
+               }
+            }           
+           
+            span:nth-child(odd){                
+                font-size: 18px;
+                color: @000;
+                margin-right: 40px;
+            }
+            
+        }
+        
+         .search_gjc{
+             position: relative;
+             margin-top: 27px;
+                span{
+                    display: block;
+                    margin-top: 12px;
+                    margin-right: 15px;
+                }
+                span,input{
+                    float: left;
+                    line-height: 100%;
+                }
+                input{
+                    width: 300px;
+                    height: 40px;
+                    border: 1px solid @bar;
+                    margin-right: 20px;
+                }
+                .checkd{
+                    width: 14px;
+                   height: 14px;
+                   opacity: 0;
+                }
+               .search_cub{
+                   width: 14px;
+                   height: 14px;
+                   border: 1px solid @bar;
+               }
+               .margin-left{
+                   margin-left: 180px;
+               }
+               .margin-left1{
+                   margin-left: 167px;
+               }              
+           
+        }
+        .search_Nx{
+            margin-top: 22px;
+            line-height: 40px;
+            .search_text_r{
+                float: left;
+               margin-right: 15px;
+            }
+             .search_xiala{
+                    float: left;
+                    width: 300px;
+                    height: 40px;
+                    line-height: 40px;
+                    span:nth-child(1){
+                        float: left;
+                        display: block;
+                        margin-left: 17px;
+                    }
+                    span:nth-child(2){
+                        display: inline-block;
+                        float: right;
+                        margin-right: 17px;
+                        width: 17px;
+                        height: 17px;
+                        margin-left: 38px;
+                        transform: rotate(45deg);
+                        position: relative;
+                        border: 1px solid #666;
+                        margin-top: 5px;
+                    }
+                    span:nth-child(2)::before{
+                        content:'';
+                        display: block;
+                        width: 27px;
+                        height: 12px;
+                        background-color:white;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        left: -11px;
+                        top: -1px;
+                    }
+                    border: 1px solid @bar;
+                }
+                .search_xiala:hover{
+                    cursor: pointer;
+                }
+        }
+        .search_Tj{
+            margin-top: 35px;
+            width: 1200px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #333333;
+            .search_checkd ,.search_yxtj{
+                display: inline-block;
+                margin-left: 25px;    
+                vertical-align: bottom;            
+            }
+            .search_checkd {
+                margin-left: 32px;
+                line-height: 42px;
+            }
+            .search_jpg{
+                float: right;
+                width: 100px;
+                height: 38px;
+                background: url("../../images/sousuo.png") no-repeat;
+                background-color: #f29b76;
+                background-position: 35px 4px ;
+            }
+            .checkd{
+                opacity: .2;
+            }
+            .checkd1_icon::before{
+                background: url("../../images/oudx.png") no-repeat;
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .search_content{
+            margin-top: 70px;
+            position: relative;
+            .search_content_sole{
+                width: 285px;
+                margin: 0 20px 20px 0;
+                text-align: center;
+                padding-top: 35px;
+                border: 1px solid @bar;
+                color: @000;
+                float: left;
+                s{
+                    display: block;
+                    font-size: 24px;
+                    margin-bottom: 12px;
+                }
+                em{
+                    display: inline-block;
+                    font-size: 14px;
+                }
+                em:nth-child(even){
+                    margin-right: 26px;
+                }
+                .search_content_solefoot{
+                    height: 60px;
+                    line-height: 60px;
+                    background-color: @bar;
+                    margin-top: 25px;
+                    .content_solefoot_l
+                    ,.content_solefoot_r{
+                        display: block;                        
+                        color: @000;
+                        font-size: 14px;
+                    }
+                    .content_solefoot_l{
+                        float: left;
+                    }
+                    .content_solefoot_r{
+                        float: right;
+                        margin-right: 35px;
+                        position: relative;
+                    }
+                    .content_footl_icon{
+                        position: relative;
+                        margin-left: 57px;
+                    }
+                    .content_footl_icon::before{
+                        content: '';
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        left: -30px;
+                        top:21px;
+                        background:url("../../images/zt.png") no-repeat;
+                    }
+                    .content_footr_icon::before{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        left: -30px;
+                        top:21px;
+                        background:url("../../images/dizhi.png") no-repeat;
+                    }
+                }
+                
+            }
+            .fenye{
+                bottom: -100px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+    .header ul li {
+        float: left;
+        margin: 0 13px;
+    }
+
+}
