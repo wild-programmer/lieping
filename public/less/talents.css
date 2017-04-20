@@ -23,6 +23,7 @@
   height: 14px;
   border: 1px solid #dcdcdc;
   border-radius: 50%;
+  z-index: -1;
 }
 .content .continer .checkd_icon::before {
   background: url("../../images/XZ.png") no-repeat;
@@ -31,6 +32,7 @@
 }
 .content .continer .checkd_1_icon::before {
   border-radius: 0;
+  z-index: -1;
 }
 .content .continer .checkd1_icon::before {
   border: 0px;

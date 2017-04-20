@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猎评网</title>
+    <link rel="shortcut icon" href="../lieping.ico">
+    <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/less/firmUser.css">
+
+</head>
+
+<body>
+    <!--文件读取-->
+    <div class="reader_filebox">
+        <div class="reader_fileboxT">
+            <span class="updatahidden"></span>
+        </div>
+        <div class="reader_fileboxC">
+            <div class="reader_fileboxCT"></div>
+            <div class="reader_fileboxCB">
+                <div class="reader_fileboxCBT">
+                    <span>+</span><span>选择图片</span>
+                    <input type="file" value="选择图片">
+                </div>
+                <p>只支持jpj,png大小不超过2M</p>
+            </div>
+
+        </div>
+        <div class="reader_fileboxB">
+            <button class="reader_file_bc">保存</button>
+            <button class="reader_file_qx">取消</button>
+        </div>
+    </div>
+    <!--头部导航-->
+    <div class="header">
+        <div class="continer clearfix">
+            <div class="col-sm-4">
+                <div class="log">
+                    <img src="../images/logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="./talentsCx.html">人才查询</a></li>
+                    <li><a href="./firmCx.html">企业查询</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="" style="color:#e95513">个人用户</a></li>
+                    <span>|</span>
+                    <li><a href="">企业用户</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--大图片-->
+    <div class="dImage">
+
+    </div>
+
+    <!--主体内容区域-->
+    <div class="content">
+        <div class="continer clearfix">
+            <div class="col-sm-2 ceb_nav">
+                <div class="ceb_nav_top">
+                    <!--<div class="ceb_nav_img"></div>-->
+                    <p class="ceb_xiugai "><i class="ceb_active"><a href="javascript:;"  class="ceb_updata">修改</a></i><i><a href="">删除</a></i></p>
+                </div>
+                <div class="ceb_nav_topB">
+                    <ul class="ceb_navul">
+                        <li class="ceb_navback" data-navname="resume_tianx">
+                            <p>我的简历</p>
+                            <m></m>
+                        </li>
+                        <li>
+                            <p>搜索职位</p>
+                        </li>
+                        <li>
+                            <p>申请列表</p>
+                        </li>
+                        <li>
+                            <p>收藏中心</p>
+                        </li>
+                        <li data-navname="resume_pingj">
+                            <p>评价申诉</p>
+                        </li>
+                        <li>
+                            <p>退出账号</p>
+                        </li>
+                    </ul>
+                    <div class="ceb_sanjiao">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-10 col-sm-10padding" id="resume_tianx">
+
+                <div class="continer_zpzw clearfix">
+                    <p class="outsidep">基本信息</p>
+                    <!--此处为简历-初始化状态下 顶部横条的右侧图标显示-0状态 可点击-->
+                </div>
+                <!--基本信息-->
+                <div class="continer_content clearfix">
+                    <div class="continer_content001">
+                        <div class="firmUserImg">
+                            <h1>温馨提示</h1>
+                            <h2>您可以上传公司图片</h2>
+                        </div>
+                        <div class="firmUserImgB">
+                            <div class="firmUserfile">
+                                <span>上传图片</span>
+                                <input type="file" class="updata2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continer_content01" style="margin-top:50px">
+                        <span>企业名称</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>企业性质</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content02 clearfix">
+                        <span>所属行业</span><i></i>
+                        <div class="setUp_contqz_xiala clearfix">
+                            <i>年薪</i>
+                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>
+                            <div class="contqz_xiala_oryue clearfix xiala_show">
+                                <li class="lp_yearmo">年薪</li>
+                                <li class="lp_moseney">月薪</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continer_content02 clearfix">
+                        <span>成立日期</span><i></i>
+                        <div class="setUp_contqz_xiala clearfix">
+                            <i>年薪</i>
+                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>
+                            <div class="contqz_xiala_oryue clearfix xiala_show">
+                                <li class="lp_yearmo">年薪</li>
+                                <li class="lp_moseney">月薪</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continer_content03 clearfix">
+                        <m>公司规模</m><i></i>
+                        <span class="check_icon checkd_icon">
+                            <input type="checkbox" class="checkd checkdball" checked="checked">
+                        </span>
+                        <span>少于50人</span>
+                        <span class="check_icon ">
+                            <input type="checkbox" class="checkd checkdball">
+                        </span>
+                        <span>50-200人</span>
+                        <span class="check_icon ">
+                            <input type="checkbox" class="checkd checkdball">
+                        </span>
+                        <span>200-500人</span>
+                        <span class="check_icon ">
+                            <input type="checkbox" class="checkd checkdball">
+                        </span>
+                        <span>500人以上</span>
+
+                    </div>
+                    <div class="continer_content04 clearfix">
+                        <span>企业介绍</span><i></i>
+                        <textarea name="CommentContent" id="CommentContent" maxlength="500" class=" classFormEle_ok"></textarea>
+                    </div>
+                    <div class="setUp_buttonbox">
+                        <button type="button" class="firmUser_bc">保存</button>
+                        <button type="button" class="firmUser_bc">取消</button>
+                    </div>
+                </div>
+                <!--企业证明-->
+                <div class="continer_zpzw clearfix">
+                    <p class="outsidep">企业证明</p>
+                </div>
+                <div class="continer_content clearfix">
+                    <div class="continer_content002 continer_content001">
+                        <div class="firmUserImg">
+                            <h1>温馨提示</h1>
+                            <h2>您可以上传公司图片</h2>
+                        </div>
+                        <div class="firmUserImgB">
+                            <div class="firmUserfile">
+                                <span>上传图片</span>
+                                <input type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continer_content02 clearfix">
+                        <span>证件类型</span><i></i>
+                        <div class="setUp_contqz_xiala clearfix">
+                            <i>不限</i>
+                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>
+                            <div class="contqz_xiala_oryue clearfix xiala_show">
+                                <li class="lp_yearmo">年薪</li>
+                                <li class="lp_moseney">月薪</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continer_content01">
+                        <span>证件编号</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>企业名称</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>法人代表</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>注册资金</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>详细地址</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content03_0  clearfix">
+                        <m>证件有效期</m><i></i> <input type="text" name="" value="">
+                        <span class="check_icon checkd_icon">
+                            <input type="checkbox" class="checkd checkdbal">
+                        </span>
+                        <span>至长期</span>
+
+
+                    </div>
+                    <div class="setUp_buttonbox">
+                        <button type="button" class="firmUser_bc">保存</button>
+                        <button type="button" class="firmUser_bc">取消</button>
+                    </div>
+                </div>
+
+                <!--联系方式-->
+                <div class="continer_zpzw clearfix">
+                    <p class="outsidep">联系方式</p>
+                </div>
+                <div class="continer_content clearfix">
+
+                    <div class="continer_content05">
+                        <span>证件编号</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content05">
+                        <span>手机号码</span><i></i><input type="text" name="" value=""><span style="color:#656565">仅限接收服务通知，不对外公开</span>
+                    </div>
+                    <div class="continer_content06 clearfix">
+                        <span>联系电话</span><i></i><input type="text" name="" value="" class="continer_content06inpt"> <span>-</span> <input type="text" name="" value="" class="continer_content06inp">
+                        <span class="checkd_1_icon">
+                            <input type="checkbox" class="checkd checkdCur">
+                        </span>
+                        <span style="color:#656565">仅限接收服务通知，不对外公开</span>
+                    </div>
+                    <div class="continer_content06 clearfix">
+                        <span>电子邮箱</span><i></i><input type="text" name="" value="" class="continer_content06inp" style="margin-left:0px;">
+                        <span class="checkd_1_icon">
+                            <input type="checkbox" class="checkd checkdCur">
+                        </span>
+                        <span style="color:#656565">不公开 (仅限接收服务通知，修改简历接收邮箱请前往<m style="color:#e95513">发布招聘</m>。)</span>
+                    </div>
+                    <div class="continer_content05">
+                        <span>详细地址</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content01">
+                        <span>企业官网</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="continer_content07">
+                        <span>企业微博</span><i></i><input type="text" name="" value="">
+                    </div>
+                    <div class="setUp_buttonbox">
+                        <button type="button" class="firmUser_bc">保存</button>
+                        <button type="button" class="firmUser_bc">取消</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="fenye">
+                    <ul class="clearfix">
+                        <span>上一页</span>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li class="fy_doudian"><a href="">......</a></li>
+                        <span>下一页</span>
+                    </ul>
+                </div>-->
+        </div>
+    </div>
+
+    </div>
+    <div class="back_ccc" style="height:4px;margin-top:200px;  background-color: #e95513"></div>
+    <!--底部关于我们-->
+    <div class="foot_our">
+        <div class="continer clearfix">
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>关于我们
+                            <dd><a href="javascript:;">公司介绍</a></dd>
+                            <dd><a href="javascript:;">发展历程</a></dd>
+                            <dd><a href="javascript:;">荣誉资质</a></dd>
+                        </dt>
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>联系我们
+                            <dd><a href="javascript:;">联系我们</a></dd>
+                            <dd><a href="javascript:;">常见问题</a></dd>
+                            <dd><a href="javascript:;">友情链接</a></dd>
+                        </dt>
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>帮助中心
+                            <dd><a href="javascript:;">常见问题</a></dd>
+                            <dd><a href="javascript:;">相关政策</a></dd>
+                        </dt>
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>注册流程
+                            <dd><a href="javascript:;">个人注册</a></dd>
+                            <dd><a href="javascript:;">公司注册</a></dd>
+                        </dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <p>未经猎评网同意，不得转载本网站之所有企业及个人信息| 猎评网版权所有© 2017/lieping </p>
+        <p>沪公网安备31011502002551号</p>
+    </div>
+
+
+
+</body>
+<script src="../public/assets/jquery-1.12.4.js"></script>
+<script src="../public/script/firmUser.js"></script>
+
+</html>
