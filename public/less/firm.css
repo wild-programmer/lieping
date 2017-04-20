@@ -7,7 +7,7 @@
   position: relative;
   background-color: #eee ;
   text-align: center;
-  height: 1200px;
+  height: 600px;
   margin-bottom: 100px;
 }
 .content .ceb_nav ul li {
@@ -52,12 +52,20 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.content .col-sm-10padding .nav_result .sousuo_kuang input {
+.content .col-sm-10padding .nav_result .sousuo_kuang .nav_result1 {
   float: left;
   color: #666 ;
   width: 625px;
   height: 40px;
   border: 1px solid #666 ;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .nav_result2 {
+  width: 200px;
+  line-height: 38px;
+  float: left;
+  border: 1px solid #666 ;
+  border-left: 0px;
+  text-indent: 20px;
 }
 .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala {
   width: 200px;
@@ -79,7 +87,11 @@
   top: 40px;
   border: 1px solid #ccc;
 }
-.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2) {
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala p {
+  float: left;
+  text-indent: 20px;
+}
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -88,7 +100,7 @@
   position: relative;
   border: 1px solid #666;
 }
-.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2)::before {
+.content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span::before {
   content: '';
   display: block;
   width: 13px;
@@ -211,5 +223,11 @@
   }
   .content .col-sm-10padding .nav_result .sousuo_kuang .sousuo_xiala span:nth-child(2) {
     margin-left: 12px;
+  }
+  .content .ceb_nav ul li {
+    font-size: 18px;
+  }
+  .content .ceb_nav .ceb_sanjiao {
+    border-width: 100px 81px 0;
   }
 }

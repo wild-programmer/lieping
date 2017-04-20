@@ -118,8 +118,9 @@
   color: #333;
 }
 .continer_jstext .continer_imgtext p {
-  letter-spacing: 2px;
   text-indent: 8px;
+  line-height: 24px;
+  color: #666;
 }
 .continer_zpzw p {
   float: left;

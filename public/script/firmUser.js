@@ -2,6 +2,7 @@
 $('.xiala').each(function(i, el) {
     el.index = i;
     $(el).on('click', function() {
+        // $(document.body).on('click', $(el), function() {
         var k = this.index;
         // console.log(k);
         var that = this;
@@ -47,60 +48,60 @@ $('.xiala').each(function(i, el) {
 // 企业头像上传
 var upheader = function() {
 
-        var input = document.querySelector('input[type=file]'); //input 标签
-        var result = document.querySelector('.reader_fileboxCT');
-        var filebox = document.querySelector('.reader_filebox');
-        var bc = document.querySelector('.reader_file_bc');
-        document.querySelector('.ceb_active').onclick = function() {
-            filebox.style.display = 'block'; //  点击删除显示摩太狂
-        }
-        document.querySelector('.updatahidden').onclick = function() {
+    var input = document.querySelector('input[type=file]'); //input 标签
+    var result = document.querySelector('.reader_fileboxCT');
+    var filebox = document.querySelector('.reader_filebox');
+    var bc = document.querySelector('.reader_file_bc');
+    document.querySelector('.ceb_active').onclick = function() {
+        filebox.style.display = 'block'; //  点击删除显示摩太狂
+    }
+    document.querySelector('.updatahidden').onclick = function() {
+        filebox.style.display = 'none';
+    }
+    document.querySelector('.reader_file_qx').onclick = function() {
+        filebox.style.display = 'none';
+        result.innerHTML = document.querySelector('.ceb_nav_top').innerHTML;
+    }
+    document.querySelector('.reader_file_bc').onclick = function() {
             filebox.style.display = 'none';
+            var img = result.innerHTML;
+            $('.ceb_nav_top').children('img').remove();
+            $('.ceb_nav_top').append(img);
         }
-        document.querySelector('.reader_file_qx').onclick = function() {
-            filebox.style.display = 'none';
-            result.innerHTML = document.querySelector('.ceb_nav_top').innerHTML;
+        // 给按钮注册点击事件
+        //  var result = document.getElementById("result");
+
+    if (typeof FileReader === 'undefined') {
+        result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+        input.setAttribute('disabled', 'disabled');
+    } else {
+        input.addEventListener('change', readFile1, false);
+    }
+
+
+    function readFile1() {
+        var file = this.files[0];
+        if (!/image\/\w+/.test(file.type)) {
+            alert("请确保文件为图像类型");
+            return false;
         }
-        document.querySelector('.reader_file_bc').onclick = function() {
-                filebox.style.display = 'none';
-                var img = result.innerHTML;
-                $('.ceb_nav_top').children('img').remove();
-                $('.ceb_nav_top').append(img);
-            }
-            // 给按钮注册点击事件
-            //  var result = document.getElementById("result");
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
 
-        if (typeof FileReader === 'undefined') {
-            result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
-            input.setAttribute('disabled', 'disabled');
-        } else {
-            input.addEventListener('change', readFile1, false);
-        }
-
-
-        function readFile1() {
-            var file = this.files[0];
-            if (!/image\/\w+/.test(file.type)) {
-                alert("请确保文件为图像类型");
-                return false;
-            }
-            var reader = new FileReader();
-            reader.readAsDataURL(file);
-
-            reader.onload = function(e) {
-                result.innerHTML = '<img src="' + this.result + '" alt=""/>';
-            }
+        reader.onload = function(e) {
+            result.innerHTML = '<img src="' + this.result + '" alt=""/>';
         }
     }
-    upheader();
+}
+upheader();
 
 
 
-// 企业展示大图上传
+// 企业展示大图上传 updata2 firmUserImg1
 
-var uodata2 = function() {
-    var input = document.querySelector('.updata2'); //input 标签
-    var result = document.querySelector('.firmUserImg'); //填充图片的标签
+var uodata2 = function(elclick, elshow) {
+    var input = document.querySelector(elclick); //input 标签
+    var result = document.querySelector(elshow); //填充图片的标签
     console.log(result)
     if (typeof FileReader === 'undefined') {
         result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
@@ -128,37 +129,79 @@ var uodata2 = function() {
 
 
 }
-uodata2();
+uodata2('.updata2', '.firmUserImg1');
+uodata2('.updata3', '.firmUserImg2');
 
 // 一大堆就选一个的单选按钮
 $('.checkdball').each(function(i, el) {
-    $(el).click(function() {
-        if (this.checked) {
-            $('.checkdball').each(function(i,el){
-                el.checked=false;
-            })
-            $(this).parent().addClass('checkd_icon').siblings().removeClass('checkd_icon');
-           this.checked=true;
-        } else {
-            $(this).parent().removeClass('checkd_icon');
-        }
+        $(el).click(function() {
+            if (this.checked) {
+                $('.checkdball').each(function(i, el) {
+                    el.checked = false;
+                })
+                $(this).parent().addClass('checkd_icon').siblings().removeClass('checkd_icon');
+                this.checked = true;
+            } else {
+                $(this).parent().removeClass('checkd_icon');
+            }
+        })
     })
-})
-$('.checkdbal').click(function(){
+    //单选
+$('.checkdbal').click(function() {
     if (this.checked) {
-            $(this).parent().addClass('checkd_icon');
-           this.checked=true;
-        } else {
-            $(this).parent().removeClass('checkd_icon');
-        }
+        $(this).parent().addClass('checkd_icon');
+        this.checked = true;
+    } else {
+        $(this).parent().removeClass('checkd_icon');
+    }
 })
 $('.checkdCur').each(function(i, el) {
     $(el).click(function() {
         if (this.checked) {
             $(this).parent().addClass('check_1_icon');
-           this.checked=true;
+            this.checked = true;
         } else {
             $(this).parent().removeClass('check_1_icon');
         }
+    })
+})
+
+
+//状态切换
+// outsidep_shanchu  outsidep_xiugai 顶部图标点击元素
+// 状态1 continer_content      点击元素firmUser_bc  firmUser_qx
+// 状态2 continer_content1
+//点击保存  让顶部栏图标显示  让状态2显示  continer_contentimg
+$('.firmUser_qx').each(function(i, el) {
+    el.index = i;
+    $(el).click(function() {
+        $('.outsidep_shanchu')[this.index].style.display = 'block';
+        $('.outsidep_xiugai')[this.index].style.display = 'block';
+        $('.continer_content1')[this.index].style.display = 'block';
+        $('.continer_content')[this.index].style.display = 'none';
+    })
+})
+$('.firmUser_bc').each(function(i, el) {
+    el.index = i;
+    $(el).click(function() {
+        $('.outsidep_shanchu')[this.index].style.display = 'block';
+        $('.outsidep_xiugai')[this.index].style.display = 'block';
+        $('.continer_content1')[this.index].style.display = 'block';
+        $('.continer_content')[this.index].style.display = 'none';
+        // if($('.continer_content .firmUserImg').children('img')){}
+        console.log($('.continer_content .firmUserImg')[this.index].childNodes[0])
+        if ($($('.continer_content .firmUserImg')[this.index]).children('img').length == 1) {
+            $('.continer_contentimg:eq(' + [this.index] + ')').html($('.continer_content .firmUserImg')[this.index].childNodes[0]);
+
+        }
+    })
+})
+$('.outsidep_xiugai').each(function(i, el) {
+    el.index = i;
+    $(el).click(function() {
+        $('.outsidep_shanchu')[this.index].style.display = 'none';
+        $('.outsidep_xiugai')[this.index].style.display = 'none';
+        $('.continer_content1')[this.index].style.display = 'none';
+        $('.continer_content')[this.index].style.display = 'block';
     })
 })

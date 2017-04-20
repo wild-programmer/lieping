@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../lieping.ico">
     <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../public/less/firm.css">
+    <link rel="stylesheet" type="text/css" href="../public/less/firmsearch/hzw-city-picker.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                     <li><a href="">联系我们</a></li>
                     <li><a href="./personalUser.html">个人用户</a></li>
                     <span>|</span>
-                    <li><a href="">企业用户</a></li>
+                    <li><a href="./firmUser.html">企业用户</a></li>
                 </ul>
             </div>
         </div>
@@ -36,7 +37,7 @@
     <!--大图片-->
     <div class="dImage">
         <div class="img_box">
-            <img src="../public/uploade/16sucai_201403151248.png" alt="" width="100%">
+            <img src="../public/uploade/firmCx.png" alt="" width="100%">
         </div>
     </div>
 
@@ -64,14 +65,8 @@
             <div class="col-sm-10 col-sm-10padding">
                 <div class="nav_result clearfix">
                     <div class="sousuo_kuang">
-                        <input type="text" name="" value="" placeholder=" &nbsp  &nbsp搜索职位公司">
-                        <div class="sousuo_xiala">
-                            <span class="nav_result_clikN">上海</span> <span class="nav_result_clik"></span>
-                            <div class="nav_result_clkc">
-                                <li>杭州</li>
-                                <li>郑州</li>
-                            </div>
-                        </div>
+                        <input type="text" name="" value="" placeholder=" &nbsp  &nbsp搜索职位公司" class="nav_result1">
+                        <input type="text" class="nav_result2" id="cityChoice" placeholder=" &nbsp  &nbsp请选择城市" id="cityChoice">
                         <div class="sousuo_button">
                             <span></span>
                         </div>
@@ -348,12 +343,33 @@
         $('.nav_result_clkc').css('display', 'none');
     })
 </script>
+<script type="text/javascript" src="../public/assets/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../public/script/firmsearch/city-data.js"></script>
+<script type="text/javascript" src="../public/script/firmsearch/hzw-city-picker.min.js"></script>
 <script>
     $('.ceb_nav li').each(function(i, el) {
         $(el).click(function() {
             $(this).siblings().children('span').remove().end().end().append('<span class="ceb_navbar"></span>');
         })
     })
+    var cityPicker = new HzwCityPicker({
+        data: data,
+        target: 'cityChoice',
+        valType: 'k-v',
+        hideCityInput: {
+            name: 'city',
+            id: 'city'
+        },
+        hideProvinceInput: {
+            name: 'province',
+            id: 'province'
+        },
+        callback: function() {
+            console.log('ok');
+        }
+    });
+
+    cityPicker.init();
 </script>
 
 </html>

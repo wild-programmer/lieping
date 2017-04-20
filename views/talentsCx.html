@@ -28,7 +28,7 @@
                     <li><a href="">联系我们</a></li>
                     <li><a href="./personalUser.html">个人用户</a></li>
                     <span>|</span>
-                    <li><a href="">企业用户</a></li>
+                    <li><a href="./firmUser.html">企业用户</a></li>
                 </ul>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <!--大图片-->
     <div class="dImage">
         <div class="img_box">
-            <img src="../public/uploade/16sucai_201403151248.png" alt="" width="100%">
+            <img src="../public/uploade/rencai.png" alt="" width="100%">
         </div>
     </div>
 
@@ -51,78 +51,98 @@
             <div class="search_fanwei clearfix">
                 <span class="search_text_r">搜索范围 :</span>
                 <span class="check_icon checkd_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdball" checked='checked'>
                 </span>
                 <span>全部人才</span>
                 <span class="check_icon ">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdball">
                 </span>
                 <span>精英人才</span>
                 <span class="check_icon ">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdball">
                 </span>
                 <span>白领人才</span>
             </div>
             <div class="search_gjc clearfix">
-                <span class="search_text_r">关键词 :</span>
-                <input type="text" placeholder=" &nbsp 可搜索姓名">
-                <span class="check_icon checkd1_icon checkd_1_icon search_position">
-                     <input type="checkbox" class="checkd">
-                </span>
-                <span>包含任意关键词</span>
-                <span class="search_text_r margin-left">行业 :</span>
-                <input type="text" placeholder=" &nbsp 请选择行业">
+                <div class="search_gjc_floatLef clearfix">
+                    <span class="search_text_r guanjianci">关键词 :</span>
+                    <input type="text" placeholder=" &nbsp 可搜索姓名">
+                    <span class="check_icon checkd1_icon checkd_1_icon search_position">
+                     <input type="checkbox" class="checkd checkdcull" checked='checked'>
+                    </span>
+                    <span>包含任意关键词</span>
+                </div>
+
+                <div class="search_gjc_floatLeft clearfix">
+                    <span class="search_text_r margin-left">行业 :</span>
+                    <input type="text" placeholder=" &nbsp 请选择行业">
+                </div>
+
             </div>
             <div class="search_gjc clearfix">
-                <span class="search_text_r">地区 :</span>
-                <input type="text" placeholder=" &nbsp 请选择地区">
-                <span class="check_icon  checkd_1_icon search_position">
-                     <input type="checkbox" class="checkd">
-                </span>
-                <span>包含期望工作地区</span>
-                <span class="search_text_r margin-left1">职能 :</span>
-                <input type="text" placeholder=" &nbsp 请选择职能">
+                <div class="search_gjc_floatLef clearfix">
+                    <span class="search_text_r guanjianci">地区 :</span>
+                    <input type="text" placeholder=" &nbsp 请选择地区">
+                    <span class="check_icon  checkd_1_icon search_position">
+                     <input type="checkbox" class="checkd checkdcull">
+                    </span>
+                    <span>包含期望工作地区</span>
+                </div>
+                <div class="search_gjc_floatLeft clearfix">
+                    <span class="search_text_r margin-left1">职能 :</span>
+                    <input type="text" placeholder=" &nbsp 请选择职能">
+                </div>
             </div>
 
             <div class="search_fanwei clearfix">
                 <span class="search_text_r">学历 :</span>
-                <span class="check_icon checkd1_icon checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                <span class="check_icon checkd_1_icon checkd1_icon">
+                     <input type="checkbox" class="checkd checkdcula" checked='checked'>
                 </span>
                 <span>博士后</span>
                 <span class="check_icon  checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdcula">
                 </span>
                 <span>博士</span>
                 <span class="check_icon  checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdcula">
                 </span>
                 <span>硕士</span>
                 <span class="check_icon  checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdcula">
                 </span>
                 <span>本科</span>
                 <span class="check_icon  checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdcula">
                 </span>
                 <span>大专</span>
                 <span class="check_icon  checkd_1_icon">
-                     <input type="checkbox" class="checkd">
+                     <input type="checkbox" class="checkd checkdcula">
                 </span>
                 <span>高中及以下学历</span>
             </div>
             <div class="search_Nx clearfix">
                 <div class="search_text_r">工作年限 :</div>
                 <div class="search_xiala clearfix">
-                    <span>不限</span>
-                    <span></span>
+                    <span class="xiala_content">不限</span>
+                    <span class="xiala_show"></span>
+                    <div class="contqz_xiala_oryue">
+                        <li class="lp_yearmo">一周内</li>
+                        <li class="lp_moseney">一月内</li>
+                        <li class="lp_moseney">待定</li>
+                    </div>
                 </div>
             </div>
             <div class="search_Nx clearfix">
                 <div class="search_text_r">薪资要求 :</div>
                 <div class="search_xiala clearfix">
-                    <span>不限</span>
-                    <span></span>
+                    <span class="xiala_content">不限</span>
+                    <span class="xiala_show"></span>
+                    <div class="contqz_xiala_oryue">
+                        <li class="lp_yearmo">一周内</li>
+                        <li class="lp_moseney">一月内</li>
+                        <li class="lp_moseney">待定</li>
+                    </div>
                 </div>
             </div>
             <div class="search_Tj clearfix">
@@ -334,5 +354,7 @@
 
 
 </body>
+<script src="../public/assets/jquery-1.12.4.js"></script>
+<script src="../public/script/talentsCx.js"></script>
 
 </html>

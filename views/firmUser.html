@@ -47,10 +47,10 @@
                     <li><a href="../index.html">首页</a></li>
                     <li><a href="./talentsCx.html">人才查询</a></li>
                     <li><a href="./firmCx.html">企业查询</a></li>
-                    <li><a href="">联系我们</a></li>
-                    <li><a href="" style="color:#e95513">个人用户</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                    <li><a href="./personalUser.html">个人用户</a></li>
                     <span>|</span>
-                    <li><a href="">企业用户</a></li>
+                    <li><a href="javascript:;" style="color:#e95513">企业用户</a></li>
                 </ul>
             </div>
         </div>
@@ -101,11 +101,13 @@
                 <div class="continer_zpzw clearfix">
                     <p class="outsidep">基本信息</p>
                     <!--此处为简历-初始化状态下 顶部横条的右侧图标显示-0状态 可点击-->
+                    <span class="outsidep_shanchu"></span>
+                    <span class="outsidep_xiugai"></span>
                 </div>
                 <!--基本信息-->
                 <div class="continer_content clearfix">
                     <div class="continer_content001">
-                        <div class="firmUserImg">
+                        <div class="firmUserImg1 firmUserImg">
                             <h1>温馨提示</h1>
                             <h2>您可以上传公司图片</h2>
                         </div>
@@ -170,23 +172,52 @@
                     </div>
                     <div class="setUp_buttonbox">
                         <button type="button" class="firmUser_bc">保存</button>
-                        <button type="button" class="firmUser_bc">取消</button>
+                        <button type="button" class="firmUser_qx">取消</button>
+                    </div>
+                </div>
+                <!--状态二-->
+                <div class="continer_content2 continer_content1 clearfix" style="display:none">
+                    <div class="continer_contentimgl">
+                        <div class="continer_contentimg">
+                            <img src="../public/uploade/rongzhijia.png" alt="">
+                        </div>
+                        <p>
+                            融之家金融信息服务有限公司
+                        </p>
+                    </div>
+                    <div class="continer_contentimgr">
+                        <p>
+                            融之家成立于2015年，总部位于上海。依托庞大的征信数据集、先进的数据挖掘技术和智能搜索技术，帮助借款用户通过手机轻松实现贷款需求，帮助房贷机构降低运营获客成本。
+                        </p>
+                        <p>
+                            平台为借款人提供贷款搜索比价服务，帮助借款人以最低成本的完成贷款；同时，为银行及金融机构寻找匹配的信贷客户。 融之家为个人和小微企业免费提供正规的贷款渠道，通过“大数据智能匹配”功能，将借款用户的个人信息、贷款需求与贷款产品进行智能匹配，借款人可以根据自己的喜好，选择相应的贷款产品，帮助借款人低成本得完成贷款。
+                        </p>
+                        <p>
+                            股东介绍：
+                        </p>
+                        <p>
+                            创东方—— 是一家专业从事创业投资和资产管理的投资机构，中国创投委2013年度优秀创投机构金奖获得者，2016年度“中国最佳回报中资创业投资机构”TOP10。<br> 赛富—— 赛富投资基金是一家领先的为亚太地区的高成长性企业提供资金支持的私募股权公司，赛富目前管理总规模近60亿人民币及40亿美元的投资基金。<br> 网贷之家 —— 国内最有影响力、最专业的互联网金融门户网站。<br> 优势资本 —— 最早进入国的以拟上市（Pre- IPO）企业私募股权为主要投资对象的投资机构之一。
+                            <br>名川资本 —— 主要专注于 Pre-A及A轮阶段的TMT投资，团队成员均来自于业内一线基金，拥有丰富的投资经验和专业知识。
+                        </p>
+
                     </div>
                 </div>
                 <!--企业证明-->
                 <div class="continer_zpzw clearfix">
                     <p class="outsidep">企业证明</p>
+                    <span class="outsidep_shanchu"></span>
+                    <span class="outsidep_xiugai"></span>
                 </div>
                 <div class="continer_content clearfix">
                     <div class="continer_content002 continer_content001">
-                        <div class="firmUserImg">
+                        <div class="firmUserImg2 firmUserImg">
                             <h1>温馨提示</h1>
                             <h2>您可以上传公司图片</h2>
                         </div>
                         <div class="firmUserImgB">
                             <div class="firmUserfile">
                                 <span>上传图片</span>
-                                <input type="file">
+                                <input type="file" class="updata3">
                             </div>
                         </div>
                     </div>
@@ -227,13 +258,19 @@
                     </div>
                     <div class="setUp_buttonbox">
                         <button type="button" class="firmUser_bc">保存</button>
-                        <button type="button" class="firmUser_bc">取消</button>
+                        <button type="button" class="firmUser_qx">取消</button>
                     </div>
                 </div>
-
+                <div class="continer_content21 continer_content1 clearfix" style="display:none">
+                    <div class="continer_contentimg">
+                        <img src="../public/uploade/zs1.png" alt="">
+                    </div>
+                </div>
                 <!--联系方式-->
                 <div class="continer_zpzw clearfix">
                     <p class="outsidep">联系方式</p>
+                    <span class="outsidep_shanchu"></span>
+                    <span class="outsidep_xiugai"></span>
                 </div>
                 <div class="continer_content clearfix">
 
@@ -268,10 +305,29 @@
                     </div>
                     <div class="setUp_buttonbox">
                         <button type="button" class="firmUser_bc">保存</button>
-                        <button type="button" class="firmUser_bc">取消</button>
+                        <button type="button" class="firmUser_qx">取消</button>
                     </div>
                 </div>
-
+                <div class="continer_content22 continer_content1" style="display:none">
+                    <p>
+                        联系人：艾米
+                    </p>
+                    <p>
+                        手机 / Mobile:15711462371
+                    </p>
+                    <p>
+                        电话 / Tel:010-82332922-8025
+                    </p>
+                    <p>
+                        电子邮箱：editor@cyzone.cn
+                    </p>
+                    <p>
+                        公司地址：上海市闵行区田林路1036号科技绿洲三期16号楼4层(靠近合川路)
+                    </p>
+                    <p>
+                        http://www.rongzj.com/
+                    </p>
+                </div>
             </div>
             <!--<div class="fenye">
                     <ul class="clearfix">

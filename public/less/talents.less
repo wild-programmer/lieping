@@ -106,6 +106,9 @@
                     border: 1px solid @bar;
                     margin-right: 20px;
                 }
+                .checkdcull{
+                    margin-right: 0px;
+                }
                 .checkd{
                     width: 14px;
                    height: 14px;
@@ -136,6 +139,7 @@
                     width: 300px;
                     height: 40px;
                     line-height: 40px;
+                    position: relative;
                     span:nth-child(1){
                         float: left;
                         display: block;
@@ -169,13 +173,26 @@
                 .search_xiala:hover{
                     cursor: pointer;
                 }
+                .contqz_xiala_oryue{
+                    display: none;
+                    position: absolute;
+                    left: -1px;
+                    top: 40px;
+                    width: 300px;
+                    background-color: white;
+                    z-index: 10;
+                    border: 1px solid @bar;
+                    li{
+                       text-indent: 20px;
+                    }
+                }
         }
         .search_Tj{
             margin-top: 35px;
             width: 1200px;
             height: 40px;
             line-height: 40px;
-            border: 1px solid #333333;
+            border: 1px solid @bar;
             .search_checkd ,.search_yxtj{
                 display: inline-block;
                 margin-left: 25px;    
@@ -278,7 +295,9 @@
     }
 }
 
-
+.search_gjc_floatLef{
+    float: left;
+}
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -287,5 +306,21 @@
         float: left;
         margin: 0 13px;
     }
-
+    .content .continer .search_gjc .margin-left1,
+     .content .continer .search_gjc .margin-left{
+      margin-left: 0px ;
+  }
+  .content .continer .search_gjc input{
+      margin-right: 0px;
+  }
+  .content .continer .search_gjc span{
+      margin-left: 20px;
+  }
+  .search_gjc_floatLeft{
+      float: left;
+      margin-top: 25px;
+  }
+  .content .continer .search_gjc .guanjianci{
+      margin-left: 0px;
+  }
 }

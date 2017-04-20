@@ -12,9 +12,14 @@ body {
     margin-bottom: 30px;
 }
 
+.header .col-sm-8 {
+    padding: 0px;
+}
+
 .header ul {
     font-size: 20px;
     line-height: 50px;
+    float: right;
 }
 
 .header ul li {

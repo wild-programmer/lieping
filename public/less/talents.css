@@ -99,6 +99,9 @@
   border: 1px solid #dcdcdc;
   margin-right: 20px;
 }
+.content .continer .search_gjc .checkdcull {
+  margin-right: 0px;
+}
 .content .continer .search_gjc .checkd {
   width: 14px;
   height: 14px;
@@ -128,6 +131,7 @@
   width: 300px;
   height: 40px;
   line-height: 40px;
+  position: relative;
   border: 1px solid #dcdcdc;
 }
 .content .continer .search_Nx .search_xiala span:nth-child(1) {
@@ -161,12 +165,25 @@
 .content .continer .search_Nx .search_xiala:hover {
   cursor: pointer;
 }
+.content .continer .search_Nx .contqz_xiala_oryue {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: 40px;
+  width: 300px;
+  background-color: white;
+  z-index: 10;
+  border: 1px solid #dcdcdc;
+}
+.content .continer .search_Nx .contqz_xiala_oryue li {
+  text-indent: 20px;
+}
 .content .continer .search_Tj {
   margin-top: 35px;
   width: 1200px;
   height: 40px;
   line-height: 40px;
-  border: 1px solid #333333;
+  border: 1px solid #dcdcdc;
 }
 .content .continer .search_Tj .search_checkd,
 .content .continer .search_Tj .search_yxtj {
@@ -266,6 +283,9 @@
 .content .continer .search_content .fenye {
   bottom: -100px;
 }
+.search_gjc_floatLef {
+  float: left;
+}
 @media (max-width: 1240px) {
   .continer {
     width: 970px;
@@ -273,5 +293,22 @@
   .header ul li {
     float: left;
     margin: 0 13px;
+  }
+  .content .continer .search_gjc .margin-left1,
+  .content .continer .search_gjc .margin-left {
+    margin-left: 0px ;
+  }
+  .content .continer .search_gjc input {
+    margin-right: 0px;
+  }
+  .content .continer .search_gjc span {
+    margin-left: 20px;
+  }
+  .search_gjc_floatLeft {
+    float: left;
+    margin-top: 25px;
+  }
+  .content .continer .search_gjc .guanjianci {
+    margin-left: 0px;
   }
 }
