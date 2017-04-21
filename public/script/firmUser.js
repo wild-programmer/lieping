@@ -205,3 +205,49 @@ $('.outsidep_xiugai').each(function(i, el) {
         $('.continer_content')[this.index].style.display = 'block';
     })
 })
+
+
+//我的评价下拉
+$('.pingjia_topRclk').click(function() {
+    document.querySelector('.pingjia_topRB').style.display = 'block';
+    $('.pingjia_topRclk').css({
+        'transform': 'rotate(-135deg)',
+        'borderColor': '#e95513',
+        'marginTop': '7px'
+    })
+})
+$('.pingjia_topRB li').each(function(i, el) {
+    $(el).on('click', function() {
+        $('.pingjia_topRclk').siblings('i').html($(this).html());
+        $('.pingjia_topRB').toggle();
+        $('.pingjia_topRclk').css({
+            'transform': 'rotate(45deg)',
+            'borderColor': '#666',
+            'marginTop': ''
+        });
+    })
+})
+
+// 个人申诉
+$('.shensu_table').each(function(i, el) {
+    $(el).on('click', function() {
+        $('.lp_tousu').css('display', 'block');
+    })
+})
+$('.lp_tousu_tj').click(function() {
+    $('.lp_tousu').css('display', 'none');
+    $('.pingjia_contentF').css('display', 'block')
+})
+
+// 侧边栏选项卡
+$('.ceb_navul li').each(function(i, el) {
+    $(el).click(function() {
+        $(this).append('<m></m>').siblings().children('m').remove().end().end().addClass('ceb_navback').siblings().removeClass('ceb_navback');
+        var elname = $(this).attr('data-navname');
+        if (elname == 'resume_tianx') {
+            $('#' + elname).css('display', 'block').next().css('display', 'none');
+        } else if (elname == 'resume_pingj') {
+            $('#' + elname).css('display', 'block').prev().css('display', 'none');
+        }
+    })
+})

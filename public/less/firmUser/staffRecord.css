@@ -1,0 +1,108 @@
+@import '../base.css';
+@import '../common.css';
+.dImage {
+  height: 6px;
+  background-color: #e95513;
+}
+.Record_content .Record_contentT {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-left: 5px solid #e95513;
+  font-size: 18.4px;
+}
+.Record_content .Record_contentT .back_show {
+  display: inline-block;
+  float: left;
+  margin-right: 17px;
+  width: 14px;
+  height: 15px;
+  margin-left: 25px;
+  transform: rotate(135deg);
+  position: relative;
+  border: 1px solid #666;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.Record_content .Record_contentT .back_show:before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 13px;
+  background-color: white;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -9px;
+  top: -4px;
+}
+.Record_content .Record_contentC .Record_contentCl {
+  float: left;
+}
+.Record_content .Record_contentC .Record_contentCl img {
+  width: 124px;
+  height: 164px;
+}
+.Record_content .Record_contentC .Record_contentCr {
+  margin-left: 190px;
+}
+.Record_content .Record_contentC .Record_contentCr p {
+  font-size: 18px;
+}
+.Record_content .Record_contentC .Record_contentCr p .cull {
+  display: block;
+  float: right;
+  width: 16px;
+  height: 16px;
+  background-image: url('../../../images/onlypj.png');
+  margin-top: 5px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC {
+  height: 30px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC ul li {
+  float: left;
+  margin-right: 15px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC ul span {
+  float: left;
+  display: block;
+  width: 1px;
+  height: 20px;
+  margin-right: 15px;
+  background-color: #dcdcdc;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 {
+  height: 25px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 li {
+  float: left;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 li:first-child {
+  margin-left: 35px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 li:last-child {
+  margin-left: 58px;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 .back_show {
+  display: inline-block;
+  float: left;
+  margin-right: 17px;
+  width: 14px;
+  height: 15px;
+  margin-left: 25px;
+  transform: rotate(45deg);
+  position: relative;
+  border: 1px solid #666;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.Record_content .Record_contentC .Record_contentCr .Record_contentCrC1 .back_show:before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 13px;
+  background-color: white;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -9px;
+  top: -4px;
+}
