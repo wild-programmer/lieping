@@ -398,6 +398,10 @@ var input = document.querySelector('input[type=file]'); //input 标签
 var result = document.querySelector('.reader_fileboxCT');
 var filebox = document.querySelector('.reader_filebox');
 var bc = document.querySelector('.reader_file_bc');
+
+$('.ceb_active').next().click(function() {
+    $('.ceb_nav_img').html('');
+})
 document.querySelector('.ceb_updata').onclick = function() {
     filebox.style.display = 'block';
 }

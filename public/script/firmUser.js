@@ -63,11 +63,19 @@ var upheader = function() {
         result.innerHTML = document.querySelector('.ceb_nav_top').innerHTML;
     }
     document.querySelector('.reader_file_bc').onclick = function() {
-            filebox.style.display = 'none';
-            var img = result.innerHTML;
-            $('.ceb_nav_top').children('img').remove();
-            $('.ceb_nav_top').append(img);
-        }
+        filebox.style.display = 'none';
+        var img = result.innerHTML;
+        $('.ceb_nav_top').children('img').remove();
+        $('.ceb_nav_top').append(img);
+    }
+    $('.ceb_active').next().click(function() {
+            if ($('.ceb_nav_top').children('img')) {
+                $('.ceb_nav_top').children('img').remove();
+            }
+            if ($('.reader_fileboxCT').children('img')) {
+                $('.reader_fileboxCT').children('img').remove();
+            }
+        })
         // 给按钮注册点击事件
         //  var result = document.getElementById("result");
 
@@ -199,6 +207,8 @@ $('.firmUser_bc').each(function(i, el) {
 $('.outsidep_xiugai').each(function(i, el) {
     el.index = i;
     $(el).click(function() {
+        $('.firmUserImg')[this.index].style.paddingTop = '0px';
+        $('.firmUserImg')[this.index].innerHTML = $('.continer_contentimg')[this.index].innerHTML;
         $('.outsidep_shanchu')[this.index].style.display = 'none';
         $('.outsidep_xiugai')[this.index].style.display = 'none';
         $('.continer_content1')[this.index].style.display = 'none';
@@ -207,37 +217,37 @@ $('.outsidep_xiugai').each(function(i, el) {
 })
 
 
-//我的评价下拉
-$('.pingjia_topRclk').click(function() {
-    document.querySelector('.pingjia_topRB').style.display = 'block';
-    $('.pingjia_topRclk').css({
-        'transform': 'rotate(-135deg)',
-        'borderColor': '#e95513',
-        'marginTop': '7px'
-    })
-})
-$('.pingjia_topRB li').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.pingjia_topRclk').siblings('i').html($(this).html());
-        $('.pingjia_topRB').toggle();
-        $('.pingjia_topRclk').css({
-            'transform': 'rotate(45deg)',
-            'borderColor': '#666',
-            'marginTop': ''
-        });
-    })
-})
+// //我的评价下拉
+// $('.pingjia_topRclk').click(function() {
+//     document.querySelector('.pingjia_topRB').style.display = 'block';
+//     $('.pingjia_topRclk').css({
+//         'transform': 'rotate(-135deg)',
+//         'borderColor': '#e95513',
+//         'marginTop': '7px'
+//     })
+// })
+// $('.pingjia_topRB li').each(function(i, el) {
+//     $(el).on('click', function() {
+//         $('.pingjia_topRclk').siblings('i').html($(this).html());
+//         $('.pingjia_topRB').toggle();
+//         $('.pingjia_topRclk').css({
+//             'transform': 'rotate(45deg)',
+//             'borderColor': '#666',
+//             'marginTop': ''
+//         });
+//     })
+// })
 
-// 个人申诉
-$('.shensu_table').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.lp_tousu').css('display', 'block');
-    })
-})
-$('.lp_tousu_tj').click(function() {
-    $('.lp_tousu').css('display', 'none');
-    $('.pingjia_contentF').css('display', 'block')
-})
+// // 个人申诉
+// $('.shensu_table').each(function(i, el) {
+//     $(el).on('click', function() {
+//         $('.lp_tousu').css('display', 'block');
+//     })
+// })
+// $('.lp_tousu_tj').click(function() {
+//     $('.lp_tousu').css('display', 'none');
+//     $('.pingjia_contentF').css('display', 'block')
+// })
 
 // 侧边栏选项卡
 $('.ceb_navul li').each(function(i, el) {

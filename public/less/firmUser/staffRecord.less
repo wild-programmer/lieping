@@ -42,6 +42,15 @@
         }
     }
     .Record_contentC{
+        padding-top: 30px;
+        border-top: 1px solid @bar;
+        >p{
+            padding-left: 20px;
+            border-left: 5px solid @colcor;
+            height: 20px;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
         .Record_contentCl{
             float: left;
             img{
@@ -63,7 +72,8 @@
                 }
             }
             .Record_contentCrC{
-                height: 30px;
+                height: 20px;
+                margin: 20px 0;
                 ul{
                     li{
                         float: left;
@@ -84,6 +94,22 @@
                 height: 25px;
                 li{
                     float: left;
+                    position: relative;
+                }
+                li:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: -35px;
+                    top: 0px;
+                    width: 22px;
+                    height: 22px;
+                }
+                li:first-child:before{
+                    background-image: url('../../../images/email.png')
+                }
+                li:last-child:before{
+                    background-image: url('../../../images/phoneico.png')
                 }
                 li:first-child{
                     margin-left: 35px;
@@ -116,6 +142,36 @@
                     top: -4px;
                 }
             }
+            .Record_chak{
+                margin-top: 35px;
+                text-align: right;
+                .back_show{
+                    display: inline-block;
+                    margin-right: 17px;
+                    width: 14px;
+                    height: 15px;
+                    margin-left: 8px;
+                    transform: rotate(45deg);
+                    position: relative;
+                    top: -2px;
+                    left: 0;
+                    border: 1px solid #666;
+                    margin-top: 6px;
+                    cursor: pointer;
+                }
+                .back_show:before{
+                    content: '';
+                    display: inline-block;
+                    width: 21px;
+                    height: 15px;
+                    background-color: white;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    left: -9px;
+                    top: -7px;
+                }
+            }
         }
     }
 }
+

@@ -9,19 +9,11 @@
     <link rel="shortcut icon" href="../lieping.ico">
     <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../public/less/firmUser.css">
-
+    <script src="../public/assets/jquery-1.12.4.js"></script>
 </head>
 
 <body>
-    <!--申诉框-->
-    <div class="lp_tousu">
-        <h2>申诉</h2>
-        <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok"> </textarea>
-        <div class="lp_tousu_foot">
-            <p>可输入<span>500</span>字</p>
-            <button type="button" class="lp_tousu_tj">提交申诉</button>
-        </div>
-    </div>
+
     <!--文件读取-->
     <div class="reader_filebox">
         <div class="reader_fileboxT">
@@ -75,7 +67,7 @@
             <div class="col-sm-2 ceb_nav">
                 <div class="ceb_nav_top">
                     <!--<div class="ceb_nav_img"></div>-->
-                    <p class="ceb_xiugai "><i class="ceb_active"><a href="javascript:;"  class="ceb_updata">修改</a></i><i><a href="">删除</a></i></p>
+                    <p class="ceb_xiugai "><i class="ceb_active"><a href="javascript:;"  class="ceb_updata">修改</a></i><i><a href="javascript:;">删除</a></i></p>
                 </div>
                 <div class="ceb_nav_topB">
                     <ul class="ceb_navul">
@@ -84,10 +76,14 @@
                             <m></m>
                         </li>
                         <li>
-                            <p>员工档案</p>
+                            <a href="./firmUser/sraffDanga.html">
+                                <p>员工档案</p>
+                            </a>
                         </li>
                         <li>
-                            <p>员工评价</p>
+                            <a href="./firmUser/staffpingj.html">
+                                <p>员工评价</p>
+                            </a>
                         </li>
                         <li>
                             <p>发布招聘</p>
@@ -95,8 +91,10 @@
                         <li>
                             <p>简历管理</p>
                         </li>
-                        <li data-navname="resume_pingj">
-                            <p>评价申诉</p>
+                        <li>
+                            <a href="./firmUser/staffshenS.html">
+                                <p>评价申诉</p>
+                            </a>
                         </li>
                         <li>
                             <p>消息管理</p>
@@ -106,9 +104,8 @@
                         <span></span>
                     </div>
                 </div>
-
             </div>
-            <div class="col-sm-10 col-sm-10padding" id="resume_tianx" style="display:none">
+            <div class="col-sm-10 col-sm-10padding" id="resume_tianx">
 
                 <div class="continer_zpzw clearfix">
                     <p class="outsidep">基本信息</p>
@@ -341,276 +338,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-10 col-sm-10padding" id="resume_guanl" style="display:none">
-                <div class="resume_guanlT">
-                    <p>数据导入</p>
-                </div>
-                <!--<table class="resume_guanlTable">
-                    <div class="table_top">
-                        <ul>
-                            <li>姓名</li>
-                            <li>性别</li>
-                            <li>部门</li>
-                            <li>岗位</li>
-                            <li>详细资料</li>
-                        </ul>
-                    </div>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>3</td>
-                    </tr>
-                </table>-->
-                <table class="resume_guanlTable">
-                    <th></th>
-                    <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-sm-10 col-sm-10padding" id="resume_yuangpj">
-                <div class="resume_yuangT clearfix">
-                    <li></li>
-                    <input type="text" placeholder="&nbsp &nbsp部门或姓名">
-                </div>
-                <div class="resume_yuangC">
-                    <div class="resume_yuangCT">
-                        <p>员工评价</p>
-                    </div>
-                    <div class="resume_yuangCTC">
-                        <span class="resume_cpostion"></span>
-                        <div class="resume_yuangCTCl">
-                            <img src="../public/uploade/ox.png" alt="">
-                            <p>刘珂</p>
-                            <p>市场部-金融顾问</p>
-                        </div>
-                        <div class="resume_yuangCTCr">
-                            <div class="star_top clearfix">
-                                <span>综合评价：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>工作能力：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>考勤情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>人际关系：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>性格情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_footer clearfix">
-                                <p>评价：</p>
-                                <p>能够遵守公司纪律，不迟到、不早退，在工作时间内能坚守岗位，对工作负责；工作上主观能动性强，能够较为全面的掌握本岗位业务， 能够较为迅速的执行领导的具体工作要求，并能很好的配合好其它部门完成工作；思想认识上主观辨别能力与分析能力较强，对待问题 能准确及时辨别对错，思想上成熟；工作上能够主动的进行学习，并且在具体工作中能积极发挥创造性思维， 注重观察，善于发现问题、提出问题，提出解决办法，并时而与其它同事探讨管理水平的如何提高等问题，考虑问题、处理问题稳妥。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="resume_yuangC">
-                    <div class="resume_yuangCTC">
-                        <div class="resume_yuangCTCl">
-                            <img src="../public/uploade/ox.png" alt="">
-                            <p>刘珂</p>
-                            <p>市场部-金融顾问</p>
-                        </div>
-                        <div class="resume_yuangCTCr">
-                            <div class="star_top clearfix">
-                                <span>综合评价：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>工作能力：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>考勤情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>人际关系：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>性格情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_footer clearfix">
-                                <p>评价：</p>
-                                <textarea name="CommentContent" id="CommentContent" maxlength="500" class=" classFormEle_ok"></textarea>
-                            </div>
-                            <div class="star_footerT">
-                                <button>提交评价</button>
-                                <p>可输入500字</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume_yuangC">
-                    <div class="resume_yuangCTC">
-                        <div class="resume_yuangCTCl">
-                            <img src="../public/uploade/ox.png" alt="">
-                            <p>刘珂</p>
-                            <p>市场部-金融顾问</p>
-                        </div>
-                        <div class="resume_yuangCTCr">
-                            <div class="star_top clearfix">
-                                <span>综合评价：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>工作能力：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>考勤情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_center">
-                                <span>人际关系：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                                <span>性格情况：</span>
-                                <span class="wx_back wx_back2">
-                                    <m class="wx2_back wx_back2"></m>
-                                </span>
-                            </div>
-                            <div class="star_footer clearfix">
-                                <p>评价：</p>
-                                <textarea name="CommentContent" id="CommentContent" maxlength="500" class=" classFormEle_ok"></textarea>
-                            </div>
-                            <div class="star_footerT">
-                                <button>提交评价</button>
-                                <p>可输入500字</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-10 col-sm-10padding" id="resume_pingj" style="padding-bottom:100px;display:none">
-                <div class="pingjia_top clearfix">
-                    <p>公司评价</p>
-                    <div class="pingjia_topR">
-                        <span class="pingjia_topRclk"></span> <i>全部</i>
-                        <div class="pingjia_topRB">
-                            <li>任职企业</li>
-                            <li>面试企业</li>
-                            <li>其他</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="pingjia_content">
-                    <div class="pingjia_contentT clearfix">
-                        <li>来自</li>
-                        <li class="pingjia_jbteb"><b>公司员工-刘**</b>(上海)</li>
-                        <li>2017/03.24 &nbsp &nbsp 14:29</li>
-                        <li class="shensu_table">申诉</li>
-
-                    </div>
-                    <div class="pingjia_contentC clearfix">
-                        <p class="wxpingjh6">综合评价：</p>
-                        <span class="wx_back wx_back2">
-                                <m class="wx2_back wx_back2"></m>
-                            </span>
-                    </div>
-                    <div class="pingjia_contentB clearfix">
-                        <p class="pingjia_contentB1">评语：</p>
-                        <p class="pingjia_contentB2">1：能够遵守公司纪律，不迟到、不早退，在工作时间内能坚守岗位，对工作负责；工作上主观能动性强，能够较为全面的掌握本岗位业务，能够较为迅速的执行领导的具体工作要求，并能很好的配合好其它部门完成工作；思想认识上主观辨别能力与分析能力较强，对待问题能准确及时辨别对错，思想上成熟；工作上能够主动的进行学习，并且在具体工作中能积极发挥创造性思维，注重观察，善于发现问题、提出问题，提出解决办法，并时而与其它同事探讨管理水平的如何提高等问题，考虑问题、处理问题稳妥；上能很快的融入到整个团队之中，能与其它同事建立良好的。</p>
-                    </div>
-                </div>
-                <div class="pingjia_content">
-                    <div class="pingjia_contentT clearfix">
-                        <li>来自</li>
-                        <li class="pingjia_jbteb"><b>公司面试者-李**</b>(上海)</li>
-                        <li>2017/03.24 &nbsp &nbsp 14:29</li>
-                        <li class="shensu_tableoll">已申诉</li>
-
-                    </div>
-                    <div class="pingjia_contentC clearfix">
-                        <p class="wxpingjh6">综合评价：</p>
-                        <span class="wx_back wx_back2">
-                                <m class="wx2_back wx_back2"></m>
-                            </span>
-                    </div>
-                    <div class="pingjia_contentB clearfix">
-                        <p class="pingjia_contentB1">评语：</p>
-                        <p class="pingjia_contentB2">1：能够遵守公司纪律，不迟到、不早退，在工作时间内能坚守岗位，对工作负责；工作上主观能动性强，能够较为全面的掌握本岗位业务，能够较为迅速的执行领导的具体工作要求，并能很好的配合好其它部门完成工作；思想认识上主观辨别能力与分析能力较强，对待问题能准确及时辨别对错，思想上成熟；工作上能够主动的进行学习，并且在具体工作中能积极发挥创造性思维，注重观察，善于发现问题、提出问题，提出解决办法，并时而与其它同事探讨管理水平的如何提高等问题，考虑问题、处理问题稳妥；上能很快的融入到整个团队之中，能与其它同事建立良好的。</p>
-                    </div>
-                </div>
-                <div class="pingjia_contentF">
-                    <div class="pingjia_content">
-                        <div class="pingjia_contentT clearfix">
-                            <li>来自</li>
-                            <li class="pingjia_jbteb"><b>公司面试者-李**</b>(上海)</li>
-                            <li>2017/03.24 &nbsp &nbsp 14:29</li>
-                            <li class="shensu_tableoll">已申诉</li>
-
-                        </div>
-                        <div class="pingjia_contentC clearfix">
-                            <p class="wxpingjh6">综合评价：</p>
-                            <span class="wx_back wx_back2">
-                                <m class="wx2_back wx_back2"></m>
-                            </span>
-                        </div>
-                        <div class="pingjia_contentB clearfix">
-                            <p class="pingjia_contentB1">评语：</p>
-                            <p class="pingjia_contentB3">1：能够遵守公司纪律，不迟到、不早退，在工作时间内能坚守岗位，对工作负责；工作上主观能动性强，能够较为全面的掌握本岗位业务，能够较为迅速的执行领导的具体工作要求，并能很好的配合好其它部门完成工作；思想认识上主观辨别能力与分析能力较强，对待问题能准确及时辨别对错，思想上成熟；工作上能够主动的进行学习，并且在具体工作中能积极发挥创造性思维，注重观察，善于发现问题、提出问题，提出解决办法，并时而与其它同事探讨管理水平的如何提高等问题，考虑问题、处理问题稳妥；上能很快的融入到整个团队之中，能与其它同事建立良好的。</p>
-                        </div>
-                        <div class="pingjia_contentFB">
-                            <p>申诉结果<span></span></p>
-                        </div>
-                    </div>
-                    <div class="pingjia_contentFF">
-                        <p>暂时没有处理结果！</p>
-                    </div>
-                </div>
-            </div>
-            <!--<div class="fenye">
-                    <ul class="clearfix">
-                        <span>上一页</span>
-                        <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">4</a></li>
-                        <li class="fy_doudian"><a href="">......</a></li>
-                        <span>下一页</span>
-                    </ul>
-                </div>-->
         </div>
-    </div>
-
     </div>
     <div class="back_ccc" style="height:4px;margin-top:200px;  background-color: #e95513"></div>
     <!--底部关于我们-->
@@ -660,7 +388,6 @@
 
 
 </body>
-<script src="../public/assets/jquery-1.12.4.js"></script>
 <script src="../public/script/firmUser.js"></script>
 
 </html>
