@@ -38,29 +38,43 @@ $('.checkdcull').each(function(i, el) {
     })
 })
 
-//下拉展示
-$('.contqz_xiala_oryue').each(function(i, el) {
-    el.index = i;
-    $(el).children('li').each(function(i, el) {
-        el.onclick = function() {
-            document.querySelectorAll('.xiala_content')[$(el).parent()[0].index].innerHTML = this.innerHTML;
-            $(el).parent().css('display', 'none');
-            $($('.xiala_show')[$(el).parent()[0].index]).css({
-                'transform': 'rotate(45deg)',
-                'top': '0px',
-                'border-color': '#666'
-            })
-        }
-    })
-})
-$('.xiala_show').each(function(i, el) {
-    el.onclick = function() {
-        el.nextElementSibling.style.display = 'block';
-        $(this).css({
-            'transform': 'rotate(-135deg)',
-            'top': '9px',
-            'border-color': '#e95513'
-        })
-    }
 
+
+
+function stopPro(e) {
+    if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+
+        if (event.stopPropagation) {
+            // this code is for Mozilla and Opera 
+            event.stopPropagation();
+        } else if (window.event) {
+            // this code is for IE 
+            window.event.cancelBubble = true;
+        }
+    } else {
+        e.stopPropagation();
+    }
+}
+
+
+$('body').on('click', '.xiala_show', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    if ($('.contqz_xiala_oryue').hasClass('active')) {
+        $('.contqz_xiala_oryue').removeClass('active');
+        $('.xiala_show').removeClass('actives');
+    } else {
+        $(this).next('div').addClass('active').parent().parent().siblings().find('div').find('div').removeClass('active');
+        $(this).addClass('actives').parent().parent().parent().siblings().find('div').find('p').find('span').removeClass('active');
+    }
+});
+$('body').on('click', function() {
+    $('.contqz_xiala_oryue').removeClass('active');
+    $('.xiala_show').removeClass('actives');
+});
+$('body').on('click', '.contqz_xiala_oryue li', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    $(this).parent().siblings('.xiala_content').text($(this).text());
+    $(this).parent().removeClass('active').siblings('.xiala_show').removeClass('actives');
 })

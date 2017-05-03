@@ -1,0 +1,41 @@
+@import 'base.css';
+@import 'common.css';
+.dImage {
+  height: 6px;
+  background-color: #e95513;
+}
+.cemtent p {
+  border-left: 5px solid #e95513;
+  padding-left: 15px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.cemtent .lianxiwm {
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.cemtent .lianxiwm li {
+  margin-top: 15px;
+}
+.cemtent .lianxiwm img {
+  margin-top: 35px;
+}
+.cemtent .links {
+  margin-top: 30px;
+}
+.cemtent .links img {
+  width: 200px;
+  height: 70px;
+  margin-right: 39px;
+  margin-bottom: 27px;
+}
+@media (max-width: 1240px) {
+  .continer {
+    width: 970px;
+  }
+  .header ul li {
+    float: left;
+    margin: 0 13px;
+  }
+}

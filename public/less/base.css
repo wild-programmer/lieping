@@ -86,6 +86,12 @@ textarea {
     z-index: 11;
 }*/
 
+.one_txt_cut {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 
 /*清除浮动*/
 

@@ -54,8 +54,7 @@
             width: 200px;
             height: 200px;
             font-size: 18px;
-            background-image: url("../../images/firmLog.png");
-            background-repeat: no-repeat;
+            background-image: url("../uploade/rongzhijia.png");
             background-position: 0 187px;
              background-size: 100% 100%;
              position: relative;
@@ -247,7 +246,7 @@
             }
         }
          .setUp_contqz_xiala{
-                    width: 200px;
+                    width: 300px;
                     height: 40px;
                     border: 1px solid @bar;
                     cursor:pointer;
@@ -284,6 +283,12 @@
                         float: right;
                         border: 1px solid #666;
                     }
+                    .ceb_xialspan.actives{
+                        transform: rotate(-135deg);
+                        margin-top: 7px;
+                        background-color: white;
+                        border: 1px solid #e95513;
+                    }
                     .ceb_xialspan::before{
                         content:'';
                         display: block;
@@ -308,8 +313,11 @@
                             text-indent: 30px;
                             height: 30px;
                             line-height: 30px;
-                        }
+                        }                       
                     }
+                     .contqz_xiala_oryue.active{
+                            display: block;
+                        }
                     // 下拉日期
                     
                     .lp_xl {
@@ -323,6 +331,7 @@
                         border-radius: 3px;
                         box-shadow: 2px 2px 4px #e7e7e7;
                         display: none;
+                        margin-top: 0;
                         .mr_year {
                             width: 90px;
                             height: 158px;
@@ -337,6 +346,7 @@
                                 background-color: #fff;
                                 color: #333;
                                 text-align: center;
+                                text-indent: 0;
                             }
                             li:hover{
                                 color: #ccc;
@@ -360,6 +370,7 @@
                                     margin: 0 0 10px;
                                     border-radius: 3px;
                                     text-align: center;
+                                    text-indent: 0;
                                 }
                                 span{
                                     padding: 0 6px;
@@ -375,7 +386,79 @@
                 font-size: 14px;
             }
         
-        
+    //    所属行业
+    .suoshuhangye{
+        width: 205%;
+        background-color: white;
+        border-top: 6px solid @colcor;
+        margin-top: 40px;
+        position: relative;
+        left: -1px;
+        z-index: 111;
+        box-shadow: 0 0 10px 2px;
+        display: none;
+        .suoshuhangyetop{
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px dashed #b5b5b5;
+            span{
+                display: inline-block;
+                font-size: 14px;
+            }
+            span:first-child{
+                float: left;
+                margin-left: 27px;
+            }
+            span:last-child{
+                float: right;
+                width: 11px;
+                height: 11px;
+                background: url('../../images/updataimg.png') no-repeat ;
+                background-size: 100%;
+                vertical-align: middle;
+                margin-top: 22px;
+                margin-right: 20px;
+            }
+        }
+        .suoshuhangyecontent{
+            border-bottom: 1px dashed #b5b5b5;
+            .suoshuhangyecontentl{
+                width: 220px;
+                // height: 395px;
+                background-color: #eee;
+                float: left;
+                ul{
+                    padding-left: 1px;
+                    li{
+                        height: 25px;
+                        line-height: 25px;
+                        font-size: 14px;
+                        margin-top: 11px;
+                    }
+                    .suoshuhangyeactiv{
+                        color: @colcor;
+                        border-left: 5px solid @colcor;
+                    }
+                }
+            }
+            .suoshuhangyecontentr{
+                margin-left: 220px;
+                padding: 0 10px;
+                p{
+                    display: block;
+                    border-left: 0;
+                    width: 100%;
+                    height: none;
+                    margin-top: none;
+                    float: none;
+                    display: none;
+                    span{                        
+                        margin: 0 10px; 
+                    }
+                }
+            }
+        }
+    } 
        
     //    照片读取1
        .continer_content001{
@@ -698,7 +781,7 @@
                     margin: 0 15px;   
                 }
                 input{
-                    width: 200px;
+                    width: 300px;
                     height: 40px;
                     border: 1px solid @bar;
                 }
@@ -780,7 +863,9 @@
 }
 
 
-
+.min-width{
+    width: 333px !important;
+}
 
 
 
@@ -917,7 +1002,11 @@
         }
     }
 }
-
+.chenglTz{
+    width: 198px;
+    height: 35px;
+}
+            
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -948,10 +1037,11 @@
      margin-right: 10px;
      margin-bottom: 0px;
      height: 360px;
+     width: 280px;
  }
  .col-sm-10padding .continer_content002 .firmUserImg img,
  .col-sm-10padding .continer_content002 .firmUserImg{
-     height: 310px;
+     height: 300px;
  }
  .col-sm-10padding .continer_content002 .firmUserImgB{
      height: 50px;
@@ -972,6 +1062,12 @@
  }
  .col-sm-10padding .continer_content .continer_content04 textarea{
      width: 600px;
+ }
+ .col-sm-10padding .continer_content .continer_content07{
+     margin-right: 60px;
+ }
+ .min-width{
+     width: 290px !important;
  }
 }
 

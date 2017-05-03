@@ -13,7 +13,27 @@
 </head>
 
 <body>
+    <!--文件读取-->
+    <div class="reader_filebox">
+        <div class="reader_fileboxT">
+            <span class="updatahidden"></span>
+        </div>
+        <div class="reader_fileboxC">
+            <div class="reader_fileboxCT"></div>
+            <div class="reader_fileboxCB">
+                <div class="reader_fileboxCBT">
+                    <span>+</span><span>选择图片</span>
+                    <input type="file" value="选择图片" class="updataclick">
+                </div>
+                <p>只支持jpj,png大小不超过2M</p>
+            </div>
 
+        </div>
+        <div class="reader_fileboxB">
+            <button class="reader_file_bc">保存</button>
+            <button class="reader_file_qx">取消</button>
+        </div>
+    </div>
     <!--头部导航-->
     <div class="header">
         <div class="continer clearfix">
@@ -40,97 +60,436 @@
 
     </div>
     <!--内容部分 -->
-    <div class="Record_content">
-        <div class="continer">
-            <div class="Record_contentT">
-                <p><span class="back_show"></span>返回</p>
-            </div>
-            <div class="Record_contentC clearfix">
-                <p>基本信息</p>
-                <div class="Record_contentCl ">
-                    <img src="../../public/uploade/lke.png" alt="">
-                </div>
-                <div class="Record_contentCr">
-                    <p><span class="cull"></span> <span>刘珂</span></p>
-                    <div class="Record_contentCrC clearfix">
-                        <ul>
-                            <li>男</li>
-                            <span></span>
-                            <li>28岁（1988/12/12）</li>
-                            <span></span>
-                            <li>硕士学历</li>
-                            <span></span>
-                            <li>现居于上海市嘉定区</li>
-                            <span></span>
-                            <li>3年工作经验</li>
-                        </ul>
-                    </div>
-                    <div class="Record_contentCrC1 clearfix">
-                        <li>liuke@126.com</li>
-                        <li>177-1078-1256</li>
-                    </div>
-                    <p class="Record_chak">
-                        <m>查看更多</m> <span class="back_show"></span>
+
+    <div class="content">
+        <div class="continer clearfix">
+            <div class="col-sm-6 contentl">
+                <div class="contentl_img">
+                    <p>
+                        <a href="./sraffDanga.html">返回</a>
                     </p>
+                    <div class="contentl_herde">
+                        <img src="../../public/uploade/lke.png" alt="">
+                    </div>
+                    <ul class="clearfix">
+                        <li class="daochu">
+                            <span></span>
+                            <span>导出档案</span>
+                        </li>
+                        <li class="xiugai">
+                            <p>刘珂(liuke)</p>
+                            <p>
+                                <span class="xiug"><a href="javascript:;">修改</a></span>
+                                <span class="chac"><a href="javascript:;">删除</a></span>
+                            </p>
+                        </li>
+                        <li class="daochu ">
+                            <span class="chakxq"></span>
+                            <span>查看详情</span>
+                        </li>
+                    </ul>
+                    <div class="contentl_box">
+                        <p>
+                            <span>档案完整度：</span>
+                            <span>80%</span>
+                        </p>
+                        <p class="contentl_jindu">
+                            <span></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="contentr02 contentlrall">
+                    <div class="contentr_bar contentr_bar02">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>起止时间：2009.09-2012.06</li>
+                        <li>学校：上海同济大学</li>
+                        <li>专业：汽车服务专业</li>
+                        <li>学历：硕士</li>
+                        <li>档案编号：１２３４５６７７</li>
+                    </ul>
+                    <div class="contentrC" style="margin-right:30px">
+                        <div class="contentrC03 font4">
+                            <span>起止时间</span>
+                            <i>*</i>
+                            <input type="text" name="" value="">
+                            <i style="color:black">-</i>
+                            <input type="text" name="" value="">
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>毕业院校</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>专业</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>最高学历</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>档案编号</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentr02 contentlrall contentr04">
+                    <div class="contentr_bar contentr_bar04">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>姓名：刘洋</li>
+                        <li>关系：弟弟</li>
+                        <li>联系号码：158001770901</li>
+                        <li>联系人地址：上海市奉贤区南桥镇江海新村５２７号</li>
+                    </ul>
+                    <div class="contentrC" style="margin-right:30px">
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l ">
+                                <span>姓名</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>关系</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>联系电话</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>联系地址</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:282px">
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentr02 contentlrall contentr06">
+                    <div class="contentr_bar contentr_bar06">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>签订日期：2014/07/01</li>
+                        <li>签署公司：上海市徐汇区田林东路支行</li>
+                        <li>合同类型：劳动用人合同（岗位确认、保密协议、绩效考核）</li>
+                    </ul>
+                    <div class="contentrC" style="margin-right:30px">
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>签订时间</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>签署公司</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:173px">
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>合同类型</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:215px">
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>合同内容</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:291px">
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="Record_contentd">
-
+            <div class="col-sm-6 contentr">
+                <div class="contentr01">
+                    <div class="contentr_bar">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>姓名：刘珂</li>
+                        <li>性别：男</li>
+                        <li>户籍：中国上海市奉贤区南桥镇江海新村527号301室</li>
+                        <li>户口性质：农村户口</li>
+                        <li>现居地：中国上海市奉贤区南桥镇江海新村527号301室</li>
+                        <li>政治面貌：中共党员　</li>
+                        <li>血型：Ｏ型</li>
+                        <li>婚育状况：未婚未育</li>
+                        <li>邮编：2014001</li>
+                        <li>手机：158007550901</li>
+                        <li>邮箱：luxiaoxiao@dtd3651.com</li>
+                    </ul>
+                    <div class="contentrC ">
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l">
+                                <span>姓名</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>性别</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC02">
+                            <span>户籍</span>
+                            <i>*</i>
+                            <input type="text" name="" value="">
+                        </div>
+                        <div class="contentrC02 font3">
+                            <span>现居地</span>
+                            <i>*</i>
+                            <input type="text" name="" value="">
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>户口性质</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>政治面貌</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>婚姻状况</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>生育状况</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l">
+                                <span>血型</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>邮编</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l">
+                                <span>电话</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>邮箱</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentr03 contentrrall">
+                    <div class="contentr_bar contentr_bar03">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>身份证号：3102261991051103281</li>
+                        <li>社保类型：五险一金</li>
+                        <li>公积金账号：127314489205</li>
+                        <li>银行卡号：6214850211266512（招商银行上海分行曹杨支行）</li>
+                    </ul>
+                    <div class="contentrC">
+                        <div class="contentrC02 font4">
+                            <span>身份证号</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:282px">
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>社保类型</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:162px">
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>公积金号</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:282px">
+                        </div>
+                        <div class="contentrC02 font4">
+                            <span>银行卡号</span>
+                            <i>*</i>
+                            <input type="text" name="" value="" style="width:282px">
+                        </div>
+                        <div class="contentrC02 font3">
+                            <span>开户行</span>
+                            <i>*</i>
+                            <input type="text" name="" value="">
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
+                </div>
+                <div class=" contentr05 contentrrall">
+                    <div class="contentr_bar contentr_bar03">
+                        <span></span>
+                    </div>
+                    <ul class="ulshow">
+                        <li>身份证号：3102261991051103281</li>
+                        <li>社保类型：五险一金</li>
+                        <li>公积金账号：127314489205</li>
+                        <li>银行卡号：6214850211266512（招商银行上海分行曹杨支行）</li>
+                    </ul>
+                    <div class="contentrC">
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>公司名称</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>机构号</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC03 font4">
+                            <span>公司名称</span>
+                            <i>*</i>
+                            <input type="text" name="" value="">
+                            <i style="color:black">-</i>
+                            <input type="text" name="" value="">
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font4">
+                                <span>在职状态</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>部门</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l ">
+                                <span>职位</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>试用期</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrC01 clearfix">
+                            <div class="contentrC01l font5">
+                                <span>试用期薪资</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                            <div class="contentrC01r">
+                                <span>转正薪资</span>
+                                <i>*</i>
+                                <input type="text" name="" value="">
+                            </div>
+                        </div>
+                        <div class="contentrCB">
+                            <button type="button" class="quxiao">取消</button>
+                            <button type="button" class="baocun">保存</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-
-
-
-
-            <div class="back_ccc" style="height:4px;margin-top:200px;  background-color: #e95513"></div>
-            <!--底部关于我们-->
-            <div class="foot_our">
-                <div class="continer clearfix">
-                    <div class="col-sm-3 col-xs-6">
-                        <dl>
-                            <dt>关于我们
+        </div>
+    </div>
+    <div class="back_ccc" style="height:4px;margin-top:200px;  background-color: #e95513"></div>
+    <!--底部关于我们-->
+    <div class="foot_our">
+        <div class="continer clearfix">
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>关于我们
                             <dd><a href="javascript:;">公司介绍</a></dd>
                             <dd><a href="javascript:;">发展历程</a></dd>
                             <dd><a href="javascript:;">荣誉资质</a></dd>
                         </dt>
-                        </dl>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <dl>
-                            <dt>联系我们
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>联系我们
                             <dd><a href="javascript:;">联系我们</a></dd>
                             <dd><a href="javascript:;">常见问题</a></dd>
                             <dd><a href="javascript:;">友情链接</a></dd>
                         </dt>
-                        </dl>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <dl>
-                            <dt>帮助中心
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>帮助中心
                             <dd><a href="javascript:;">常见问题</a></dd>
                             <dd><a href="javascript:;">相关政策</a></dd>
                         </dt>
-                        </dl>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <dl>
-                            <dt>注册流程
+                </dl>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <dl>
+                    <dt>注册流程
                             <dd><a href="javascript:;">个人注册</a></dd>
                             <dd><a href="javascript:;">公司注册</a></dd>
                         </dt>
-                        </dl>
-                    </div>
-                </div>
+                </dl>
             </div>
-            <div class="foot">
-                <p>未经猎评网同意，不得转载本网站之所有企业及个人信息| 猎评网版权所有© 2017/lieping </p>
-                <p>沪公网安备31011502002551号</p>
-            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <p>未经猎评网同意，不得转载本网站之所有企业及个人信息| 猎评网版权所有© 2017/lieping </p>
+        <p>沪公网安备31011502002551号</p>
+    </div>
 
 
 
 </body>
 <script src="../../public/assets/jquery-1.12.4.js"></script>
+<script src="../../public/script/frmUser/staffRecord.js"></script>
 
 </html>

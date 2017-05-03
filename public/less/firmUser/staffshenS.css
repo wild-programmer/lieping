@@ -269,7 +269,6 @@
   position: relative;
 }
 .pingjia_top .pingjia_topR .pingjia_topRB {
-  display: none;
   width: 140px;
   background-color: white;
   position: absolute;
@@ -278,6 +277,10 @@
   z-index: 99;
   border: 1px solid #dcdcdc;
   cursor: pointer;
+  display: none;
+}
+.pingjia_top .pingjia_topR .pingjia_topRB.active {
+  display: block;
 }
 .pingjia_top .pingjia_topR span {
   display: inline-block;
@@ -291,6 +294,12 @@
   float: right;
   border: 1px solid #ccc;
   cursor: pointer;
+}
+.pingjia_top .pingjia_topR span.actives {
+  transform: rotate(-135deg);
+  margin-top: 7px;
+  background-color: white;
+  border: 1px solid #e95513;
 }
 .pingjia_top .pingjia_topR span:after {
   content: '';

@@ -1,5 +1,8 @@
 @import 'base.css';
 @import 'common.css';
+.marginT {
+  margin-top: 20px;
+}
 .header {
   padding-bottom: 20px;
   margin-top: 40px;
@@ -114,7 +117,11 @@
 .zc_content .zc_contenter .zc_contenter_r .zcinput_lang {
   width: 460px;
   height: 40px;
-  margin: 15px 0 20px 0;
+  margin: 15px 0 0px 0;
+}
+.zc_content .zc_contenter .zc_contenter_r .wrong {
+  display: none;
+  color: red;
 }
 .zc_content .zc_contenter .zc_contenter_r input {
   border: 1px solid #dcdcdc;

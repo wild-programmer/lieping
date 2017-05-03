@@ -11,22 +11,60 @@ $("#lp_page").pagination({
 });
 $('.m-pagination-group').addClass('clearfix')
     // 员工档案刷新
-$('.table_xial').each(function(index, el) {
-    el.tag = index;
-    $(el).click(function() {
-        var tag = this.tag;
-        $('.table_xialX').each(function(index, el) {
-            el.style.display = 'none';
-        });
-        $('.table_xialX').get(tag).style.display = 'block';
-    })
+
+// $('.table_xial').each(function(index, el) {
+//     el.tag = index;
+//     $(el).click(function() {
+//         var tag = this.tag;
+//         $('.table_xialX').each(function(index, el) {
+//             el.style.display = 'none';
+//         });
+//         $('.table_xialX').get(tag).style.display = 'block';
+//     })
+// });
+// $('.table_xialX>p').each(function(index, el) {
+//     $(el).click(function() {
+//         $(this).parent('div').css('display', 'none');
+//         $(this).parent().prev().html($(this).html() + '<span></span>');
+//     })
+// });
+function stopPro(e) {
+    if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+
+        if (event.stopPropagation) {
+            // this code is for Mozilla and Opera 
+            event.stopPropagation();
+        } else if (window.event) {
+            // this code is for IE 
+            window.event.cancelBubble = true;
+        }
+    } else {
+        e.stopPropagation();
+    }
+}
+
+
+$('body').on('click', '.table_xial', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    if ($('.table_xialX').hasClass('active')) {
+        $('.table_xialX').removeClass('active');
+        $('.table_xial >span').removeClass('actives');
+    } else {
+        $(this).siblings('div').addClass('active').end().children('span').addClass('actives');
+    }
 });
-$('.table_xialX>p').each(function(index, el) {
-    $(el).click(function() {
-        $(this).parent('div').css('display', 'none');
-        $(this).parent().prev().html($(this).html() + '<span></span>');
-    })
+$('body').on('click', function() {
+    $('.table_xialX').removeClass('active');
+    $('.table_xial span').removeClass('actives');
 });
+$('body').on('click', '.table_xialX p', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    $(this).parent().siblings().children('i').text($(this).text());
+    $(this).parent().removeClass('active').siblings().children('span').removeClass('actives');
+})
+
 
 
 // 企业头像上传

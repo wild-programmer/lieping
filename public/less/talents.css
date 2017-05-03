@@ -168,6 +168,12 @@
   left: -11px;
   top: -1px;
 }
+.content .continer .search_Nx .search_xiala span:nth-child(2).actives {
+  transform: rotate(-135deg);
+  margin-top: 16px;
+  background-color: white;
+  border: 1px solid #e95513;
+}
 .content .continer .search_Nx .search_xiala:hover {
   cursor: pointer;
 }
@@ -184,9 +190,12 @@
 .content .continer .search_Nx .contqz_xiala_oryue li {
   text-indent: 20px;
 }
+.content .continer .search_Nx .contqz_xiala_oryue.active {
+  display: block;
+}
 .content .continer .search_Tj {
   margin-top: 35px;
-  width: 1200px;
+  width: 100%;
   height: 40px;
   line-height: 40px;
   border: 1px solid #dcdcdc;

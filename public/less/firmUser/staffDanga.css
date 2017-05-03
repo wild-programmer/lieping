@@ -316,6 +316,9 @@
   background-color: #f29b76;
   cursor: pointer;
 }
+.resume_guanlTable th .table_xialX.active {
+  display: block;
+}
 .resume_guanlTable th span {
   display: inline-block;
   width: 13px;
@@ -325,6 +328,12 @@
   left: 7px;
   top: -1px;
   transform: rotate(-45deg);
+}
+.resume_guanlTable th span.actives {
+  transform: rotate(135deg);
+  top: 7px;
+  background-color: #f29b76;
+  border: 1px solid #e95513;
 }
 .resume_guanlTable th span::before {
   display: block;

@@ -1,3 +1,129 @@
+// 熟练程度
+(function() {
+    var val = '',
+        va = ['node'];
+    $('.setUp_contjinengbc').on('click', function() {
+        var value = $('.cont_jineng').val(); //技能语言
+        val = $('.shuliand').html(); //熟练程度
+        // if ($.inArray(value, va)) {
+        for (var i = 0; i < va.length; i++) {
+            if (va[i] == value) {
+                $('.show_jin').each(function(i, el) {
+                    var value1 = el.innerHTML;
+                    if (value1 == value) {
+                        if (val == '一般') {
+                            alert('一般')
+                            $(el).parent().siblings('div').removeClass('cont_color');
+                            $(el).parent().siblings('div').eq(1).addClass('cont_color');
+                            $(el).siblings().html(val);
+                            alert(1);
+                        } else if (val == '良好') {
+                            $(el).parent().siblings('div').removeClass('cont_color');
+                            $(el).parent().siblings('div').eq(1).addClass('cont_color');
+                            $(el).parent().siblings('div').eq(2).addClass('cont_color');
+                        } else if (val == '熟练') {
+                            $(el).parent().siblings('div').removeClass('cont_color');
+                            $(el).parent().siblings('div').eq(1).addClass('cont_color');
+                            $(el).parent().siblings('div').eq(2).addClass('cont_color');
+                            $(el).parent().siblings('div').eq(3).addClass('cont_color');
+                        } else if (val == '精通') {
+                            $(el).parent().siblings('div').removeClass('cont_color');
+                            $(el).parent().siblings('div').addClass('cont_color');
+                        } else {
+                            return
+                        }
+                    }
+                })
+
+            } else if (va[i] != value && i == va.length - 1 && value != '') {
+                setTimeout(function() {
+                    va.push(value);
+                    if (val == '一般') {
+                        var Html = '<div class="setUp_contjineng20L">' +
+                            '<div class="TBbox4 Tb"></div>' +
+                            '<div class="TBbox1 Tb cont_color"></div>' +
+                            '<div class="TBbox2 Tb"></div>' +
+                            '<div class="TBbox3 Tb"></div>' +
+                            '<span class="TBboxPotion">' +
+                            '<p class="show_jin">' + value + '</p>' +
+                            '<p class="show_try">' + val + '</p>' +
+                            '</span>' +
+                            '</div>'
+                    } else if (val == '良好') {
+                        var Html = '<div class="setUp_contjineng20L">' +
+                            '<div class="TBbox4 "></div>' +
+                            '<div class="TBbox1 cont_color"></div>' +
+                            '<div class="TBbox2 cont_color"></div>' +
+                            '<div class="TBbox3 "></div>' +
+                            '<span class="TBboxPotion">' +
+                            '<p class="show_jin">' + value + '</p>' +
+                            '<p class="show_try">' + val + '</p>' +
+                            '</span>' +
+                            '</div>'
+                    } else if (val == '熟练') {
+                        var Html = '<div class="setUp_contjineng20L">' +
+                            '<div class="TBbox4 "></div>' +
+                            '<div class="TBbox1 cont_color"></div>' +
+                            '<div class="TBbox2 cont_color"></div>' +
+                            '<div class="TBbox3 cont_color"></div>' +
+                            '<span class="TBboxPotion">' +
+                            '<p class="show_jin">' + value + '</p>' +
+                            '<p class="show_try">' + val + '</p>' +
+                            '</span>' +
+                            '</div>';
+                    } else if (val == '精通') {
+                        var Html = '<div class="setUp_contjineng20L">' +
+                            '<div class="TBbox4 cont_color"></div>' +
+                            '<div class="TBbox1 cont_color"></div>' +
+                            '<div class="TBbox2 cont_color"></div>' +
+                            '<div class="TBbox3 cont_color"></div>' +
+                            '<span class="TBboxPotion">' +
+                            '<p class="show_jin">' + value + '</p>' +
+                            '<p class="show_try">' + val + '</p>' +
+                            '</span>' +
+                            '</div>'
+
+                    } else {
+                        return
+                    }
+                    document.querySelector('.setUp_contjineng20C').innerHTML += Html;
+                }, 200)
+
+            }
+        }
+        // if (va.indexOf(value) && value != '') {
+        //     //没有在数组中
+
+        //     // alert(1)
+        //     console.log(va.indexOf(value));
+        // } else if (value != '') {
+        //     // 有的进来
+        //     alert('有')
+
+        // }
+
+
+
+
+
+
+        // val = $('.shuliand').html();
+        // if (val == '一般') {
+
+        // } else if (val == '良好') {
+
+        // } else if (val == '熟练') {
+        //     $(this).siblings('div').css('backgroundColor', ':#898989');
+
+        // } else if (val == '精通') {
+        //     $(this).siblings('div').css('backgroundColor', ':#898989');
+
+        // } else {
+        //     return
+        // }
+    })
+})()
+
 // 点击元素
 // [
 //     {初始化状态的点击元素},记录外层的位置。记录内层的位置
@@ -150,13 +276,6 @@ function jianliTag() {
     }
 }
 
-//  <p class="lp_xl_showoryue"> <span class="ceb_xialspan"></span></p>
-//                             <div class="contqz_xiala_oryue clearfix">
-//                                 <li class="lp_yearmo">年薪</li>
-//                                 <li class="lp_moseney">月薪</li>
-//                             </div>
-
-// 日期下拉 lp_xiala
 (function() {
     //首先要考虑到获取 多个showdata里面的值 点击谁获取谁上面的showdata 方法只有一个  记录是第几个日期插件  然后获取第几个的showdata值
     //     $('#xiala').on('click', function() {
@@ -176,16 +295,6 @@ function jianliTag() {
             lp_showel[i].onclick = function() {
                 var lp_xl1 = document.querySelectorAll('.lp_xl')[this.tag];
                 var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[this.tag];
-                // lp_xl1.style.display = 'block';
-                $(lp_xl1).toggle();
-                if (lp_xl1.style.display == 'none') {
-                    lp_xl_showjT.style.transform = 'rotate(45deg)';
-                    lp_xl_showjT.style.borderColor = '#666';
-                } else {
-                    lp_xl_showjT.style.transform = 'rotate(-135deg)';
-                    lp_xl_showjT.style.borderColor = '#e95513';
-                }
-
             }
         })(j);
     }
@@ -193,7 +302,6 @@ function jianliTag() {
         // mr_months[i].tage = i;
         (function(i) {
             var k = i;
-
             var lis = mr_years[i].querySelectorAll('li');
             var lis2 = mr_months[i].querySelectorAll('li');
             for (var i = 0; i < lis.length; i++) {
@@ -233,164 +341,92 @@ function jianliTag() {
                             mr_value = mr_yeva + '.' + mr_mova;
                             riqi.innerText = mr_value;
                             // lp_xl.style.display = 'none';
-                            $(lp_xl).toggle();
-                            lp_xl_showjT.style.transform = 'rotate(45deg)';
-                            lp_xl_showjT.style.borderColor = '#666';
+                            $('.lp_xl').removeClass('active');
+                            $(lp_xl_showjT).removeClass('actives');
                             mr_yeva = undefined;
                         }
                     })(lis2[i]);
                 }
             }
         })(i)
-
-
-
-
     }
-
-
 })()
-//     $('#xiala').on('click', function() {
-//     console.log(12);
-//     $('#xiala_show').toggle();
 
-// })
 // 行业下拉
-console.log($('#xial_qiw_show'));
-(function() {
-    var tag = 0,
-        value = '';
-    $("#xial_qiw").on('click', function() {
-        $('#xiala_qiw_show').toggle();
-        if ($('#xiala_qiw_show').css('display') == 'block') {
-            $('#xiala_qiw_show').children().children().children('span').css('backgroundColor', 'white');
-            // $('#xiala_qiw_show').siblings('i').html('');
-            // console.log($('#xiala_qiw_show').children().children('span'));
-            tag = 0;
-        }
-    })
-    $('.xial_bc').click(function() {
-        $('#xiala_qiw_show').toggle();
-        $(this).parent().parent().siblings('i').html(value);
-    })
-    $('.xial_qx').click(function() {
-        $('#xiala_qiw_show').toggle();
-    })
-    $("#xiala_qiw_show li").each(function(i, el) {
-        // var xiala_qiw_show = $(this).parent();
-        // xiala_qiw_show.value = 0;
-        // console.log(xiala_qiw_show)
-        // el.querySelector('span');
-        el.style.zIndex = $('#xiala_qiw_show2 li').length - i;
+// console.log($('#xial_qiw_show'));
+// (function() {
+//     var tag = 0,
+//         value = '';
+//     $("#xial_qiw").on('click', function() {
+//         $('#xiala_qiw_show').toggle();
+//         if ($('#xiala_qiw_show').hasClass('active')) {
+//             $('#xiala_qiw_show').children().children().children('span').css('backgroundColor', 'white');
+//             tag = 0;
+//         }
+//     })
+//     $('.xial_bc').click(function() {
+//         $('#xiala_qiw_show').toggle();
+//         $(this).parent().parent().siblings('i').html(value);
+//     })
+//     $('.xial_qx').click(function() {
+//         $('#xiala_qiw_show').toggle();
+//     })
+//     $("#xiala_qiw_show li").each(function(i, el) {
+//         el.style.zIndex = $('#xiala_qiw_show2 li').length - i;
+//         $(el).on('click', function() {
+//             if (tag < 3) {
+//                 var val = $(this.querySelector('span')).html();
+//                 // console.log(val);
+//                 if (tag == 0) {
+//                     value = '';
+//                     value += val;
+//                     tag++;
+//                 } else {
+//                     value += ',' + val;
+//                     tag++;
+//                 }
+//                 // console.log(value);
+//                 $(this.querySelector('span')).css('backgroundColor', '#e95513');
+//             }
+//         })
+//     })
+// })();xiala_qiw_show2 xiala_qiw_show
+hangye('xiala_qiw_show');
+hangye('xiala_qiw_show2');
+
+function hangye(el) {
+    var len = 2000,
+        tag = 0,
+        xialvalue = '';
+    $('#' + el + ' li').each(function(i, el) {
+        $(el).css('z-index', "" + len - i * 10 + "");
         $(el).on('click', function() {
-            if (tag < 3) {
-                var val = $(this.querySelector('span')).html();
-                console.log(val);
-                if (tag == 0) {
-                    value = '';
-                    value += val;
-                    tag++;
-                } else {
-                    value += ',' + val;
-                    tag++;
-                }
-                // console.log(value);
-                $(this.querySelector('span')).css('backgroundColor', '#e95513');
+            if (tag <= 2) {
+                tag++;
+                $(this).children('span').css('backgroundColor', '#e95513');
+                xialvalue += $(this).children('span').html() + " ";
             }
-
-        })
-
-    })
-})();
-// 下拉
-(function() {
-    var tag = 0,
-        value = '';
-    $("#xial_qiw2").on('click', function() {
-        $('#xiala_qiw_show2').toggle();
-        if ($('#xiala_qiw_show2').css('display') == 'block') {
-            $('#xiala_qiw_show2').children().children().children('span').css('backgroundColor', 'white');
-            $('#xiala_qiw_show2').siblings('i').html('');
-            // console.log($('#xiala_qiw_show2').children().children('span'));
-            tag = 0;
-        }
-    })
-    $('.xial_bc2').click(function() {
-        $('#xiala_qiw_show2').toggle();
-    })
-    $('.xial_qx2').click(function() {
-        $('#xiala_qiw_show2').toggle();
-    })
-    $("#xiala_qiw_show2 li").each(function(i, el) {
-        el.style.zIndex = $('#xiala_qiw_show2 li').length * 1000 - i * 1000;
-        $(el).on('click', function() {
-            if (tag < 3) {
-                var val = $(this.querySelector('span')).html();
-                if (tag == 0) {
-                    value += val;
-                    tag++;
-                } else {
-                    value += ',' + val;
-                    tag++;
-                }
-                // console.log(value);
-                $(this.querySelector('span')).css('backgroundColor', '#e95513');
-                $(this).parent().parent().siblings('i').html(value);
-            }
-
-        })
-
-    })
-})();
-
-
-// 薪资下拉
-$('.xiala').each(function(i, el) {
-    el.index = i;
-    $(el).on('click', function() {
-        var k = this.index;
-        // console.log(k);
-        var that = this;
-        var $el = $('.xiala_show').get(k);
-        var $elspan = $('.xialaspan').get(k); //箭头元素
-        $($el).toggle();
-        if ($($el).css('display') == 'none') {
-            // $($elspan).css('transform', 'rotate(45deg)', 'borderColor', '#666');
-            $($elspan).css({
-                'transform': 'rotate(45deg)',
-                'borderColor': '#666',
-                'marginTop': ''
-            });
-        } else {
-            $($elspan).css({
-                'transform': 'rotate(-135deg)',
-                'borderColor': '#e95513',
-                'marginTop': '7px'
-            });
-        }
-
-
-        //下边是点击显示后 获取到value值  #xiala_show 下边的p元素
-        var $xiala_show_p = $el.querySelectorAll('li');
-        $($xiala_show_p).each(function(j, el) {
-            // console.log(el);
-            $(el).on('click', function() {
-                // console.log($(that).siblings(i));
-                var xiala_show_i = $(that).siblings(i)[0];
-                xiala_show_i.innerText = $(this).html();
-                $($el)[0].style.display = 'none';
-                $('.xialaspan').get(k);
-                $($elspan).css({
-                    'transform': 'rotate(45deg)',
-                    'borderColor': '#666',
-                    'marginTop': ''
-                });
-            })
         })
     })
-})
-
-
+    $('#' + el + ' .xial_bc').on('click', function() {
+        // console.log(xialvalue)
+        tag = 0;
+        $('#' + el + '').siblings('i').html(xialvalue);
+        $('#' + el + ' span').each(function(i, el) {
+            $(el).css('backgroundColor', 'white');
+        })
+        $('#' + el + '').removeClass('active');
+        $(this).parent().parent().siblings('.xial_qiw').children('.xial_qiw_span').removeClass('actives');
+        xialvalue = '';
+    })
+    $('#' + el + ' .xial_qx').on('click', function() {
+        // console.log(xialvalue)
+        tag = 0;
+        xialvalue = '';
+        $('#' + el + '').removeClass('active');
+        $(this).parent().parent().siblings('.xial_qiw').children('.xial_qiw_span').removeClass('actives');
+    })
+}
 
 // 头像上传
 
@@ -413,12 +449,10 @@ document.querySelector('.reader_file_qx').onclick = function() {
     result.innerHTML = document.querySelector('.ceb_nav_img').innerHTML;
 }
 document.querySelector('.reader_file_bc').onclick = function() {
-        filebox.style.display = 'none';
-        var img = result.innerHTML;
-        document.querySelector('.ceb_nav_img').innerHTML = img;
-    }
-    // 给按钮注册点击事件
-    //  var result = document.getElementById("result");
+    filebox.style.display = 'none';
+    var img = result.innerHTML;
+    document.querySelector('.ceb_nav_img').innerHTML = img;
+}
 
 if (typeof FileReader === 'undefined') {
     result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
@@ -442,37 +476,85 @@ function readFile() {
     }
 }
 
-//我的评价下拉
-$('.pingjia_topRclk').click(function() {
-    document.querySelector('.pingjia_topRB').style.display = 'block';
-    $('.pingjia_topRclk').css({
-        'transform': 'rotate(-135deg)',
-        'borderColor': '#e95513',
-        'marginTop': '7px'
-    })
-})
-$('.pingjia_topRB li').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.pingjia_topRclk').siblings('i').html($(this).html());
-        $('.pingjia_topRB').toggle();
-        $('.pingjia_topRclk').css({
-            'transform': 'rotate(45deg)',
-            'borderColor': '#666',
-            'marginTop': ''
-        });
-    })
-})
+(function() {
+    function stopPro(e) {
+        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
 
-// 个人申诉
-$('.shensu_table').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.lp_tousu').css('display', 'block');
+            if (event.stopPropagation) {
+                // this code is for Mozilla and Opera 
+                event.stopPropagation();
+            } else if (window.event) {
+                // this code is for IE 
+                window.event.cancelBubble = true;
+            }
+        } else {
+            e.stopPropagation();
+        }
+    }
+    $('body').on('click', '.pingjia_topRclk', function(event) {
+        stopPro(event);
+        if ($('.pingjia_topRB').hasClass('active')) {
+            $('.pingjia_topRB').removeClass('active');
+            $(this).removeClass('actives');
+        } else {
+            $(this).siblings('div').addClass('active').end().addClass('actives');
+        }
+    });
+    $('body').on('click', '.hidexial2', function(event) {
+        stopPro(event);
+        if ($('.contqz_xiala_oryue').hasClass('active')) {
+            $('.contqz_xiala_oryue').removeClass('active');
+            $('.hidexial2 >span').removeClass('actives');
+        } else {
+            $(this).siblings('div').addClass('active').end().children('span').addClass('actives');
+        }
+    });
+    $('body').on('click', '.hidexial1', function(event) {
+        stopPro(event);
+        if ($('.contqz_xiala_oryue').hasClass('active')) {
+            $('.contqz_xiala_oryue').removeClass('active');
+            $('.hidexial1 >span').removeClass('actives');
+        } else {
+            $(this).parent().siblings('div').addClass('active').end().end().children('span').addClass('actives');
+        }
+    });
+    $('body').on('click', function() {
+        $('.contqz_xiala_oryue').removeClass('active');
+        $('.lp_xl').removeClass('active');
+        $('.pingjia_topRB').removeClass('active');
+        $('.hidexial2 span').removeClass('actives');
+        $('.hidexial1 span').removeClass('actives');
+        $('.pingjia_topRclk').removeClass('actives');
+    });
+
+
+    $('body').on('click', '.lp_xl', function(event) {
+        stopPro(event);
     })
-})
-$('.lp_tousu_tj').click(function() {
-    $('.lp_tousu').css('display', 'none');
-    $('.pingjia_contentF').css('display', 'block')
-})
+    $('body').on('click', '#xiala_qiw_show', function(event) {
+        stopPro(event);
+    })
+    $('body').on('click', '#xiala_qiw_show2', function(event) {
+        stopPro(event);
+    })
+    $('body').on('click', '.contqz_xiala_oryue  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('p').children('span').removeClass('actives');
+    })
+    $('body').on('click', '.xiala_show  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('div').children('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('div').children('p').children('span').removeClass('actives');
+    })
+    $('body').on('click', '.pingjia_topRB  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('span').removeClass('actives');
+    })
+})()
+
+
 
 
 // 侧边栏选项卡

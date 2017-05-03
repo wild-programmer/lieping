@@ -1,49 +1,67 @@
-// 薪资下拉
-$('.xiala').each(function(i, el) {
-    el.index = i;
-    $(el).on('click', function() {
-        // $(document.body).on('click', $(el), function() {
-        var k = this.index;
-        // console.log(k);
-        var that = this;
-        var $el = $('.xiala_show').get(k);
-        var $elspan = $('.xialaspan').get(k); //箭头元素
-        $($el).toggle();
-        if ($($el).css('display') == 'none') {
-            // $($elspan).css('transform', 'rotate(45deg)', 'borderColor', '#666');
-            $($elspan).css({
-                'transform': 'rotate(45deg)',
-                'borderColor': '#666',
-                'marginTop': ''
-            });
-        } else {
-            $($elspan).css({
-                'transform': 'rotate(-135deg)',
-                'borderColor': '#e95513',
-                'marginTop': '7px'
-            });
+(function(window) {
+
+    var firmUser = {
+        init: function() {
+            var that = this;
+            that.dropDown();
+        },
+        dropDown: function() {
+            function stopPro(e) {
+                if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+
+                    if (event.stopPropagation) {
+                        // this code is for Mozilla and Opera 
+                        event.stopPropagation();
+                    } else if (window.event) {
+                        // this code is for IE 
+                        window.event.cancelBubble = true;
+                    }
+                } else {
+                    e.stopPropagation();
+                }
+            }
+
+            function dropDownSwitch() {
+                $('body').on('click', '.content .continer_content02 .xiala', function(event) {
+                    // event.stopPropagation();
+                    stopPro(event);
+                    if ($('.contqz_xiala_oryue').hasClass('active')) {
+                        $('.contqz_xiala_oryue').removeClass('active');
+                        $('.xialaspan').removeClass('actives');
+                    } else {
+                        $(this).next('div').addClass('active').parent().parent().siblings().find('div').find('div').removeClass('active');
+                        $(this).find('span').addClass('actives').parent().parent().parent().siblings().find('div').find('p').find('span').removeClass('active');
+                    }
+                });
+                $('body').on('click', function() {
+                    $('.contqz_xiala_oryue').removeClass('active');
+                    $('.xialaspan').removeClass('actives');
+                });
+                $('body').on('click', '.contqz_xiala_oryue li', function(event) {
+                    // event.stopPropagation();
+                    stopPro(event);
+                    $(this).parent().siblings('i').text($(this).text());
+                    $(this).parent().removeClass('active').siblings('p').children().removeClass('actives');
+                })
+                $('body').on('click', '.suoshuhangye ', function(event) {
+                    stopPro(event);
+                })
+            };
+            dropDownSwitch();
         }
 
+    };
 
-        //下边是点击显示后 获取到value值  #xiala_show 下边的p元素
-        var $xiala_show_p = $el.querySelectorAll('li');
-        $($xiala_show_p).each(function(j, el) {
-            // console.log(el);
-            $(el).on('click', function() {
-                // console.log($(that).siblings(i));
-                var xiala_show_i = $(that).siblings(i)[0];
-                xiala_show_i.innerText = $(this).html();
-                $($el)[0].style.display = 'none';
-                $('.xialaspan').get(k);
-                $($elspan).css({
-                    'transform': 'rotate(45deg)',
-                    'borderColor': '#666',
-                    'marginTop': ''
-                });
-            })
-        })
-    })
-})
+    $(function() {
+        firmUser.init();
+    });
+
+    window.firmUser = firmUser;
+
+})(window)
+
+
+
 
 // 企业头像上传
 var upheader = function() {
@@ -180,6 +198,7 @@ $('.checkdCur').each(function(i, el) {
 // 状态1 continer_content      点击元素firmUser_bc  firmUser_qx
 // 状态2 continer_content1
 //点击保存  让顶部栏图标显示  让状态2显示  continer_contentimg
+var imglen = document.querySelectorAll('.firmUserImg').length;
 $('.firmUser_qx').each(function(i, el) {
     el.index = i;
     $(el).click(function() {
@@ -197,7 +216,6 @@ $('.firmUser_bc').each(function(i, el) {
         $('.continer_content1')[this.index].style.display = 'block';
         $('.continer_content')[this.index].style.display = 'none';
         // if($('.continer_content .firmUserImg').children('img')){}
-        console.log($('.continer_content .firmUserImg')[this.index].childNodes[0])
         if ($($('.continer_content .firmUserImg')[this.index]).children('img').length == 1) {
             $('.continer_contentimg:eq(' + [this.index] + ')').html($('.continer_content .firmUserImg')[this.index].childNodes[0]);
 
@@ -207,8 +225,10 @@ $('.firmUser_bc').each(function(i, el) {
 $('.outsidep_xiugai').each(function(i, el) {
     el.index = i;
     $(el).click(function() {
-        $('.firmUserImg')[this.index].style.paddingTop = '0px';
-        $('.firmUserImg')[this.index].innerHTML = $('.continer_contentimg')[this.index].innerHTML;
+        if (this.index < imglen) {
+            $('.firmUserImg')[this.index].style.paddingTop = '0px';
+            $('.firmUserImg')[this.index].innerHTML = $('.continer_contentimg')[this.index].innerHTML;
+        }
         $('.outsidep_shanchu')[this.index].style.display = 'none';
         $('.outsidep_xiugai')[this.index].style.display = 'none';
         $('.continer_content1')[this.index].style.display = 'none';
@@ -216,48 +236,132 @@ $('.outsidep_xiugai').each(function(i, el) {
     })
 })
 
+// (function($) {
+//首先要考虑到获取 多个showdata里面的值 点击谁获取谁上面的showdata 方法只有一个  记录是第几个日期插件  然后获取第几个的showdata值
+//     $('#xiala').on('click', function() {
+//     console.log(12);
+//     $('#xiala_show').toggle();
+// })
+var mr_months = document.querySelectorAll('.mr_month');
+var mr_years = document.querySelectorAll('.mr_year');
+var lp_showel = document.querySelectorAll('.lp_xl_showdata');
+// 年薪下拉
+var lp_yearmos = document.querySelectorAll('.lp_yearmo');
+var mr_yeva,
+    mr_value;
+for (var j = 0; j < lp_showel.length; j++) {
+    (function(i) {
+        lp_showel[i].tag = i;
+        lp_showel[i].onclick = function() {
+            var lp_xl1 = document.querySelectorAll('.lp_xl')[this.tag];
+            var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[this.tag];
+        }
+    })(j);
+}
+for (var i = 0; i < mr_months.length; i++) {
+    // mr_months[i].tage = i;
+    (function(i) {
+        var k = i;
+        var lis = mr_years[i].querySelectorAll('li');
+        var lis2 = mr_months[i].querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            //記錄这个哪一个 日期下拉  要对应showdata
+            lis[i].tage = k;
+            (function(el) {
+                el.onclick = function() {
+                    var All = this.parentNode.children;
+                    for (var i = 0, pl = All.length; i < pl; i++) {
+                        All[i].style.backgroundColor = "";
+                    }
+                    for (var i = 0, pl2 = lis2.length; i < pl2; i++) {
+                        lis2[i].style.backgroundColor = "";
+                    }
+                    this.style.backgroundColor = "#e95513";
+                    // lis[i].tage; 这是第几个showdata
+                    mr_yeva = this.innerText;
+                }
+            })(lis[i]);
+            if (i < 12) {
+                (function(el2) {
+                    el2.onclick = function() {
+                        for (var i = 0, pl = lis2.length; i < pl; i++) {
+                            lis2[i].style.backgroundColor = "";
+                        }
+                        this.style.backgroundColor = "#e95513";
+                        var mr_mova = parseInt(this.innerText);
+                        if (mr_mova < 10) {
+                            mr_mova = '0' + mr_mova;
+                        }
+                        var riqi = document.querySelectorAll('.showdata')[lis[i].tage];
+                        var lp_xl = document.querySelectorAll('.lp_xl')[lis[i].tage];
+                        var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[lis[i].tage];
+                        if (mr_yeva == undefined) {
+                            mr_yeva = riqi.innerText.split('.')[0];
+                        }
+                        mr_value = mr_yeva + '.' + mr_mova;
+                        riqi.innerText = mr_value;
+                        // lp_xl.style.display = 'none';
+                        $('.lp_xl').removeClass('active');
+                        $(lp_xl_showjT).removeClass('actives');
+                        mr_yeva = undefined;
+                    }
+                })(lis2[i]);
+            }
+        }
+    })(i)
+}
 
-// //我的评价下拉
-// $('.pingjia_topRclk').click(function() {
-//     document.querySelector('.pingjia_topRB').style.display = 'block';
-//     $('.pingjia_topRclk').css({
-//         'transform': 'rotate(-135deg)',
-//         'borderColor': '#e95513',
-//         'marginTop': '7px'
-//     })
-// })
-// $('.pingjia_topRB li').each(function(i, el) {
-//     $(el).on('click', function() {
-//         $('.pingjia_topRclk').siblings('i').html($(this).html());
-//         $('.pingjia_topRB').toggle();
-//         $('.pingjia_topRclk').css({
-//             'transform': 'rotate(45deg)',
-//             'borderColor': '#666',
-//             'marginTop': ''
-//         });
-//     })
-// })
-
-// // 个人申诉
-// $('.shensu_table').each(function(i, el) {
-//     $(el).on('click', function() {
-//         $('.lp_tousu').css('display', 'block');
-//     })
-// })
-// $('.lp_tousu_tj').click(function() {
-//     $('.lp_tousu').css('display', 'none');
-//     $('.pingjia_contentF').css('display', 'block')
-// })
 
 // 侧边栏选项卡
 $('.ceb_navul li').each(function(i, el) {
-    $(el).click(function() {
-        $(this).append('<m></m>').siblings().children('m').remove().end().end().addClass('ceb_navback').siblings().removeClass('ceb_navback');
-        var elname = $(this).attr('data-navname');
-        if (elname == 'resume_tianx') {
-            $('#' + elname).css('display', 'block').next().css('display', 'none');
-        } else if (elname == 'resume_pingj') {
-            $('#' + elname).css('display', 'block').prev().css('display', 'none');
+        $(el).click(function() {
+            $(this).append('<m></m>').siblings().children('m').remove().end().end().addClass('ceb_navback').siblings().removeClass('ceb_navback');
+            var elname = $(this).attr('data-navname');
+            if (elname == 'resume_tianx') {
+                $('#' + elname).css('display', 'block').next().css('display', 'none');
+            } else if (elname == 'resume_pingj') {
+                $('#' + elname).css('display', 'block').prev().css('display', 'none');
+            }
+        })
+    })
+    // 行业下拉
+$('.suoshuhangyecontentl li').on('click', function() {
+    $(this).siblings().removeClass('suoshuhangyeactiv');
+    $(this).addClass('suoshuhangyeactiv');
+    var that = this;
+    $('.suoshuhangyecontentr p').each(function(i, el) {
+        if (i == $(that).index()) {
+            // alert(1);
+            $(this).siblings().css('display', 'none');
+            $(this).css('display', 'block');
+            // $(this).children('span').each(function(i, el) {
+            //     console.log(el)
+            //     $(el).on('click', function() {
+            //         alert(1);
+            //         $('.suoshuhangye').siblings(i).index() = $(this).index();
+            //     })
+            // })
         }
+    })
+
+})
+$('.suoshuhangyecontentr span').each(function(i, el) {
+    $(el).on('click', function() {
+        $('.suoshuhangye').siblings('i').html($(this).html());
+        $('.suoshuhangye').siblings('p').children('span').removeClass('actives');
+        $('.suoshuhangye').removeClass('active');
+    })
+})
+$('.suoshuhangyequx').on('click', function() {
+    $('.suoshuhangye').siblings('p').children('span').removeClass('actives');
+    $('.suoshuhangye').removeClass('active');
+})
+
+// 下拉框数据填充
+// $('.xialaval')
+
+$('.showval').each(function(i, el) {
+    $(el).on('click', function() {
+        $(this).parent().siblings('i').attr('data-val', $(this).attr('data-val'));
     })
 })

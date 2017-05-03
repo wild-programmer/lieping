@@ -1,48 +1,56 @@
-//我的评价下拉
-$('.pingjia_topRclk').click(function() {
-    // document.querySelector('.pingjia_topRB').style.display = 'block';
-    $('.pingjia_topRB').toggle();
-    var style = document.querySelector('.pingjia_topRB').style.display;
-    if (style == 'block') {
-        $('.pingjia_topRclk').css({
-            'transform': 'rotate(-135deg)',
-            'borderColor': '#e95513',
-            'marginTop': '7px'
-        })
+// 下拉框
+function stopPro(e) {
+    if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+
+        if (event.stopPropagation) {
+            // this code is for Mozilla and Opera 
+            event.stopPropagation();
+        } else if (window.event) {
+            // this code is for IE 
+            window.event.cancelBubble = true;
+        }
     } else {
-        $('.pingjia_topRclk').css({
-            'transform': 'rotate(45deg)',
-            'borderColor': '#666',
-            'marginTop': ''
-        });
+        e.stopPropagation();
     }
+}
 
+
+$('body').on('click', '.pingjia_topRclk', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    if ($('.pingjia_topRB').hasClass('active')) {
+        $('.pingjia_topRB').removeClass('active');
+        $('.pingjia_topRclk').removeClass('actives');
+    } else {
+        $(this).siblings('div').addClass('active').end().addClass('actives');
+    }
+});
+$('body').on('click', function() {
+    $('.pingjia_topRB').removeClass('active');
+    $('.pingjia_topRclk').removeClass('actives');
+    $('.lp_tousu').css('display', 'none')
+});
+$('body').on('click', '.pingjia_topRB li', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    $(this).parent().siblings('i').text($(this).text());
+    $(this).parent().removeClass('active').siblings('span').removeClass('actives');
 })
-$('.pingjia_topRB li').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.pingjia_topRclk').siblings('i').html($(this).html());
-        $('.pingjia_topRB').toggle();
-        $('.pingjia_topRclk').css({
-            'transform': 'rotate(45deg)',
-            'borderColor': '#666',
-            'marginTop': ''
-        });
-    })
+$('body').on('click', '.shensu_table', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
+    $('.lp_tousu').css('display', 'block');
 })
 
-// 个人申诉
-$('.shensu_table').each(function(i, el) {
-    $(el).on('click', function() {
-        $('.lp_tousu').css('display', 'block');
-    })
+$('body').on('click', '.lp_tousu', function(event) {
+    stopPro(event);
 })
-$('.lp_tousu_tj').click(function() {
+$('body').on('click', '.lp_tousu .lp_tousu_tj', function(event) {
+    // event.stopPropagation();
+    stopPro(event);
     $('.lp_tousu').css('display', 'none');
-    $('.pingjia_contentF').css('display', 'block')
 })
 
-
-// 分页
 $("#lp_page").pagination({
     pageIndex: 2, //当前页数
     pageSize: 2, //每页显示的数据
