@@ -8,9 +8,7 @@ html,
 body,
 ul,
 li,
-ol,
 dl,
-dd,
 dt,
 p,
 h1,
@@ -41,8 +39,7 @@ button {
 }
 
 ul,
-li,
-ol {
+li {
     list-style: none;
 }
 

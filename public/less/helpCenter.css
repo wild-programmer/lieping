@@ -1,0 +1,107 @@
+@import 'common.css';
+.dImage {
+  height: 6px;
+  background-color: #e95513;
+}
+body {
+  padding: 0;
+  margin: 0;
+  /*font: 12px/150% Arial, Verdana, "\5b8b\4f53"; 宋体 unicode*/
+  color: #000;
+  background: #fff;
+  /*白色*/
+  font-family: "MicrosoftYaHei", "微软雅黑";
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  /*font-family: "SimSun", "宋体";*/
+  /*新宋体*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+.continer img {
+  margin-top: -2px;
+}
+.continer .imgBul {
+  width: 100%;
+  margin-top: 43px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.continer .imgBul li {
+  float: left;
+  font-size: 20px;
+  padding-bottom: 15px;
+  margin-right: 80px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.continer .imgBul li.active {
+  border-bottom: 5px solid #e95513;
+}
+.continer h2 {
+  color: #e95513;
+  font-size: 18px;
+  margin-top: 33px;
+}
+dt {
+  margin-top: 17px;
+  color: #010101;
+  font-size: 14px;
+  font-weight: 500;
+}
+dt ol li {
+  margin-top: 15px;
+}
+dt ol dd {
+  color: #959595;
+  margin-top: 10px;
+  line-height: 25px;
+}
+dt ol dd a {
+  color: #e95513;
+}
+.content_zhengc {
+  display: none;
+}
+.content_zhengc p {
+  color: #8C8C8C;
+  line-height: 26px;
+}
+.content_zhengc p b {
+  color: #000;
+}
+@media (max-width: 1240px) {
+  .continer {
+    width: 970px;
+  }
+  .header ul li {
+    float: left;
+    margin: 0 13px;
+  }
+}

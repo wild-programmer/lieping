@@ -1,0 +1,131 @@
+// @import 'base.css';
+@import 'common.css';
+@colcor:#e95513 ;
+@black:black;
+@bar: #dcdcdc;
+@000:#000000;
+.dImage{
+    height: 6px;
+    background-color: @colcor;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /*font: 12px/150% Arial, Verdana, "\5b8b\4f53"; 宋体 unicode*/
+    color: #000;
+    background: #fff;
+    /*白色*/
+    font-family: "MicrosoftYaHei", "微软雅黑";
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+ul
+ {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    /*font-family: "SimSun", "宋体";*/
+    /*新宋体*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s,
+i,
+em {
+    font-style: normal;
+    text-decoration: none;
+}
+.continer{
+    img{
+        margin-top: -2px;
+    }
+    .imgBul{
+        width: 100%;
+        margin-top: 43px;
+        border-bottom: 1px solid @bar;
+        li{
+            float: left;
+            font-size: 20px;
+            padding-bottom: 15px;
+            margin-right: 80px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        li.active{
+            border-bottom: 5px solid @colcor;
+        }
+    }
+    h2{
+        color: @colcor;
+        font-size: 18px;
+        margin-top: 33px;
+    }
+}
+
+dt{
+    margin-top: 17px;
+    color: #010101;
+    font-size: 14px;
+    font-weight: 500;
+    ol{
+        li{
+            margin-top: 15px;
+        }
+        dd{
+            color: #959595;
+            margin-top: 10px;
+            line-height: 25px;
+            a{
+                color: @colcor;
+            }
+        }
+    }
+}
+.content_zhengc{
+    display: none;
+    p{
+        color: #8C8C8C;
+        line-height: 26px;
+        b{
+            color: #000;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1240px) {
+    .continer {
+        width: 970px;
+    }
+     .header ul li {
+        float: left;
+        margin: 0 13px;
+    }
+}

@@ -1,5 +1,21 @@
 @import 'base.css';
 @import 'common.css';
+    .er {
+        font-size:14px;
+        margin-left: 95px;
+        margin-bottom:5px;
+        margin-top:-20px;
+        height:20px;
+        color:red;
+    }
+
+em {
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    background: url('../../images/jiantou1.png') 0 2px no-repeat;
+}
 .dImage {
   height: 6px;
   background-color: #e95513;
@@ -48,7 +64,7 @@
   display: block;
 }
 .content .ceb_nav .ceb_nav_top {
-  width: 200px;
+  width: 202px;
   height: 200px;
   font-size: 18px;
   background-image: url("../uploade/rongzhijia.png");
@@ -56,7 +72,6 @@
   background-size: 100% 100%;
   position: relative;
   border: 1px solid #dcdcdc;
-  margin-left: 2px;
 }
 .content .ceb_nav .ceb_nav_top img {
   width: 200px;
@@ -595,7 +610,7 @@
   margin-right: 20px;
 }
 .col-sm-10padding .continer_content .continer_content04 {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -619,7 +634,7 @@
   border: 1px solid #dcdcdc;
 }
 .col-sm-10padding .continer_content .continer_content03 {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -702,7 +717,7 @@
   margin-right: 10px;
 }
 .col-sm-10padding .continer_content .continer_content02 {
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -722,10 +737,11 @@
   float: left;
 }
 .col-sm-10padding .continer_content .continer_content01 {
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
+  height:40px;
 }
 .col-sm-10padding .continer_content .continer_content01 i {
   display: inline-block;
@@ -1004,3 +1020,4 @@
     width: 290px !important;
   }
 }
+

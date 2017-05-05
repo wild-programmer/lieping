@@ -7,82 +7,99 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>猎评网</title>
     <link rel="shortcut icon" href="../lieping.ico">
-    <link rel="stylesheet" href="../public/less/zhuC.css">
+    <link rel="stylesheet" href="../public/less/zhuce.css">
 </head>
 
 <body>
     <div class="header">
         <div class="continer clearfix">
-            <div class="header_left">
-                <a href="../index.html"><img src="../images/logo.png" alt=""></a>
-                <ul>
-                    <li>公平</li>
-                    <li>公正</li>
-                    <li>真实</li>
-                    <li>客观</li>
-                    <span>|</span>
-                    <li>欢迎注册</li>
-                </ul>
-            </div>
-            <div class="header_right">
-                <ul>
-                    <li><a href="../index.html">首页</a></li>
+            <img src="../images/logo.png" alt="">
+            <ul class="hedeull">
+                <li> </li>
+                <li>公平</li>
+                <li>公正</li>
+                <li>真实</li>
+                <li>客观</li>
+                <span></span>
+                <li>欢迎注册</li>
+            </ul>
+            <ul class="hedeulr">
+                <a href="./foot/helpCenter.html">
                     <li>帮助中心</li>
-                </ul>
-            </div>
+                </a>
+                <a href="../index.html">
+                    <li>首页</li>
+                </a>
+            </ul>
         </div>
     </div>
 
     <div class="zc_content">
-        <div class="zc_contenter">
-            <div class="zc_contenter_l">
-                <ul>
-                    <li>
-                        <span class="zcnth-child-1">最全面</span>
-                        <i>整个最大渠道企业人才信息</i>
-                    </li>
-                    <li>
-                        <span class="zcnth-child-2">最真实</span>
-                        <i>企业人才相互点评，信息更真实</i>
-                    </li>
-                    <li>
-                        <span class="zcnth-child-3">最安全</span>
-                        <i>只有注册认证客户才能查看资源</i>
-                    </li>
-                    <li>
-                        <span class="zcnth-child-4">最高效</span>
-                        <i>找工作找人才更便捷高效</i>
-                    </li>
-                </ul>
+        <div class="zc_contentC">
+            <div class="zc_contentCl">
+                <img src="../images/shuaige.png" alt="">
+                <p>个人职场诚信档案查询，提高应聘成功率，增加就业筹码</p>
             </div>
-            <div class="zc_contenter_r">
-                <li>个人注册</li>
-                <li class="margin">手机号码/邮箱</li>
-                <input type="text" name="" class="zcinput_lang index_phone" placeholder="&nbsp请输入手机号码/邮箱号,它将用于登录和找回密码">
-                <p class="wrong">1212</p>
-                <li class="margin">密码</li>
-                <input type="text" name="" class="zcinput_lang index_pass" placeholder="&nbsp请输入密码，6-16位字母/数字/符号相组">
-                <p class="wrong">1212</p>
-                <li class="margin">确认密码</li>
-                <input type="text" name="" class="zcinput_lang index_pass1" placeholder="&nbsp请输入和上面相同的密码">
-                <p class="wrong">1212</p>
-                <li class="margin">图形验证码</li>
-                <input type="text" placeholder="&nbsp不区分大小写，点击图片可刷新" class="zcinput_yanz"> <span></span>
-                <!--<li>短信验证码</li>
-                <input type="text" placeholder="&nbsp请输入短信验证码" class="zcinput_yanz"> <button>获取验证码</button>-->
-                <input type="button" value="注册">
-                <div class="zc_conr_foot">
-                    <i>已有猎评网账号,</i>
-                    <a href="">直接登录</a>
-                    <a href="">
-                        <m></m>
-                    </a>
+            <div class="zc_contentCr">
+                <ul class="clearfix zc_contentCr_ul">
+                    <li class="active" data-id="geren_zc">
+                        个人注册
+                        <span></span>
+                    </li>
+                    <li data-id="firm_zc">企业注册</li>
+                </ul>
+                <div class=" clearfix" id="geren_zc">
+                    <div class="inputbox ">
+                        <span>手机号码/邮箱</span><input type="text" name="" value="" class="zcinput_lang index_phone" placeholder="&nbsp请输入手机号码/邮箱号/用户名">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>密码</span><input type="text" name="" value="" class="zcinput_lang index_pass" placeholder="&nbsp请输入密码，6-16位字母/数字/符号相组">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>确认密码</span><input type="text" name="" value="" class="zcinput_lang index_pass1" placeholder="&nbsp请输入和上面相同的密码">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>图形验证</span>
+                        <input type="text" class="erwm_iput" placeholder="&nbsp不区分大小写,点击图片可刷新">
+                        <input type="text" name="" value="" class="erwm">
+                        <p class="wrong">1212</p>
+                    </div>
                 </div>
+                <div class="clearfix" id="firm_zc">
+                    <div class="inputbox ">
+                        <span>企业名称</span><input type="text" name="" value="" class="zcinput_lang firm_name" placeholder="&nbsp请输入手机号码/邮箱号/用户名">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox ">
+                        <span>手机号码/邮箱</span><input type="text" name="" value="" class="zcinput_lang index_phone2" placeholder="&nbsp请输入手机号码/邮箱号/用户名">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>密码</span><input type="text" name="" value="" class="zcinput_lang index_pass2" placeholder="&nbsp请输入密码，6-16位字母/数字/符号相组">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>确认密码</span><input type="text" name="" value="" class="zcinput_lang index_pass12" placeholder="&nbsp请输入和上面相同的密码">
+                        <p class="wrong">1212</p>
+                    </div>
+                    <div class="inputbox">
+                        <span>图形验证</span>
+                        <input type="text" class="erwm_iput" placeholder="&nbsp不区分大小写,点击图片可刷新">
+                        <input type="text" name="" value="" class="erwm">
+                        <p class="wrong">1212</p>
+                    </div>
+                </div>
+                <button type="button">注册</button>
+                <p class="foot">已有猎评账号，<a href="./signIn.html">直接登录</a><span class="shoujian"></span></p>
             </div>
         </div>
     </div>
 
 </body>
 <script src="../public/script/zhuce.js"></script>
+
 
 </html>

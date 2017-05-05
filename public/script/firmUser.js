@@ -209,18 +209,18 @@ $('.firmUser_qx').each(function(i, el) {
     })
 })
 $('.firmUser_bc').each(function(i, el) {
-    el.index = i;
-    $(el).click(function() {
-        $('.outsidep_shanchu')[this.index].style.display = 'block';
-        $('.outsidep_xiugai')[this.index].style.display = 'block';
-        $('.continer_content1')[this.index].style.display = 'block';
-        $('.continer_content')[this.index].style.display = 'none';
-        // if($('.continer_content .firmUserImg').children('img')){}
-        if ($($('.continer_content .firmUserImg')[this.index]).children('img').length == 1) {
-            $('.continer_contentimg:eq(' + [this.index] + ')').html($('.continer_content .firmUserImg')[this.index].childNodes[0]);
+    //el.index = i;
+    //$(el).click(function() {
+    //    $('.outsidep_shanchu')[this.index].style.display = 'block';
+    //    $('.outsidep_xiugai')[this.index].style.display = 'block';
+    //    $('.continer_content1')[this.index].style.display = 'block';
+    //    $('.continer_content')[this.index].style.display = 'none';
+    //    // if($('.continer_content .firmUserImg').children('img')){}
+    //    if ($($('.continer_content .firmUserImg')[this.index]).children('img').length == 1) {
+    //        $('.continer_contentimg:eq(' + [this.index] + ')').html($('.continer_content .firmUserImg')[this.index].childNodes[0]);
 
-        }
-    })
+    //    }
+    //})
 })
 $('.outsidep_xiugai').each(function(i, el) {
     el.index = i;
