@@ -929,11 +929,12 @@
   display: block;
   width: 120px;
   height: 120px;
-  position: relative;
   border-radius: 50%;
   overflow: hidden;
   float: left;
   margin: 0 30px;
+  margin-top: 10px;
+  position: relative;
 }
 .content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBbox3,
 .content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBbox4 {
@@ -963,6 +964,7 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
 }
 .content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBboxPotion p {
   font-size: 20px;
@@ -970,6 +972,31 @@
 }
 .content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBboxPotion p:first-child {
   margin-top: 30px;
+}
+.content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBboxhidden {
+  display: none;
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: black;
+  opacity: .8;
+}
+.content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBboxhidden:before {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 21px;
+  background: url('../../images/delete3.png') no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.content .col-sm-10padding .setUp_contjineng20 .setUp_contjineng20C .setUp_contjineng20L .TBboxPotion:hover .TBboxhidden {
+  display: block;
 }
 .content .col-sm-10padding .starspan {
   display: inline-block;

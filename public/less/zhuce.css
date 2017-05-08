@@ -129,11 +129,12 @@ body {
 }
 .zc_content .zc_contentC .zc_contentCr #geren_zc {
   height: 360px;
-  display: none;
+  /**display: none;**/
 }
 .zc_content .zc_contentC .zc_contentCr #firm_zc {
   height: 360px;
   margin-top: -20px;
+  display: none;
 }
 .zc_content .zc_contentC .zc_contentCr .inputbox {
   float: right;
@@ -159,8 +160,11 @@ body {
   margin-left: 20px;
   font-size: 15px;
 }
+    .zc_content .zc_contentC .zc_contentCr .erwm {
+        margin-top:-5px;
+    }
 .zc_content .zc_contentC .zc_contentCr .inputbox .erwm {
-  width: 112px;
+  width: 115px;
   height: 40px;
   border: 1px solid #dcdcdc;
   margin-left: 11px;

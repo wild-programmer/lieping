@@ -170,6 +170,7 @@ p {
 
 .user .continer .r .user_img {
     float: right;
+    width: 200px;
 }
 
 .user .continer .r .user_firm {

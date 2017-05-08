@@ -906,6 +906,8 @@
                     overflow: hidden;
                     float: left;
                     margin: 0 30px;
+                    margin-top: 10px;     
+                    position: relative;              
                     .TBbox3,
                     .TBbox4 {
                         width: 50%;
@@ -935,6 +937,7 @@
                         left: 50%;
                         top: 50%;
                         transform: translateX(-50%) translateY(-50%);
+                        cursor: pointer;
                         p{                            
                             font-size: 20px;
                             line-height: 25px;
@@ -942,6 +945,31 @@
                         p:first-child{
                             margin-top:30px;
                         }
+                    }
+                     .TBboxhidden{
+                        display: none;
+                        width: 122px;
+                        height: 122px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        background-color: black;
+                        opacity: .8;
+                    }
+                    .TBboxhidden:before{
+                        display: block;
+                        content: '';
+                        width: 20px;
+                        height: 21px;
+                        background: url('../../images/delete3.png') no-repeat;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                    .TBboxPotion:hover .TBboxhidden{
+                        display: block;
                     }
                 }
             }

@@ -1,22 +1,19 @@
 // 熟练程度
 (function() {
     var val = '',
-        va = ['node'];
+        va = [''];
     $('.setUp_contjinengbc').on('click', function() {
         var value = $('.cont_jineng').val(); //技能语言
         val = $('.shuliand').html(); //熟练程度
-        // if ($.inArray(value, va)) {
         for (var i = 0; i < va.length; i++) {
             if (va[i] == value) {
                 $('.show_jin').each(function(i, el) {
                     var value1 = el.innerHTML;
                     if (value1 == value) {
                         if (val == '一般') {
-                            alert('一般')
                             $(el).parent().siblings('div').removeClass('cont_color');
                             $(el).parent().siblings('div').eq(1).addClass('cont_color');
                             $(el).siblings().html(val);
-                            alert(1);
                         } else if (val == '良好') {
                             $(el).parent().siblings('div').removeClass('cont_color');
                             $(el).parent().siblings('div').eq(1).addClass('cont_color');
@@ -47,6 +44,8 @@
                             '<span class="TBboxPotion">' +
                             '<p class="show_jin">' + value + '</p>' +
                             '<p class="show_try">' + val + '</p>' +
+                            '<i class="TBboxhidden">' +
+                            '</i>' +
                             '</span>' +
                             '</div>'
                     } else if (val == '良好') {
@@ -58,6 +57,8 @@
                             '<span class="TBboxPotion">' +
                             '<p class="show_jin">' + value + '</p>' +
                             '<p class="show_try">' + val + '</p>' +
+                            '<i class="TBboxhidden">' +
+                            '</i>' +
                             '</span>' +
                             '</div>'
                     } else if (val == '熟练') {
@@ -69,6 +70,8 @@
                             '<span class="TBboxPotion">' +
                             '<p class="show_jin">' + value + '</p>' +
                             '<p class="show_try">' + val + '</p>' +
+                            '<i class="TBboxhidden">' +
+                            '</i>' +
                             '</span>' +
                             '</div>';
                     } else if (val == '精通') {
@@ -80,6 +83,8 @@
                             '<span class="TBboxPotion">' +
                             '<p class="show_jin">' + value + '</p>' +
                             '<p class="show_try">' + val + '</p>' +
+                            '<i class="TBboxhidden">' +
+                            '</i>' +
                             '</span>' +
                             '</div>'
 
@@ -91,39 +96,27 @@
 
             }
         }
-        // if (va.indexOf(value) && value != '') {
-        //     //没有在数组中
-
-        //     // alert(1)
-        //     console.log(va.indexOf(value));
-        // } else if (value != '') {
-        //     // 有的进来
-        //     alert('有')
-
-        // }
-
-
-
-
-
-
-        // val = $('.shuliand').html();
-        // if (val == '一般') {
-
-        // } else if (val == '良好') {
-
-        // } else if (val == '熟练') {
-        //     $(this).siblings('div').css('backgroundColor', ':#898989');
-
-        // } else if (val == '精通') {
-        //     $(this).siblings('div').css('backgroundColor', ':#898989');
-
-        // } else {
-        //     return
-        // }
+        document.querySelector('.cont_jineng').value = ''
     })
+    $('.setUp_contjinengqx').on('click', function() {
+            document.querySelector('.cont_jineng').value = ''
+        })
+        // $('.setUp_contjineng20L').each(function(i, el) {
+        //         alert($(el).index())
+        //         $(el).on('click', 'i', function() {
+        //             alert(1);
+        //         })
+        //     })
+        // $('body').on('click', $('setUp_contjineng20L TBboxhidden'), function() {
+        //     alert(1)
+        //     $(this).parent().parent().remove();
+        // })
 })()
-
+$(document).ready(function() {
+    $(".setUp_contjineng20C").on("click", $('.TBboxhidden'), function() {
+        console.log(this)
+    });
+});
 // 点击元素
 // [
 //     {初始化状态的点击元素},记录外层的位置。记录内层的位置

@@ -41,6 +41,9 @@
   margin-top: 35px;
   text-align: center;
 }
+.reader_filebox .reader_fileboxC .reader_fileboxCT .ceb_xiugai {
+  display: none;
+}
 .reader_filebox .reader_fileboxC .reader_fileboxCB {
   display: none;
   position: absolute;
@@ -361,7 +364,7 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 60%;
+  width: 70%;
 }
 .lpfnye #lp_page .m-pagination-page > li.active > a {
   background-color: #f29b76;
@@ -423,5 +426,8 @@
   }
   .resume_guanlTable th {
     width: 100px;
+  }
+  .lpfnye #lp_page {
+    width: 80%;
   }
 }
