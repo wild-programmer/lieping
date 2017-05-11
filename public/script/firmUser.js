@@ -1,5 +1,4 @@
 (function(window) {
-
     var firmUser = {
         init: function() {
             var that = this;
@@ -8,7 +7,6 @@
         dropDown: function() {
             function stopPro(e) {
                 if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
-
                     if (event.stopPropagation) {
                         // this code is for Mozilla and Opera 
                         event.stopPropagation();
@@ -59,9 +57,6 @@
     window.firmUser = firmUser;
 
 })(window)
-
-
-
 
 // 企业头像上传
 var upheader = function() {
@@ -128,7 +123,6 @@ upheader();
 var uodata2 = function(elclick, elshow) {
     var input = document.querySelector(elclick); //input 标签
     var result = document.querySelector(elshow); //填充图片的标签
-    console.log(result)
     if (typeof FileReader === 'undefined') {
         result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
         input.setAttribute('disabled', 'disabled');
@@ -242,75 +236,79 @@ $('.outsidep_xiugai').each(function(i, el) {
 //     console.log(12);
 //     $('#xiala_show').toggle();
 // })
-var mr_months = document.querySelectorAll('.mr_month');
-var mr_years = document.querySelectorAll('.mr_year');
-var lp_showel = document.querySelectorAll('.lp_xl_showdata');
-// 年薪下拉
-var lp_yearmos = document.querySelectorAll('.lp_yearmo');
-var mr_yeva,
-    mr_value;
-for (var j = 0; j < lp_showel.length; j++) {
-    (function(i) {
-        lp_showel[i].tag = i;
-        lp_showel[i].onclick = function() {
-            var lp_xl1 = document.querySelectorAll('.lp_xl')[this.tag];
-            var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[this.tag];
-        }
-    })(j);
-}
-for (var i = 0; i < mr_months.length; i++) {
-    // mr_months[i].tage = i;
-    (function(i) {
-        var k = i;
-        var lis = mr_years[i].querySelectorAll('li');
-        var lis2 = mr_months[i].querySelectorAll('li');
-        for (var i = 0; i < lis.length; i++) {
-            //記錄这个哪一个 日期下拉  要对应showdata
-            lis[i].tage = k;
-            (function(el) {
-                el.onclick = function() {
-                    var All = this.parentNode.children;
-                    for (var i = 0, pl = All.length; i < pl; i++) {
-                        All[i].style.backgroundColor = "";
-                    }
-                    for (var i = 0, pl2 = lis2.length; i < pl2; i++) {
-                        lis2[i].style.backgroundColor = "";
-                    }
-                    this.style.backgroundColor = "#e95513";
-                    // lis[i].tage; 这是第几个showdata
-                    mr_yeva = this.innerText;
-                }
-            })(lis[i]);
-            if (i < 12) {
-                (function(el2) {
-                    el2.onclick = function() {
-                        for (var i = 0, pl = lis2.length; i < pl; i++) {
+showdata();
+
+function showdata() {
+    var mr_months = document.querySelectorAll('.mr_month');
+    var mr_years = document.querySelectorAll('.mr_year');
+    var lp_showel = document.querySelectorAll('.lp_xl_showdata');
+    // 年薪下拉
+    var lp_yearmos = document.querySelectorAll('.lp_yearmo');
+    var mr_yeva,
+        mr_value;
+    for (var j = 0; j < lp_showel.length; j++) {
+        (function(i) {
+            lp_showel[i].tag = i;
+            lp_showel[i].onclick = function() {
+                var lp_xl1 = document.querySelectorAll('.lp_xl')[this.tag];
+                var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[this.tag];
+            }
+        })(j);
+    }
+    for (var i = 0; i < mr_months.length; i++) {
+        // mr_months[i].tage = i;
+        (function(i) {
+            var k = i;
+            var lis = mr_years[i].querySelectorAll('li');
+            var lis2 = mr_months[i].querySelectorAll('li');
+            for (var i = 0; i < lis.length; i++) {
+                //記錄这个哪一个 日期下拉  要对应showdata
+                lis[i].tage = k;
+                (function(el) {
+                    el.onclick = function() {
+                        var All = this.parentNode.children;
+                        for (var i = 0, pl = All.length; i < pl; i++) {
+                            All[i].style.backgroundColor = "";
+                        }
+                        for (var i = 0, pl2 = lis2.length; i < pl2; i++) {
                             lis2[i].style.backgroundColor = "";
                         }
                         this.style.backgroundColor = "#e95513";
-                        var mr_mova = parseInt(this.innerText);
-                        if (mr_mova < 10) {
-                            mr_mova = '0' + mr_mova;
-                        }
-                        var riqi = document.querySelectorAll('.showdata')[lis[i].tage];
-                        var lp_xl = document.querySelectorAll('.lp_xl')[lis[i].tage];
-                        var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[lis[i].tage];
-                        if (mr_yeva == undefined) {
-                            mr_yeva = riqi.innerText.split('.')[0];
-                        }
-                        mr_value = mr_yeva + '.' + mr_mova;
-                        riqi.innerText = mr_value;
-                        // lp_xl.style.display = 'none';
-                        $('.lp_xl').removeClass('active');
-                        $(lp_xl_showjT).removeClass('actives');
-                        mr_yeva = undefined;
+                        // lis[i].tage; 这是第几个showdata
+                        mr_yeva = this.innerText;
                     }
-                })(lis2[i]);
+                })(lis[i]);
+                if (i < 12) {
+                    (function(el2) {
+                        el2.onclick = function() {
+                            for (var i = 0, pl = lis2.length; i < pl; i++) {
+                                lis2[i].style.backgroundColor = "";
+                            }
+                            this.style.backgroundColor = "#e95513";
+                            var mr_mova = parseInt(this.innerText);
+                            if (mr_mova < 10) {
+                                mr_mova = '0' + mr_mova;
+                            }
+                            var riqi = document.querySelectorAll('.showdata')[lis[i].tage];
+                            var lp_xl = document.querySelectorAll('.lp_xl')[lis[i].tage];
+                            var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[lis[i].tage];
+                            if (mr_yeva == undefined) {
+                                mr_yeva = riqi.innerText.split('.')[0];
+                            }
+                            mr_value = mr_yeva + '.' + mr_mova;
+                            riqi.innerText = mr_value;
+                            // lp_xl.style.display = 'none';
+                            $('.lp_xl').removeClass('active');
+                            $(lp_xl_showjT).removeClass('actives');
+                            mr_yeva = undefined;
+                        }
+                    })(lis2[i]);
+                }
             }
-        }
-    })(i)
-}
+        })(i)
+    }
 
+}
 
 // 侧边栏选项卡
 $('.ceb_navul li').each(function(i, el) {
@@ -334,16 +332,8 @@ $('.suoshuhangyecontentl li').on('click', function() {
             // alert(1);
             $(this).siblings().css('display', 'none');
             $(this).css('display', 'block');
-            // $(this).children('span').each(function(i, el) {
-            //     console.log(el)
-            //     $(el).on('click', function() {
-            //         alert(1);
-            //         $('.suoshuhangye').siblings(i).index() = $(this).index();
-            //     })
-            // })
         }
     })
-
 })
 $('.suoshuhangyecontentr span').each(function(i, el) {
     $(el).on('click', function() {
@@ -359,9 +349,15 @@ $('.suoshuhangyequx').on('click', function() {
 
 // 下拉框数据填充
 // $('.xialaval')
-
 $('.showval').each(function(i, el) {
     $(el).on('click', function() {
         $(this).parent().siblings('i').attr('data-val', $(this).attr('data-val'));
     })
+})
+
+// 时间日期插件
+$('.lp_datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    endDate: '0d'
 })

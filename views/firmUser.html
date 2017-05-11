@@ -9,7 +9,10 @@
     <link rel="shortcut icon" href="../lieping.ico">
     <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../public/less/firmUser.css">
+    <link rel="stylesheet" href="../public/assets/detepicker/bootstrap-datepicker3.css">
     <script src="../public/assets/jquery-1.12.4.js"></script>
+    <script src="../public/assets/detepicker/bootstrap-datepicker.js"></script>
+    <script src="../public/assets/detepicker/bootstrap-datepicker.zh-CN.js"></script>
 </head>
 
 <body>
@@ -51,7 +54,12 @@
                     <li><a href="./callUs.html">联系我们</a></li>
                     <li><a href="./personalUser.html">个人用户</a></li>
                     <span>|</span>
-                    <li><a href="javascript:;" style="color:#e95513">企业用户</a></li>
+                    <li id="personahover">
+                        <a href="javascript:;" style="color:#e95513">企业用户</a>
+                        <div id="personaxl">
+                            退出
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -234,18 +242,14 @@
                     </div>
                     <div class="continer_content02 clearfix">
                         <span>成立日期</span><i></i>
-                        <div class="setUp_contqz_xiala clearfix">
-                            <!--<i>年薪</i>
-                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>-->
-                            <div class="xialT clearfix lp_xl_showoryue xiala">
-                                <i class="showdata">2011.09</i>
-                                <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT xialaspan"></span></p>
-                            </div>
-                            <!--<div class="contqz_xiala_oryue clearfix xiala_show">
-                                <li class="lp_yearmo">年薪</li>
-                                <li class="lp_moseney">月薪</li>
-                            </div>-->
-                            <div class="lp_xl clearfix contqz_xiala_oryue clearfix xiala_show">
+                        <input type="text" name="" value="" class=" lp_datepicker">
+                        <!--此处为自定义时间下拉遗址-->
+                        <!--<div class="setUp_contqz_xiala clearfix">                            -->
+                        <!--<div class="xialT clearfix lp_xl_showoryue xiala">
+                                    <i class="showdata">2011.09</i>
+                                    <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT xialaspan"></span></p>
+                                </div>-->
+                        <!--<div class="lp_xl clearfix contqz_xiala_oryue clearfix xiala_show">
                                 <ul class="mr_year">
                                     <li>2017</li>
                                     <li>2016</li>
@@ -289,8 +293,8 @@
                                     <li class="mb0"><span>11月</span></li>
                                     <li class="mr0 mb0"><span>12月</span></li>
                                 </ul>
-                            </div>
-                        </div>
+                                </div>-->
+                        <!--</div>-->
                     </div>
                     <div class="continer_content03 clearfix">
                         <m>公司规模</m><i></i>

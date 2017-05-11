@@ -8,6 +8,19 @@
     height: 6px;
     background-color: @colcor;
 }
+#personahover:hover #personaxl{
+    display: block;
+}
+#personaxl{
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+    border-top: 1px dashed @colcor;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
  .check_icon::before{
         content: '';
         display: block;
@@ -332,13 +345,13 @@
                         display: none;
                         margin-top: 0;
                         .mr_year {
-                            width: 90px;
+                            width: 89px;
                             height: 158px;
                             overflow: auto;
                             float: left;
                              li {
                                 float: left;
-                                width: 72px;
+                                width: 70px;
                                 height: 32px;
                                 cursor: pointer;
                                 line-height: 32px;
@@ -453,6 +466,10 @@
                     display: none;
                     span{                        
                         margin: 0 10px; 
+                        border-radius: 2px;
+                    }
+                    span:hover{
+                        background-color: @colcor;
                     }
                 }
             }
@@ -1005,7 +1022,16 @@
     width: 198px;
     height: 35px;
 }
-            
+.datepicker{
+    margin-top: 60px;
+}
+.lp_datepicker{
+    width: 300px;
+    height: 40px;
+    border: 1px solid @bar;
+    font-size: 14px;
+    text-indent: 30px;
+}            
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -1032,6 +1058,9 @@
      width: 161px;
      height: 161px;
  }
+ .col-sm-10padding .continer_content001{
+     margin-right: 50px;
+ }
  .col-sm-10padding .continer_content002{
      margin-right: 10px;
      margin-bottom: 0px;
@@ -1045,6 +1074,7 @@
  .col-sm-10padding .continer_content002 .firmUserImgB{
      height: 50px;
  }
+ 
  .col-sm-10padding .continer_content001 .firmUserImgB .firmUserfile{
      height: 33px;
  }
@@ -1063,7 +1093,8 @@
      width: 600px;
  }
  .col-sm-10padding .continer_content .continer_content07{
-     margin-right: 60px;
+    margin-left: 65px;
+    float: left;
  }
  .min-width{
      width: 290px !important;

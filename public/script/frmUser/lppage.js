@@ -9,7 +9,7 @@
  * Released under the MIT license
  */
 
-(function (factory) {
+(function(factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
         define(['jquery'], factory);
@@ -20,10 +20,10 @@
         // Globals
         factory(jQuery);
     }
-})(function ($) {
+})(function($) {
     "use strict";
 
-    var Page = function (element, options) {
+    var Page = function(element, options) {
         var defaultOption = {
             pageIndex: 0,
             pageSize: 10,
@@ -79,7 +79,7 @@
         this.currentPageIndex = utility.convertInt(this.options.pageIndex);
         this.currentPageSize = utility.convertInt(this.options.pageSize);
         this.currentParams = utility.deserializeParams(this.options.remote.params) || {};
-        this.getLastPageNum = function () {
+        this.getLastPageNum = function() {
             return pagination.core.calLastPageNum(this.total, this.currentPageSize);
         }
         if (this.options.remote.success === null) {
@@ -89,43 +89,43 @@
     }
 
     Page.prototype = {
-        getPageIndex: function () {
+        getPageIndex: function() {
             return this.currentPageIndex;
         },
-        getPageSize: function () {
+        getPageSize: function() {
             return this.currentPageSize;
         },
-        getParams: function () {
+        getParams: function() {
             return this.currentParams;
         },
-        setPageIndex: function (pageIndex) {
+        setPageIndex: function(pageIndex) {
             if (pageIndex !== undefined && pageIndex !== null) {
                 this.currentPageIndex = utility.convertInt(pageIndex);
             }
         },
-        setPageSize: function (pageSize) {
+        setPageSize: function(pageSize) {
             if (pageSize !== undefined && pageSize !== null) {
                 this.currentPageSize = utility.convertInt(pageSize);
             }
         },
-        setRemoteUrl: function (url) {
+        setRemoteUrl: function(url) {
             if (url) {
                 this.currentUrl = url;
             }
         },
-        setParams: function (params) {
+        setParams: function(params) {
             if (params) {
                 this.currentParams = utility.deserializeParams(params);
             }
         },
-        render: function (total) {
+        render: function(total) {
             if (total !== undefined && total !== null) {
                 this.total = utility.convertInt(total);
             }
             this.renderPagination();
             this.debug('pagination rendered');
         },
-        init: function () {
+        init: function() {
             this.initHtml();
             this.initEvent();
             if (this.currentUrl && this.options.loadFirstPage) {
@@ -135,7 +135,7 @@
             }
             this.debug('pagination inited');
         },
-        initHtml: function () {
+        initHtml: function() {
             //init size module
             var sizeHtml = $('<select data-page-btn="size"></select>');
             for (var i = 0; i < this.options.pageSizeItems.length; i++) {
@@ -152,56 +152,54 @@
                 this.$element.append(this[this.options.pageElementSort[i]]);
             }
         },
-        initEvent: function () {
+        initEvent: function() {
             this.$element
-            .on('click', { page: this }, function (event) {
-                if ($(event.target).is('button')) {
-                    if ($(event.target).data('pageBtn') == 'jump') {
-                        var $input = event.data.page.$element.find('input[data-page-btn=jump]');
+                .on('click', { page: this }, function(event) {
+                    if ($(event.target).is('button')) {
+                        if ($(event.target).data('pageBtn') == 'jump') {
+                            var $input = event.data.page.$element.find('input[data-page-btn=jump]');
+                            event.data.page.jumpEventHandler($input.val(), event);
+                        }
+                    } else {
+                        if ($(event.target).data('pageIndex') !== undefined)
+                            eventHandler.call(event.data.page, event);
+                    }
+                }).on('change', { page: this }, function(event) {
+                    var $this = $(event.target);
+                    if ($this.data('pageBtn') == 'jump') {
+                        event.data.page.jumpEventHandler($this.val(), event);
+                    }
+                    if ($this.data('pageBtn') == 'size') {
+                        eventHandler.call(event.data.page, event);
+                    }
+                }).on('keypress', { page: this }, function(event) {
+                    if (event.keyCode == "13") {
+                        var $input = event.data.page.$element.find('input[data-page-btn=jump]')
                         event.data.page.jumpEventHandler($input.val(), event);
                     }
-                } else {
-                    if ($(event.target).data('pageIndex') !== undefined)
-                        eventHandler.call(event.data.page, event);
-                }
-            }).on('change', { page: this }, function (event) {
-                var $this = $(event.target);
-                if ($this.data('pageBtn') == 'jump') {
-                    event.data.page.jumpEventHandler($this.val(), event);
-                }
-                if ($this.data('pageBtn') == 'size') {
-                    eventHandler.call(event.data.page, event);
-                }
-            }).on('keypress', { page: this }, function (event) {
-                if (event.keyCode == "13") {
-                    var $input = event.data.page.$element.find('input[data-page-btn=jump]')
-                    event.data.page.jumpEventHandler($input.val(), event);
-                }
-            });
+                });
         },
-        jumpEventHandler: function (inputValue, event) {
+        jumpEventHandler: function(inputValue, event) {
             if (!inputValue) {
                 this.$jump.removeClass('error');
             } else if (!pagination.check.checkJumpPage(inputValue)) {
                 this.$jump.addClass('error');
-            }
-            else if (utility.convertInt(inputValue) > this.getLastPageNum()) {
+            } else if (utility.convertInt(inputValue) > this.getLastPageNum()) {
                 this.$jump.addClass('error');
-            }
-            else {
+            } else {
                 this.$jump.removeClass('error');
                 eventHandler.call(this, event);
             }
         },
 
-        doPagination: function () {
+        doPagination: function() {
             if (this.currentUrl) {
                 this.remote();
             } else {
                 this.renderPagination();
             }
         },
-        remote: function () {
+        remote: function() {
             if (typeof this.options.remote.pageParams === 'function') {
                 var pageParams = this.options.remote.pageParams.call(this, { pageIndex: this.currentPageIndex, pageSize: this.currentPageSize });
                 this.currentParams = $.extend({}, this.currentParams, pageParams);
@@ -209,10 +207,10 @@
                 this.currentParams[this.options.remote.pageIndexName] = this.currentPageIndex;
                 this.currentParams[this.options.remote.pageSizeName] = this.currentPageSize;
             }
-            pagination.remote.getAjax(this, this.currentUrl, this.currentParams, this.ajaxCallBack, this.options.remote.beforeSend, this.options.remote.complete,this.options.remote.traditional);
+            pagination.remote.getAjax(this, this.currentUrl, this.currentParams, this.ajaxCallBack, this.options.remote.beforeSend, this.options.remote.complete, this.options.remote.traditional);
         },
 
-        ajaxCallBack: function (result) {
+        ajaxCallBack: function(result) {
             var total = utility.mapObjectNameRecursion(result, this.options.remote.totalName);
             if (total == null || total == undefined)
                 throw new Error("the response of totalName :  '" + this.options.remote.totalName + "'  not found.");
@@ -228,17 +226,18 @@
             }
         },
 
-        onEvent: function (eventName, pageIndex, pageSize) {
+        onEvent: function(eventName, pageIndex, pageSize) {
             if (pageIndex != null) this.currentPageIndex = utility.convertInt(pageIndex);
             if (pageSize != null) this.currentPageSize = utility.convertInt(pageSize);
             this.doPagination();
             this.$element.trigger(eventName, {
-                pageIndex: this.currentPageIndex, pageSize: this.currentPageSize
+                pageIndex: this.currentPageIndex,
+                pageSize: this.currentPageSize
             });
             this.debug('pagination ' + eventName);
         },
         //生成分页
-        renderPagination: function () {
+        renderPagination: function() {
             var option = {
                 showFirstLastBtn: this.options.showFirstLastBtn,
                 firstBtnText: this.options.firstBtnText,
@@ -249,17 +248,20 @@
             var lastPageNum = this.getLastPageNum();
             this.currentPageIndex = lastPageNum > 0 && this.currentPageIndex > lastPageNum - 1 ? lastPageNum - 1 : this.currentPageIndex;
             this.$page.empty().append(pagination.core.renderPages(this.currentPageIndex, this.currentPageSize, this.total, this.options.pageBtnCount, option)).show();
-            if (this.options.showPageSizes && lastPageNum !== 0) this.$size.show(); else this.$size.hide();
-            if (this.options.showJump && lastPageNum !== 0) this.$jump.show(); else this.$jump.hide();
+            if (this.options.showPageSizes && lastPageNum !== 0) this.$size.show();
+            else this.$size.hide();
+            if (this.options.showJump && lastPageNum !== 0) this.$jump.show();
+            else this.$jump.hide();
             this.$info.text(pagination.core.renderInfo(this.currentPageIndex, this.currentPageSize, this.total, this.options.infoFormat, this.options.noInfoText));
-            if (this.options.showInfo) this.$info.show(); else this.$info.hide();
+            if (this.options.showInfo) this.$info.show();
+            else this.$info.hide();
         },
         //销毁分页
-        destroy: function () {
+        destroy: function() {
             this.$element.unbind().data("pagination", null).empty();
             this.debug('pagination destroyed');
         },
-        debug: function (message, data) {
+        debug: function(message, data) {
             if (this.options.debug && console) {
                 message && console.info(message + ' : pageIndex = ' + this.currentPageIndex + ' , pageSize = ' + this.currentPageSize + ' , total = ' + this.total);
                 data && console.info(data);
@@ -267,21 +269,19 @@
         }
     }
 
-    var eventHandler = function (event) {
+    var eventHandler = function(event) {
         var that = event.data.page;
         var $target = $(event.target);
 
         if (event.type === 'click' && $target.data('pageIndex') !== undefined && !$target.parent().hasClass('active')) {
             that.onEvent(pagination.event.pageClicked, $target.data("pageIndex"), null);
-        }
-        else if ((event.type === 'click' || event.type === 'keypress') && $target.data('pageBtn') === 'jump') {
+        } else if ((event.type === 'click' || event.type === 'keypress') && $target.data('pageBtn') === 'jump') {
             var pageIndexStr = that.$jump.find('input').val();
             if (utility.convertInt(pageIndexStr) <= that.getLastPageNum()) {
                 that.onEvent(pagination.event.jumpClicked, pageIndexStr - 1, null);
                 that.$jump.find('input').val(null);
             }
-        }
-        else if (event.type === 'change' && $target.data('pageBtn') === 'size') {
+        } else if (event.type === 'change' && $target.data('pageBtn') === 'size') {
             var newPageSize = that.$size.find('select').val();
             var lastPageNum = pagination.core.calLastPageNum(that.total, newPageSize);
             if (lastPageNum > 0 && that.currentPageIndex > lastPageNum - 1) {
@@ -298,21 +298,21 @@
         pageSizeChanged: 'pageSizeChanged'
     };
     pagination.remote = {
-        getAjax: function (pagination, url, data, success, beforeSend, complate,traditional) {
+        getAjax: function(pagination, url, data, success, beforeSend, complate, traditional) {
             $.ajax({
                 url: url,
                 dataType: 'json',
                 data: data,
                 cache: false,
-                traditional:traditional,
+                traditional: traditional,
                 contentType: 'application/Json',
-                beforeSend: function (XMLHttpRequest) {
+                beforeSend: function(XMLHttpRequest) {
                     if (typeof beforeSend === 'function') beforeSend.call(this, XMLHttpRequest);
                 },
-                complete: function (XMLHttpRequest, textStatue) {
+                complete: function(XMLHttpRequest, textStatue) {
                     if (typeof complate === 'function') complate.call(this, XMLHttpRequest, textStatue);
                 },
-                success: function (result) {
+                success: function(result) {
                     success.call(pagination, result);
                 }
             })
@@ -325,7 +325,7 @@
             firstBtnText:
         }
         */
-        renderPages: function (pageIndex, pageSize, total, pageBtnCount, options) {
+        renderPages: function(pageIndex, pageSize, total, pageBtnCount, options) {
             options = options || {};
             var pageNumber = pageIndex + 1;
             var lastPageNumber = this.calLastPageNum(total, pageSize);
@@ -333,8 +333,7 @@
 
             if (lastPageNumber <= pageBtnCount) {
                 html = this.renderGroupPages(1, lastPageNumber, pageNumber);
-            }
-            else {
+            } else {
                 var firstPage = this.renderPerPage(options.firstBtnText || 1, 0);
                 var lastPage = this.renderPerPage(options.lastBtnText || lastPageNumber, lastPageNumber - 1);
 
@@ -361,8 +360,7 @@
                         html = this.renderGroupPages(1, pageBtnCount - 1, pageNumber);
                         html.push(nextPage);
                     }
-                }
-                else if (pageNumber > behindBtnNum) {
+                } else if (pageNumber > behindBtnNum) {
                     if (options.showFirstLastBtn) {
                         html = this.renderGroupPages(lastPageNumber - pageBtnCount + 3, pageBtnCount - 2, pageNumber);
                         html.unshift(prevPage);
@@ -371,8 +369,7 @@
                         html = this.renderGroupPages(lastPageNumber - pageBtnCount + 2, pageBtnCount - 1, pageNumber);
                         html.unshift(prevPage);
                     }
-                }
-                else {
+                } else {
                     if (options.showFirstLastBtn) {
                         html = this.renderGroupPages(pageNumber - symmetryBtnCount, pageBtnCount - 4, pageNumber);
                         html.unshift(prevPage);
@@ -388,7 +385,7 @@
             }
             return html;
         },
-        renderGroupPages: function (beginPageNum, count, currentPage) {
+        renderGroupPages: function(beginPageNum, count, currentPage) {
             var html = [];
             for (var i = 0; i < count; i++) {
                 var page = this.renderPerPage(beginPageNum, beginPageNum - 1);
@@ -399,10 +396,10 @@
             }
             return html;
         },
-        renderPerPage: function (text, value) {
+        renderPerPage: function(text, value) {
             return $("<li><a data-page-index='" + value + "'>" + text + "</a></li>");
         },
-        renderInfo: function (currentPageIndex, currentPageSize, total, infoFormat, noInfoText) {
+        renderInfo: function(currentPageIndex, currentPageSize, total, infoFormat, noInfoText) {
             if (total <= 0) {
                 return noInfoText;
             } else {
@@ -413,7 +410,7 @@
             }
         },
         //计算最大分页数
-        calLastPageNum: function (total, pageSize) {
+        calLastPageNum: function(total, pageSize) {
             total = utility.convertInt(total);
             pageSize = utility.convertInt(pageSize);
             var i = total / pageSize;
@@ -422,7 +419,7 @@
     };
     pagination.check = {
         //校验跳转页数有效性
-        checkJumpPage: function (pageIndex) {
+        checkJumpPage: function(pageIndex) {
             var reg = /^\+?[1-9][0-9]*$/;
             return reg.test(pageIndex);
         }
@@ -430,7 +427,7 @@
 
     var utility = {
         //转换为int
-        convertInt: function (i) {
+        convertInt: function(i) {
             if (typeof i === 'number') {
                 return i;
             } else {
@@ -443,11 +440,11 @@
             }
         },
         //返回是否小数
-        isDecimal: function (i) {
+        isDecimal: function(i) {
             return parseInt(i) !== i;
         },
         //匹配对象名称（递归）
-        mapObjectNameRecursion: function (object, name) {
+        mapObjectNameRecursion: function(object, name) {
             var obj = object;
             var arr = name.split('.');
             for (var i = 0; i < arr.length; i++) {
@@ -456,7 +453,7 @@
             return obj;
         },
         //匹配对象名称
-        mapObjectName: function (object, name) {
+        mapObjectName: function(object, name) {
             var value = null;
             for (var i in object) {
                 //过滤原型属性
@@ -469,7 +466,7 @@
             }
             return value;
         },
-        deserializeParams: function (params) {
+        deserializeParams: function(params) {
             var newParams = {};
             if (typeof params === 'string') {
                 var arr = params.split('&');
@@ -477,42 +474,38 @@
                     var a = arr[i].split('=');
                     newParams[a[0]] = decodeURIComponent(a[1]);
                 }
-            }
-            else if (params instanceof Array) {
+            } else if (params instanceof Array) {
                 for (var i = 0; i < params.length; i++) {
                     newParams[params[i].name] = decodeURIComponent(params[i].value);
                 }
-            }
-            else if (typeof params === 'object') {
+            } else if (typeof params === 'object') {
                 newParams = params;
             }
             return newParams;
         }
     }
 
-    $.fn.pagination = function (option) {
+    $.fn.pagination = function(option) {
         if (typeof option === 'undefined') {
             return $(this).data('pagination') || false;
         } else {
             var result;
             var args = arguments;
-            this.each(function () {
+            this.each(function() {
                 var $this = $(this);
                 var data = $this.data('pagination');
                 if (!data && typeof option === 'string') {
                     throw new Error('MricodePagination is uninitialized.');
-                }
-                else if (data && typeof option === 'object') {
+                } else if (data && typeof option === 'object') {
                     throw new Error('MricodePagination is initialized.');
                 }
-                    //初始化
+                //初始化
                 else if (!data && typeof option === 'object') {
                     var options = typeof option == 'object' && option;
                     var data_api_options = $this.data();
                     options = $.extend(options, data_api_options);
                     $this.data('pagination', (data = new Page(this, options)));
-                }
-                else if (data && typeof option === 'string') {
+                } else if (data && typeof option === 'string') {
                     result = data[option].apply(data, Array.prototype.slice.call(args, 1));
                 }
             });

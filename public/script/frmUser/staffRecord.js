@@ -47,25 +47,28 @@ $('.quxiao').each(function(i, el) {
 
 
 // 头像上传
-$('.xiug').on('click', function() {
-    $('.reader_filebox').css('display', 'block')
-});
-$('.updatahidden').on('click', function() {
-    $('.reader_filebox').css('display', 'none')
-});
-$('.reader_file_qx').on('click', function() {
-    $('.reader_filebox').css('display', 'none');
-    $('.reader_fileboxCT').html('');
-});
-$('.reader_file_bc').on('click', function() {
-    $('.reader_filebox').css('display', 'none');
-    var data = $(this).parent().prev().children('.reader_fileboxCT')[0].innerHTML
-    $(this).parent().prev().children('.reader_fileboxCT')[0].innerHTML = '';
-    document.querySelector('.contentl_herde').innerHTML = data;
-});
-$('.chac').on('click', function() {
-    $(this).parent().parent().parent().prev()[0].innerHTML = '<img src="../../public/uploade/lke.png" alt="">';
-});
+var headerUp = function() {
+    $('.xiug').on('click', function() {
+        $('.reader_filebox').css('display', 'block')
+    });
+    $('.updatahidden').on('click', function() {
+        $('.reader_filebox').css('display', 'none')
+    });
+    $('.reader_file_qx').on('click', function() {
+        $('.reader_filebox').css('display', 'none');
+        $('.reader_fileboxCT').html('');
+    });
+    $('.reader_file_bc').on('click', function() {
+        $('.reader_filebox').css('display', 'none');
+        var data = $(this).parent().prev().children('.reader_fileboxCT')[0].innerHTML
+        $(this).parent().prev().children('.reader_fileboxCT')[0].innerHTML = '';
+        document.querySelector('.contentl_herde').innerHTML = data;
+    });
+    $('.chac').on('click', function() {
+        $(this).parent().parent().parent().prev()[0].innerHTML = '<img src="../../public/uploade/lke.png" alt="">';
+    });
+}
+
 var uodata2 = function(elclick, elshow) {
     var input = document.querySelector(elclick); //input 标签
     var result = document.querySelector(elshow); //填充图片的标签
@@ -92,4 +95,5 @@ var uodata2 = function(elclick, elshow) {
         }
     }
 }
+headerUp();
 uodata2('.updataclick', '.reader_fileboxCT');

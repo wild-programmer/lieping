@@ -45,6 +45,63 @@
     height: 6px;
     background-color: @colcor;
 }
+.datepicker{
+    margin-top: 40px;
+}
+.lp_datepicker{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    float: left;
+}   
+input{
+    text-indent: 30px;
+    font-size: 14px;
+} 
+textarea{
+    border: 1px solid #dcdcdc;
+}
+#personahover:hover #personaxl{
+    display: block;
+}
+#personaxl{
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+    border-top: 1px dashed @colcor;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    // position: relative;
+    // top: -13px;
+    // left: 0px;
+}
+// 分页
+.lpfnye{
+    margin-top: 70px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    #lp_page{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 60%;
+        .m-pagination-page > li.active > a{
+            background-color: #f29b76;
+            border-color: #f29b76;
+        }
+        .m-pagination-group > button{
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            height: 36px;
+            width: 48px;
+        }
+    }
+}
 .content{
     font-family: "微软雅黑";
     .ceb_nav{
@@ -426,10 +483,12 @@
             display: none;
             .setUp_contbox{
                 margin-bottom: 25px;
+                padding-top: 25px;
+                box-sizing: border-box;
             }
             .setUp_contboxl,
             .setUp_contboxr{
-                margin-top: 25px;
+                margin-bottom: 25px;
                 font-size: 14px;
                 float: right;
                 i{
@@ -444,13 +503,24 @@
                     height: 40px;
                     border: 1px solid @bar;
                 }
+                .xingbie{
+                    margin-bottom: 0;
+                    border: 1px solid @bar;
+                    background-color: white;
+                    border-radius: 0;
+                    width: 98px;
+                }
+                .activexb{
+                    background-color: @colcor;
+                    color: white;
+                }
             }
             .setUp_contboxr{
                 margin-right: 180px;
             }
             .setUp_contboxl{
                 .setUp_name{
-                    margin-right: 125px;
+                    margin-right: 122px;
                 }
                 .setUp_how{                    
                     margin-right: 69px;
@@ -562,6 +632,7 @@
                textarea{
                    width: 640px;
                    height: 113px;
+                   border: 1px solid #dcdcdc;
                }
                p{
                    text-align: right;
@@ -792,6 +863,7 @@
                 textarea{
                     width: 810px;
                     height: 70px;
+                    border: 1px solid #dcdcdc;
                 }
                 margin: 15px 0 40px 0;
             }
@@ -1455,4 +1527,7 @@
 .pingjia_content .pingjia_contentB .pingjia_contentB3{
     width: 655px;
 }
+ .lpfnye #lp_page{
+     width: 75%; 
+ }
 }

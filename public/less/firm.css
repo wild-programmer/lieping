@@ -204,6 +204,24 @@
   left: -29px;
   top: 19px;
 }
+.lpfnye {
+  margin-top: 70px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.lpfnye #lp_page {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 60%;
+}
+.lpfnye #lp_page .m-pagination-page > li.active > a {
+  background-color: #f29b76;
+  border-color: #f29b76;
+}
 @media (max-width: 1240px) {
   .continer {
     width: 970px;
@@ -229,5 +247,8 @@
   }
   .content .ceb_nav .ceb_sanjiao {
     border-width: 100px 81px 0;
+  }
+  .lpfnye #lp_page {
+    width: 75%;
   }
 }

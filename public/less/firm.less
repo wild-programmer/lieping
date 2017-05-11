@@ -209,49 +209,30 @@
                     }
                 }
             }
-
-            // fenye
-            // .fenye{
-            //             width: 100%;
-            //             margin-top: 130px;
-            //         position: absolute;
-            //         bottom: 0px;
-            //         ul{
-            //             width: 595px;
-            //             margin: 0 auto;
-            //             span{
-            //                 display: inline-block;
-            //                 width: 100px;
-            //                 height: 40px;
-            //                 line-height: 40px;
-            //             }
-            //             li{
-            //                 width: 40px;
-            //                 height: 40px;
-            //                 line-height: 40px;
-            //             }
-            //             li , span{
-            //                 float: left;
-            //                 text-align: center;
-            //                 margin-right: 15px;
-            //                 border: 1px solid @bar;
-            //                 cursor: pointer;
-            //             }
-            //             .fy_doudian{
-            //                 border: none;
-            //                 font-size: 30px;
-            //                 a{
-            //                     display: block;
-            //                     margin-top: -10px;;
-            //                 }
-            //             }
-            //         }
-            //         }
+         
          
         }
     }
 }
-
+// 分页
+.lpfnye{
+    margin-top: 70px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    #lp_page{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 60%;
+        .m-pagination-page > li.active > a{
+            background-color: #f29b76;
+            border-color: #f29b76;
+        }
+    }
+}
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -279,5 +260,8 @@
   }
  .content .ceb_nav .ceb_sanjiao{
      border-width: 100px 81px 0;
+ }
+  .lpfnye #lp_page{
+     width: 75%; 
  }
 }

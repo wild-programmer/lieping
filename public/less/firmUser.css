@@ -1,24 +1,21 @@
 @import 'base.css';
 @import 'common.css';
-    .er {
-        font-size:14px;
-        margin-left: 95px;
-        margin-bottom:5px;
-        margin-top:-20px;
-        height:20px;
-        color:red;
-    }
-
-em {
-    display: inline-block;
-    width: 15px;
-    height: 20px;
-    vertical-align: middle;
-    background: url('../../images/jiantou1.png') 0 2px no-repeat;
-}
 .dImage {
   height: 6px;
   background-color: #e95513;
+}
+#personahover:hover #personaxl {
+  display: block;
+}
+#personaxl {
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  border-top: 1px dashed #e95513;
+  display: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
 }
 .check_icon::before {
   content: '';
@@ -313,14 +310,14 @@ em {
   margin-top: 0;
 }
 .col-sm-10padding .setUp_contqz_xiala .lp_xl .mr_year {
-  width: 90px;
+  width: 89px;
   height: 158px;
   overflow: auto;
   float: left;
 }
 .col-sm-10padding .setUp_contqz_xiala .lp_xl .mr_year li {
   float: left;
-  width: 72px;
+  width: 70px;
   height: 32px;
   cursor: pointer;
   line-height: 32px;
@@ -433,6 +430,10 @@ em {
 }
 .col-sm-10padding .suoshuhangye .suoshuhangyecontent .suoshuhangyecontentr p span {
   margin: 0 10px;
+  border-radius: 2px;
+}
+.col-sm-10padding .suoshuhangye .suoshuhangyecontent .suoshuhangyecontentr p span:hover {
+  background-color: #e95513;
 }
 .col-sm-10padding .continer_content001 {
   margin-top: 40px;
@@ -610,7 +611,7 @@ em {
   margin-right: 20px;
 }
 .col-sm-10padding .continer_content .continer_content04 {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -634,7 +635,7 @@ em {
   border: 1px solid #dcdcdc;
 }
 .col-sm-10padding .continer_content .continer_content03 {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -717,7 +718,7 @@ em {
   margin-right: 10px;
 }
 .col-sm-10padding .continer_content .continer_content02 {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
@@ -737,11 +738,10 @@ em {
   float: left;
 }
 .col-sm-10padding .continer_content .continer_content01 {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 14px;
   float: left;
   margin-left: 65px;
-  height:40px;
 }
 .col-sm-10padding .continer_content .continer_content01 i {
   display: inline-block;
@@ -957,6 +957,16 @@ em {
   width: 198px;
   height: 35px;
 }
+.datepicker {
+  margin-top: 60px;
+}
+.lp_datepicker {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  text-indent: 30px;
+}
 @media (max-width: 1240px) {
   .continer {
     width: 970px;
@@ -982,6 +992,9 @@ em {
   .content .ceb_nav .ceb_nav_top img {
     width: 161px;
     height: 161px;
+  }
+  .col-sm-10padding .continer_content001 {
+    margin-right: 50px;
   }
   .col-sm-10padding .continer_content002 {
     margin-right: 10px;
@@ -1014,10 +1027,10 @@ em {
     width: 600px;
   }
   .col-sm-10padding .continer_content .continer_content07 {
-    margin-right: 60px;
+    margin-left: 65px;
+    float: left;
   }
   .min-width {
     width: 290px !important;
   }
 }
-

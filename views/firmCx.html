@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../public/less/firm.css">
     <link rel="stylesheet" type="text/css" href="../public/less/firmsearch/hzw-city-picker.css">
+    <link rel="stylesheet" href="../public/less/firmUser/lppage.css">
+    <script src="../public/assets/jquery-1.12.4.js"></script>
+    <script src="../public/script/frmUser/lppage.js"></script>
 </head>
 
 <body>
@@ -263,24 +266,14 @@
                         </div>
                     </div>
 
-
-                    <div class="fenye">
-                        <ul class="clearfix">
-                            <span>上一页</span>
-                            <li><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li class="fy_doudian"><a href="">......</a></li>
-                            <span>下一页</span>
-                        </ul>
+                    <div class="lpfnye clearfix">
+                        <div id="lp_page" class="m-pagination"></div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="back_ccc" style="height:4px;margin-top:20px;  background-color: #e95513"></div>
+    <div class="back_ccc" style="height:4px;margin-top:100px;  background-color: #e95513"></div>
     <!--底部关于我们-->
     <div class="foot_our">
         <div class="continer clearfix">
@@ -326,13 +319,18 @@
 
 
 </body>
-<script src="../public/assets/jquery-1.12.4.js"></script>
+
 <script>
-    // <span>上海</span> <span class="nav_result_clik"></span>
-    //                         <div class="nav_result_clkc">
-    //                             <li>杭州</li>
-    //                             <li>郑州</li>
-    //                         </div>
+    $("#lp_page").pagination({
+        pageIndex: 2, //当前页数
+        pageSize: 2, //每页显示的数据
+        total: 100,
+        debug: true,
+        // showInfo: true, //是否显示分页信息
+        showJump: true, //是否显示跳转页
+        // showPageSizes: true, // 是否显示选择每页数量
+        pageElementSort: ['$page', '$size', '$jump', '$info']
+    });
     $('.nav_result_clik').click(function() {
         $('.nav_result_clkc').css('display', 'block');
     })
@@ -341,7 +339,6 @@
         $('.nav_result_clkc').css('display', 'none');
     })
 </script>
-<script type="text/javascript" src="../public/assets/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="../public/script/firmsearch/city-data.js"></script>
 <script type="text/javascript" src="../public/script/firmsearch/hzw-city-picker.min.js"></script>
 <script>

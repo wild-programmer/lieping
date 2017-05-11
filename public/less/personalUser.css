@@ -41,6 +41,59 @@
   height: 6px;
   background-color: #e95513;
 }
+.datepicker {
+  margin-top: 40px;
+}
+.lp_datepicker {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  float: left;
+}
+input {
+  text-indent: 30px;
+  font-size: 14px;
+}
+textarea {
+  border: 1px solid #dcdcdc;
+}
+#personahover:hover #personaxl {
+  display: block;
+}
+#personaxl {
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  border-top: 1px dashed #e95513;
+  display: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+.lpfnye {
+  margin-top: 70px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.lpfnye #lp_page {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 60%;
+}
+.lpfnye #lp_page .m-pagination-page > li.active > a {
+  background-color: #f29b76;
+  border-color: #f29b76;
+}
+.lpfnye #lp_page .m-pagination-group > button {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 36px;
+  width: 48px;
+}
 .content {
   font-family: "微软雅黑";
 }
@@ -399,10 +452,12 @@
 }
 .content .col-sm-10padding .setUp_cont .setUp_contbox {
   margin-bottom: 25px;
+  padding-top: 25px;
+  box-sizing: border-box;
 }
 .content .col-sm-10padding .setUp_cont .setUp_contboxl,
 .content .col-sm-10padding .setUp_cont .setUp_contboxr {
-  margin-top: 25px;
+  margin-bottom: 25px;
   font-size: 14px;
   float: right;
 }
@@ -420,11 +475,24 @@
   height: 40px;
   border: 1px solid #dcdcdc;
 }
+.content .col-sm-10padding .setUp_cont .setUp_contboxl .xingbie,
+.content .col-sm-10padding .setUp_cont .setUp_contboxr .xingbie {
+  margin-bottom: 0;
+  border: 1px solid #dcdcdc;
+  background-color: white;
+  border-radius: 0;
+  width: 98px;
+}
+.content .col-sm-10padding .setUp_cont .setUp_contboxl .activexb,
+.content .col-sm-10padding .setUp_cont .setUp_contboxr .activexb {
+  background-color: #e95513;
+  color: white;
+}
 .content .col-sm-10padding .setUp_cont .setUp_contboxr {
   margin-right: 180px;
 }
 .content .col-sm-10padding .setUp_cont .setUp_contboxl .setUp_name {
-  margin-right: 125px;
+  margin-right: 122px;
 }
 .content .col-sm-10padding .setUp_cont .setUp_contboxl .setUp_how {
   margin-right: 69px;
@@ -530,6 +598,7 @@
 .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_pj textarea {
   width: 640px;
   height: 113px;
+  border: 1px solid #dcdcdc;
 }
 .content .col-sm-10padding .setUp_contqiuzhi1 .setUp_contqz_pj p {
   text-align: right;
@@ -827,6 +896,7 @@
 .content .col-sm-10padding .setUp_contqiuzhi20 .setUp_contqz20_cent textarea {
   width: 810px;
   height: 70px;
+  border: 1px solid #dcdcdc;
 }
 .content .col-sm-10padding .setUp_contjiaoyu20 {
   display: none;
@@ -1450,5 +1520,8 @@
   }
   .pingjia_content .pingjia_contentB .pingjia_contentB3 {
     width: 655px;
+  }
+  .lpfnye #lp_page {
+    width: 75%;
   }
 }

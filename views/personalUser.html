@@ -9,7 +9,12 @@
     <link rel="shortcut icon" href="../lieping.ico">
     <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../public/less/personalUser.css">
-
+    <link rel="stylesheet" href="../public/less/firmUser/lppage.css">
+    <link rel="stylesheet" href="../public/assets/detepicker/bootstrap-datepicker3.css">
+    <script src="../public/assets/jquery-1.12.4.js"></script>
+    <script src="../public/assets/detepicker/bootstrap-datepicker.js"></script>
+    <script src="../public/assets/detepicker/bootstrap-datepicker.zh-CN.js"></script>
+    <script src="../public/script/frmUser/lppage.js"></script>
 </head>
 
 <body>
@@ -57,7 +62,12 @@
                     <li><a href="./talentsCx.html">人才查询</a></li>
                     <li><a href="./firmCx.html">企业查询</a></li>
                     <li><a href="./callUs.html">联系我们</a></li>
-                    <li><a href="" style="color:#e95513">个人用户</a></li>
+                    <li id="personahover">
+                        <a href="" style="color:#e95513">个人用户</a>
+                        <div id="personaxl">
+                            退出
+                        </div>
+                    </li>
                     <span>|</span>
                     <li><a href="./firmUser.html">企业用户</a></li>
                 </ul>
@@ -80,26 +90,20 @@
                 </div>
                 <ul class="ceb_navul">
                     <li class="ceb_navback" data-navname="resume_tianx">
-                        <p>公司信息</p>
+                        <p>我的简历</p>
                         <m></m>
                     </li>
                     <li>
-                        <p>员工档案</p>
+                        <p>职位搜索</p>
                     </li>
                     <li>
-                        <p>员工评价</p>
+                        <p>申请列表</p>
                     </li>
                     <li>
-                        <p>发布招聘</p>
-                    </li>
-                    <li>
-                        <p>简历管理</p>
+                        <p>收藏中心</p>
                     </li>
                     <li data-navname="resume_pingj">
                         <p>评价申诉</p>
-                    </li>
-                    <li>
-                        <p>消息管理</p>
                     </li>
                 </ul>
                 <div class="ceb_sanjiao">
@@ -125,7 +129,10 @@
                 <div class="setUp_cont clearfix jibenxinx">
                     <div class="setUp_contbox clearfix">
                         <div class="setUp_contboxr">
-                            <span>性别</span><i></i><input type="text" name="" value="">
+                            <span>性别</span><i></i>
+                            <!--<input type="text" name="" value="">-->
+                            <button class="xingbie">男</button>
+                            <button class="xingbie">女</button>
                         </div>
                         <div class="setUp_contboxl">
                             <span>姓名</span><i></i><input type="text" name="" value="" class="setUp_name">
@@ -134,7 +141,7 @@
                             <span>开始工作年份</span><i></i><input type="text" name="" value="">
                         </div>
                         <div class="setUp_contboxl">
-                            <span>出生日期</span><i></i><input type="text" name="" value="" class="setUp_how">
+                            <span>出生日期</span><i></i><input type="text" name="" value="" class=" lp_datepicker" style="float:none;margin-right:70px">
                         </div>
                         <div class="setUp_contboxr">
                             <span>求职状态</span><i></i><input type="text" name="" value="">
@@ -222,7 +229,7 @@
                     </div>
                     <div class="setUp_contqz_qw setUp_contqz_qwslf ">
                         <m>期望工作地</m><i class="starspan"></i>
-                        <input type="text" placeholder="&nbsp &nbsp 期望工作城市">
+                        <input type="text" placeholder="期望工作城市">
                     </div>
                     <div class="setUp_contqz_qw clearfix">
                         <div class="setUp_contqz_qwl floatLeft">
@@ -271,7 +278,7 @@
                         <div class="setUp_contqz_xialar" style="float:right">
                             <m class="">期望职位</m>
                             <i class="starspan"></i>
-                            <input type="text" placeholder="&nbsp &nbsp 期望职位">
+                            <input type="text" placeholder="期望职位">
                         </div>
 
                     </div>
@@ -279,7 +286,7 @@
                         <div class="setUp_contqz_pjT floatLeft">
                             <span>自我评价</span><i class="starspan"></i>
                             </div>
-                            <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok "> </textarea>
+                            <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok "></textarea>
                             <p><span>0</span>/500</p>
                         </div>
                         <!--<div class="setUp_contqz_qw marginBottom_35px marginRight_50px">-->
@@ -291,7 +298,6 @@
                                 <i>随时</i>
                                 <!--<p> <span class="ceb_xialspan"></span></p>
                             <div class="contqz_xiala_oryue clearfix">
-
                             </div>-->
                                 <p class="lp_xl_showoryue xiala hidexial2"> <span class="ceb_xialspan xialaspan"></span></p>
                                 <div class="contqz_xiala_oryue clearfix xiala_show" style="width:198px;">
@@ -370,10 +376,10 @@
                         <div class="serUp_jiaoyuT">
                             <span>学校名称</span>
                             <i class="starspan"></i>
-                            <input class="serUp_jiaoyuT_input" type="text" placeholder=" &nbsp 例如：北京大学">
+                            <input class="serUp_jiaoyuT_input" type="text" placeholder="例如：北京大学">
                             <span>专业名称</span>
                             <i class="starspan"></i>
-                            <input type="text" placeholder=" &nbsp 例如：计算机专业">
+                            <input type="text" placeholder="例如：计算机专业">
                         </div>
                         <div class="serUp_jiaoyuC serUp_jiaoyuCmagin  clearfix">
 
@@ -407,113 +413,11 @@
                                 <m class="starspan"></m>
                             </div>
                             <!--日期下拉菜單配置 i p .lp_xl-->
-                            <div class="setUp_contqz_xiala floatLeft clearfix">
-                                <div class="xialT clearfix">
-                                    <i class="showdata">2011.09</i>
-                                    <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                </div>
-                                <div class="lp_xl clearfix">
-                                    <ul class="mr_year">
-                                        <li>2017</li>
-                                        <li>2016</li>
-                                        <li>2015</li>
-                                        <li>2014</li>
-                                        <li>2013</li>
-                                        <li>2012</li>
-                                        <li>2011</li>
-                                        <li>2010</li>
-                                        <li>2009</li>
-                                        <li>2008</li>
-                                        <li>2007</li>
-                                        <li>2006</li>
-                                        <li>2005</li>
-                                        <li>2004</li>
-                                        <li>2003</li>
-                                        <li>2002</li>
-                                        <li>2001</li>
-                                        <li>2000</li>
-                                        <li>1999</li>
-                                        <li>1998</li>
-                                        <li>1997</li>
-                                        <li>1996</li>
-                                        <li>1995</li>
-                                        <li>1994</li>
-                                        <li>1993</li>
-                                        <li>1992</li>
-                                        <li>1991</li>
-                                    </ul>
-                                    <ul class="mr_month clearfixs">
-                                        <li><span>1月</span></li>
-                                        <li><span>2月</span></li>
-                                        <li class="mr0"><span>3月</span></li>
-                                        <li><span>4月</span></li>
-                                        <li><span>5月</span></li>
-                                        <li class="mr0"><span>6月</span></li>
-                                        <li><span>7月</span></li>
-                                        <li><span>8月</span></li>
-                                        <li class="mr0"><span>9月</span></li>
-                                        <li class="mb0"><span>10月</span></li>
-                                        <li class="mb0"><span>11月</span></li>
-                                        <li class="mr0 mb0"><span>12月</span></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <input type="text" name="" value="" class=" lp_datepicker">
                             <div class="serUp_jiaoyuC_span marginTop10px floatLeft">
                                 <span>-</span>
                             </div>
-                            <div class="setUp_contqz_xiala floatLeft clearfix">
-                                <div class="xialT clearfix">
-                                    <i class="showdata">2011.09</i>
-                                    <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                </div>
-                                <div class="lp_xl clearfix">
-                                    <ul class="mr_year">
-                                        <li>2017</li>
-                                        <li>2016</li>
-                                        <li>2015</li>
-                                        <li>2014</li>
-                                        <li>2013</li>
-                                        <li>2012</li>
-                                        <li>2011</li>
-                                        <li>2010</li>
-                                        <li>2009</li>
-                                        <li>2008</li>
-                                        <li>2007</li>
-                                        <li>2006</li>
-                                        <li>2005</li>
-                                        <li>2004</li>
-                                        <li>2003</li>
-                                        <li>2002</li>
-                                        <li>2001</li>
-                                        <li>2000</li>
-                                        <li>1999</li>
-                                        <li>1998</li>
-                                        <li>1997</li>
-                                        <li>1996</li>
-                                        <li>1995</li>
-                                        <li>1994</li>
-                                        <li>1993</li>
-                                        <li>1992</li>
-                                        <li>1991</li>
-                                    </ul>
-                                    <ul class="mr_month clearfixs">
-                                        <li><span>1月</span></li>
-                                        <li><span>2月</span></li>
-                                        <li class="mr0"><span>3月</span></li>
-                                        <li><span>4月</span></li>
-                                        <li><span>5月</span></li>
-                                        <li class="mr0"><span>6月</span></li>
-                                        <li><span>7月</span></li>
-                                        <li><span>8月</span></li>
-                                        <li class="mr0"><span>9月</span></li>
-                                        <li class="mb0"><span>10月</span></li>
-                                        <li class="mb0"><span>11月</span></li>
-                                        <li class="mr0 mb0"><span>12月</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
+                            <input type="text" name="" value="" class=" lp_datepicker">
                         </div>
                         <div class="serUp_jiaoyuB">
                             <div class=" marginTop10px floatLeft">
@@ -575,16 +479,16 @@
                         <div class="serUp_jiaoyuT">
                             <span>公司名称</span>
                             <i class="starspan"></i>
-                            <input class="serUp_jingyanT_input" type="text" placeholder=" &nbsp 例如：棋至文化公司">
+                            <input class="serUp_jingyanT_input" type="text" placeholder="例如：棋至文化公司">
                             <span>职位</span>
                             <i class="starspan"></i>
-                            <input type="text" placeholder=" &nbsp 例如：前端开发工程师">
+                            <input type="text" placeholder="例如：前端开发工程师">
                         </div>
                         <div class="serUp_jiaoyuT">
                             <div class="serUp_jiaoyuTL clearfix">
                                 <span>所属部门</span>
                                 <i class="starspan"></i>
-                                <input type="text" class="serUp_jiaoyuT_input" placeholder=" &nbsp 技术部">
+                                <input type="text" class="serUp_jiaoyuT_input" value="技术部">
                             </div>
 
                             <div class="serUp_jiaoyuTR clearfix">
@@ -600,38 +504,38 @@
                                         <ul class="clearfix">
                                             <li><span>健康医疗</span></li>
                                             <li><span>生活服务</li>
-                                    <li ><span>金融</li>
-                                    <li ><span>信息安全</li>
-                                    <li ><span>广告营销</li>
-                                    <li ><span>数据服务</li>
-                                    <li ><span>智能硬件</li>
-                                    <li ><span>文化娱乐</li>
-                                    <li ><span>网络招聘</li>
-                                    <li ><span>电子商务</li>
-                                    <li ><span>移动互联网</li>
-                                    <li ><span>企业服务</li>
-                                    <li ><span>社交网络</li>
-                                    <li ><span>教育培训</li>
-                                    <li ><span>O2O</li>
-                                    <li ><span>游戏</li>
-                                    <li ><span>媒体</li>
-                                    <li ><span>IT软件</li>
-                                    <li ><span>通信</li>
-                                    <li ><span>公关会展</li>
-                                    <li ><span>房地产/建筑</li>
-                                    <li ><span>汽车</li>
-                                    <li ><span>供应链/物流</li>
-                                    <li ><span>咨询/翻译/法律</li>
-                                    <li ><span>采购/贸易</li>
-                                    <li ><span>非互联网行业</li>
-                                </ul>
-                                <div class="setUp_buttonbox clearfix">
-                                    <button type="button" class="xial_bc">保存</button>
-                                    <button type="button" class="xial_qx">取消</button>
+                                            <li ><span>金融</li>
+                                            <li ><span>信息安全</li>
+                                            <li ><span>广告营销</li>
+                                            <li ><span>数据服务</li>
+                                            <li ><span>智能硬件</li>
+                                            <li ><span>文化娱乐</li>
+                                            <li ><span>网络招聘</li>
+                                            <li ><span>电子商务</li>
+                                            <li ><span>移动互联网</li>
+                                            <li ><span>企业服务</li>
+                                            <li ><span>社交网络</li>
+                                            <li ><span>教育培训</li>
+                                            <li ><span>O2O</li>
+                                            <li ><span>游戏</li>
+                                            <li ><span>媒体</li>
+                                            <li ><span>IT软件</li>
+                                            <li ><span>通信</li>
+                                            <li ><span>公关会展</li>
+                                            <li ><span>房地产/建筑</li>
+                                            <li ><span>汽车</li>
+                                            <li ><span>供应链/物流</li>
+                                            <li ><span>咨询/翻译/法律</li>
+                                            <li ><span>采购/贸易</li>
+                                            <li ><span>非互联网行业</li>
+                                        </ul>
+                                        <div class="setUp_buttonbox clearfix">
+                                            <button type="button" class="xial_bc">保存</button>
+                                            <button type="button" class="xial_qx">取消</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                           </div>
-                        </div>
 
                         <div class="serUp_jiaoyuC serUp_jiaoyuCmagin clearfix">
 
@@ -639,113 +543,11 @@
                                 <span>时间</span>
                                                 <m class="starspan"></m>
                                     </div>
-
-                                    <div class="setUp_contqz_xiala floatLeft clearfix">
-                                        <div class="xialT clearfix">
-                                            <i class="showdata">2011.09</i>
-                                            <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                        </div>
-                                        <div class="lp_xl clearfix">
-                                            <ul class="mr_year">
-                                                <li>2017</li>
-                                                <li>2016</li>
-                                                <li>2015</li>
-                                                <li>2014</li>
-                                                <li>2013</li>
-                                                <li>2012</li>
-                                                <li>2011</li>
-                                                <li>2010</li>
-                                                <li>2009</li>
-                                                <li>2008</li>
-                                                <li>2007</li>
-                                                <li>2006</li>
-                                                <li>2005</li>
-                                                <li>2004</li>
-                                                <li>2003</li>
-                                                <li>2002</li>
-                                                <li>2001</li>
-                                                <li>2000</li>
-                                                <li>1999</li>
-                                                <li>1998</li>
-                                                <li>1997</li>
-                                                <li>1996</li>
-                                                <li>1995</li>
-                                                <li>1994</li>
-                                                <li>1993</li>
-                                                <li>1992</li>
-                                                <li>1991</li>
-                                            </ul>
-                                            <ul class="mr_month clearfixs">
-                                                <li><span>1月</span></li>
-                                                <li><span>2月</span></li>
-                                                <li class="mr0"><span>3月</span></li>
-                                                <li><span>4月</span></li>
-                                                <li><span>5月</span></li>
-                                                <li class="mr0"><span>6月</span></li>
-                                                <li><span>7月</span></li>
-                                                <li><span>8月</span></li>
-                                                <li class="mr0"><span>9月</span></li>
-                                                <li class="mb0"><span>10月</span></li>
-                                                <li class="mb0"><span>11月</span></li>
-                                                <li class="mr0 mb0"><span>12月</span></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
+                                    <input type="text" name="" value="" class=" lp_datepicker">
                                     <div class="serUp_jiaoyuC_span marginTop10px floatLeft">
                                         <span>-</span>
                                     </div>
-                                    <div class="setUp_contqz_xiala floatLeft clearfix">
-                                        <div class="xialT clearfix">
-                                            <i class="showdata">2012.09</i>
-                                            <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                        </div>
-                                        <div class="lp_xl clearfix">
-                                            <ul class="mr_year">
-                                                <li>2017</li>
-                                                <li>2016</li>
-                                                <li>2015</li>
-                                                <li>2014</li>
-                                                <li>2013</li>
-                                                <li>2012</li>
-                                                <li>2011</li>
-                                                <li>2010</li>
-                                                <li>2009</li>
-                                                <li>2008</li>
-                                                <li>2007</li>
-                                                <li>2006</li>
-                                                <li>2005</li>
-                                                <li>2004</li>
-                                                <li>2003</li>
-                                                <li>2002</li>
-                                                <li>2001</li>
-                                                <li>2000</li>
-                                                <li>1999</li>
-                                                <li>1998</li>
-                                                <li>1997</li>
-                                                <li>1996</li>
-                                                <li>1995</li>
-                                                <li>1994</li>
-                                                <li>1993</li>
-                                                <li>1992</li>
-                                                <li>1991</li>
-                                            </ul>
-                                            <ul class="mr_month clearfixs">
-                                                <li><span>1月</span></li>
-                                                <li><span>2月</span></li>
-                                                <li class="mr0"><span>3月</span></li>
-                                                <li><span>4月</span></li>
-                                                <li><span>5月</span></li>
-                                                <li class="mr0"><span>6月</span></li>
-                                                <li><span>7月</span></li>
-                                                <li><span>8月</span></li>
-                                                <li class="mr0"><span>9月</span></li>
-                                                <li class="mb0"><span>10月</span></li>
-                                                <li class="mb0"><span>11月</span></li>
-                                                <li class="mr0 mb0"><span>12月</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <input type="text" name="" value="" class=" lp_datepicker">
 
 
                                 </div>
@@ -755,7 +557,7 @@
                                         <i class="starspan"></i>
                                     </div>
 
-                                    <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok" placeholder="选填">    </textarea>
+                                    <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok" placeholder="选填"></textarea>
                                 </div>
                                 <!--完善简历时候的点击元素-->
                                 <div class="setUp_buttonbox">
@@ -810,10 +612,10 @@
                             <div class="serUp_jiaoyuT">
                                 <span>项目名称</span>
                                 <i class="starspan"></i>
-                                <input class="serUp_jiaoyuT_input" type="text" placeholder=" &nbsp 例如:猎评网">
+                                <input class="serUp_jiaoyuT_input" type="text" placeholder="例如:猎评网">
                                 <span>担任角色</span>
                                 <i class="starspan"></i>
-                                <input type="text" placeholder=" &nbsp 例如:UI设计师">
+                                <input type="text" placeholder="例如:UI设计师">
                             </div>
 
                             <div class="serUp_jiaoyuC serUp_jiaoyuCmagin clearfix">
@@ -822,116 +624,11 @@
                                     <span>时间</span>
                                     <m class="starspan"></m>
                                 </div>
-
-                                <div class="setUp_contqz_xiala floatLeft clearfix">
-                                    <div class="xialT clearfix">
-                                        <i class="showdata">2011.09</i>
-                                        <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                    </div>
-                                    <div class="lp_xl clearfix">
-                                        <ul class="mr_year">
-                                            <li>2017</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                        </ul>
-                                        <ul class="mr_month clearfixs">
-                                            <li><span>1月</span></li>
-                                            <li><span>2月</span></li>
-                                            <li class="mr0"><span>3月</span></li>
-                                            <li><span>4月</span></li>
-                                            <li><span>5月</span></li>
-                                            <li class="mr0"><span>6月</span></li>
-                                            <li><span>7月</span></li>
-                                            <li><span>8月</span></li>
-                                            <li class="mr0"><span>9月</span></li>
-                                            <li class="mb0"><span>10月</span></li>
-                                            <li class="mb0"><span>11月</span></li>
-                                            <li class="mr0 mb0"><span>12月</span></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
+                                <input type="text" name="" value="" class=" lp_datepicker">
                                 <div class="serUp_jiaoyuC_span marginTop10px floatLeft">
                                     <span>-</span>
                                 </div>
-                                <div class="setUp_contqz_xiala floatLeft clearfix">
-                                    <div class="xialT clearfix">
-                                        <i class="showdata">2011.09</i>
-                                        <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT"></span></p>
-                                    </div>
-                                    <div class="lp_xl clearfix">
-                                        <ul class="mr_year">
-                                            <li>2017</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                        </ul>
-                                        <ul class="mr_month clearfixs">
-                                            <li><span>1月</span></li>
-                                            <li><span>2月</span></li>
-                                            <li class="mr0"><span>3月</span></li>
-                                            <li><span>4月</span></li>
-                                            <li><span>5月</span></li>
-                                            <li class="mr0"><span>6月</span></li>
-                                            <li><span>7月</span></li>
-                                            <li><span>8月</span></li>
-                                            <li class="mr0"><span>9月</span></li>
-                                            <li class="mb0"><span>10月</span></li>
-                                            <li class="mb0"><span>11月</span></li>
-                                            <li class="mr0 mb0"><span>12月</span></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-
+                                <input type="text" name="" value="" class=" lp_datepicker">
                             </div>
                             <div class="serUp_jiaoyuB">
                                 <div class=" marginTop10px floatLeft">
@@ -939,7 +636,7 @@
                                     <i class="starspan"></i>
                                 </div>
 
-                                <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok" placeholder="选填">        </textarea>
+                                <textarea name="CommentContent" id="CommentContent" maxlength='500' class=" classFormEle_ok" placeholder="选填"></textarea>
                             </div>
                             <!--完善简历时候的点击元素-->
                             <div class="setUp_buttonbox">
@@ -992,7 +689,7 @@
                             <div class="serUp_jiaoyuT">
                                 <span>技能/语言</span>
                                 <i class="starspan"></i>
-                                <input class="serUp_jiaoyuT_input2 cont_jineng" type="text" placeholder=" &nbsp 例如:node">
+                                <input class="serUp_jiaoyuT_input2 cont_jineng" type="text" placeholder="例如:node">
 
                                 <div class="shulianxy">
                                     <span>熟练程度</span>
@@ -1124,16 +821,9 @@
                                 <p>暂时没有处理结果！</p>
                             </div>
                         </div>
-                        <div class="fenye">
-                            <ul class="clearfix">
-                                <span>上一页</span>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                                <li><a href="">3</a></li>
-                                <li><a href="">4</a></li>
-                                <li class="fy_doudian"><a href="">......</a></li>
-                                <span>下一页</span>
-                            </ul>
+                        <!--分页-->
+                        <div class="lpfnye clearfix">
+                            <div id="lp_page" class="m-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -1185,7 +875,13 @@
 
 
 </body>
-<script src="../public/assets/jquery-1.12.4.js"></script>
 <script src="../public/script/personalUser.js"></script>
+<script>
+    $('.lp_datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        language: 'zh-CN',
+        endDate: '0d'
+    })
+</script>
 
 </html>

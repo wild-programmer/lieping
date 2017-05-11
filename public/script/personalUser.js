@@ -1,4 +1,4 @@
-// 熟练程度
+// 底部熟练程度
 (function() {
     var val = '',
         va = [''];
@@ -99,22 +99,12 @@
         document.querySelector('.cont_jineng').value = ''
     })
     $('.setUp_contjinengqx').on('click', function() {
-            document.querySelector('.cont_jineng').value = ''
-        })
-        // $('.setUp_contjineng20L').each(function(i, el) {
-        //         alert($(el).index())
-        //         $(el).on('click', 'i', function() {
-        //             alert(1);
-        //         })
-        //     })
-        // $('body').on('click', $('setUp_contjineng20L TBboxhidden'), function() {
-        //     alert(1)
-        //     $(this).parent().parent().remove();
-        // })
+        document.querySelector('.cont_jineng').value = ''
+    })
 })()
 $(document).ready(function() {
-    $(".setUp_contjineng20C").on("click", $('.TBboxhidden'), function() {
-        console.log(this)
+    $(".setUp_contjineng20C").on("click", '.TBboxhidden', function() {
+        $(this).parent().parent().remove();
     });
 });
 // 点击元素
@@ -269,121 +259,7 @@ function jianliTag() {
     }
 }
 
-(function() {
-    //首先要考虑到获取 多个showdata里面的值 点击谁获取谁上面的showdata 方法只有一个  记录是第几个日期插件  然后获取第几个的showdata值
-    //     $('#xiala').on('click', function() {
-    //     console.log(12);
-    //     $('#xiala_show').toggle();
-    // })
-    var mr_months = document.querySelectorAll('.mr_month');
-    var mr_years = document.querySelectorAll('.mr_year');
-    var lp_showel = document.querySelectorAll('.lp_xl_showdata');
-    // 年薪下拉
-    var lp_yearmos = document.querySelectorAll('.lp_yearmo');
-    var mr_yeva,
-        mr_value;
-    for (var j = 0; j < lp_showel.length; j++) {
-        (function(i) {
-            lp_showel[i].tag = i;
-            lp_showel[i].onclick = function() {
-                var lp_xl1 = document.querySelectorAll('.lp_xl')[this.tag];
-                var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[this.tag];
-            }
-        })(j);
-    }
-    for (var i = 0; i < mr_months.length; i++) {
-        // mr_months[i].tage = i;
-        (function(i) {
-            var k = i;
-            var lis = mr_years[i].querySelectorAll('li');
-            var lis2 = mr_months[i].querySelectorAll('li');
-            for (var i = 0; i < lis.length; i++) {
-                //記錄这个哪一个 日期下拉  要对应showdata
-                lis[i].tage = k;
-                (function(el) {
-                    el.onclick = function() {
-                        var All = this.parentNode.children;
-                        for (var i = 0, pl = All.length; i < pl; i++) {
-                            All[i].style.backgroundColor = "";
-                        }
-                        for (var i = 0, pl2 = lis2.length; i < pl2; i++) {
-                            lis2[i].style.backgroundColor = "";
-                        }
-                        this.style.backgroundColor = "#e95513";
-                        // lis[i].tage; 这是第几个showdata
-                        mr_yeva = this.innerText;
-                    }
-                })(lis[i]);
-                if (i < 12) {
-                    (function(el2) {
-                        el2.onclick = function() {
-                            for (var i = 0, pl = lis2.length; i < pl; i++) {
-                                lis2[i].style.backgroundColor = "";
-                            }
-                            this.style.backgroundColor = "#e95513";
-                            var mr_mova = parseInt(this.innerText);
-                            if (mr_mova < 10) {
-                                mr_mova = '0' + mr_mova;
-                            }
-                            var riqi = document.querySelectorAll('.showdata')[lis[i].tage];
-                            var lp_xl = document.querySelectorAll('.lp_xl')[lis[i].tage];
-                            var lp_xl_showjT = document.querySelectorAll('.lp_xl_showjT')[lis[i].tage];
-                            if (mr_yeva == undefined) {
-                                mr_yeva = riqi.innerText.split('.')[0];
-                            }
-                            mr_value = mr_yeva + '.' + mr_mova;
-                            riqi.innerText = mr_value;
-                            // lp_xl.style.display = 'none';
-                            $('.lp_xl').removeClass('active');
-                            $(lp_xl_showjT).removeClass('actives');
-                            mr_yeva = undefined;
-                        }
-                    })(lis2[i]);
-                }
-            }
-        })(i)
-    }
-})()
-
 // 行业下拉
-// console.log($('#xial_qiw_show'));
-// (function() {
-//     var tag = 0,
-//         value = '';
-//     $("#xial_qiw").on('click', function() {
-//         $('#xiala_qiw_show').toggle();
-//         if ($('#xiala_qiw_show').hasClass('active')) {
-//             $('#xiala_qiw_show').children().children().children('span').css('backgroundColor', 'white');
-//             tag = 0;
-//         }
-//     })
-//     $('.xial_bc').click(function() {
-//         $('#xiala_qiw_show').toggle();
-//         $(this).parent().parent().siblings('i').html(value);
-//     })
-//     $('.xial_qx').click(function() {
-//         $('#xiala_qiw_show').toggle();
-//     })
-//     $("#xiala_qiw_show li").each(function(i, el) {
-//         el.style.zIndex = $('#xiala_qiw_show2 li').length - i;
-//         $(el).on('click', function() {
-//             if (tag < 3) {
-//                 var val = $(this.querySelector('span')).html();
-//                 // console.log(val);
-//                 if (tag == 0) {
-//                     value = '';
-//                     value += val;
-//                     tag++;
-//                 } else {
-//                     value += ',' + val;
-//                     tag++;
-//                 }
-//                 // console.log(value);
-//                 $(this.querySelector('span')).css('backgroundColor', '#e95513');
-//             }
-//         })
-//     })
-// })();xiala_qiw_show2 xiala_qiw_show
 hangye('xiala_qiw_show');
 hangye('xiala_qiw_show2');
 
@@ -394,20 +270,27 @@ function hangye(el) {
     $('#' + el + ' li').each(function(i, el) {
         $(el).css('z-index', "" + len - i * 10 + "");
         $(el).on('click', function() {
-            if (tag <= 2) {
-                tag++;
+
+            // console.log($(this).children('span').css('backgroundColor'))
+            if ($(this).children('span').css('backgroundColor') == 'rgb(233, 85, 19)') {
+                $(this).children('span').css('backgroundColor', '');
+                tag--;
+            } else if (tag <= 2) {
                 $(this).children('span').css('backgroundColor', '#e95513');
-                xialvalue += $(this).children('span').html() + " ";
+                tag++;
             }
         })
     })
     $('#' + el + ' .xial_bc').on('click', function() {
         // console.log(xialvalue)
         tag = 0;
-        $('#' + el + '').siblings('i').html(xialvalue);
         $('#' + el + ' span').each(function(i, el) {
+            if ($(el).css('backgroundColor') == 'rgb(233, 85, 19)') {
+                xialvalue += $(el).html() + " ";
+            }
             $(el).css('backgroundColor', 'white');
         })
+        $('#' + el + '').siblings('i').html(xialvalue);
         $('#' + el + '').removeClass('active');
         $(this).parent().parent().siblings('.xial_qiw').children('.xial_qiw_span').removeClass('actives');
         xialvalue = '';
@@ -417,10 +300,113 @@ function hangye(el) {
         tag = 0;
         xialvalue = '';
         $('#' + el + '').removeClass('active');
+        $('#' + el + ' span').each(function(i, el) {
+            $(el).css('backgroundColor', 'white');
+        })
         $(this).parent().parent().siblings('.xial_qiw').children('.xial_qiw_span').removeClass('actives');
     })
 }
 
+(function() {
+    function stopPro(e) {
+        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+
+            if (event.stopPropagation) {
+                // this code is for Mozilla and Opera 
+                event.stopPropagation();
+            } else if (window.event) {
+                // this code is for IE 
+                window.event.cancelBubble = true;
+            }
+        } else {
+            e.stopPropagation();
+        }
+    }
+    $('body').on('click', '.pingjia_topRclk', function(event) {
+        stopPro(event);
+        if ($('.pingjia_topRB').hasClass('active')) {
+            $('.pingjia_topRB').removeClass('active');
+            $(this).removeClass('actives');
+        } else {
+            $(this).siblings('div').addClass('active').end().addClass('actives');
+        }
+    });
+    $('body').on('click', '.hidexial2', function(event) {
+        stopPro(event);
+        if ($('.contqz_xiala_oryue').hasClass('active')) {
+            $('.contqz_xiala_oryue').removeClass('active');
+            $('.hidexial2 >span').removeClass('actives');
+        } else {
+            $(this).siblings('div').addClass('active').end().children('span').addClass('actives');
+        }
+    });
+    $('body').on('click', '.hidexial1', function(event) {
+        stopPro(event);
+        if ($('.lp_xl').hasClass('active')) {
+            $('.lp_xl').removeClass('active');
+            $('.hidexial1 >span').removeClass('actives');
+        } else {
+            $(this).parent().siblings('div').addClass('active').end().end().children('span').addClass('actives');
+        }
+    });
+    $('body').on('click', function() {
+        $('.contqz_xiala_oryue').removeClass('active');
+        $('.lp_xl').removeClass('active');
+        $('.pingjia_topRB').removeClass('active');
+        $('.hidexial2 span').removeClass('actives');
+        $('.hidexial1 span').removeClass('actives');
+        $('.pingjia_topRclk').removeClass('actives');
+    });
+
+
+    $('body').on('click', '.lp_xl', function(event) {
+        stopPro(event);
+    })
+    $('body').on('click', '#xiala_qiw_show', function(event) {
+        stopPro(event);
+    })
+    $('body').on('click', '#xiala_qiw_show2', function(event) {
+        stopPro(event);
+    })
+    $('body').on('click', '.contqz_xiala_oryue  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('p').children('span').removeClass('actives');
+    })
+    $('body').on('click', '.xiala_show  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('div').children('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('div').children('p').children('span').removeClass('actives');
+    })
+    $('body').on('click', '.pingjia_topRB  li', function(event) {
+        stopPro(event);
+        $(this).parent().siblings('i').text($(this).text());
+        $(this).parent().removeClass('active').siblings('span').removeClass('actives');
+    })
+})()
+
+// 侧边栏选项卡
+$('.ceb_navul li').each(function(i, el) {
+    $(el).click(function() {
+        $(this).append('<m></m>').siblings().children('m').remove().end().end().addClass('ceb_navback').siblings().removeClass('ceb_navback');
+        var elname = $(this).attr('data-navname');
+        if (elname == 'resume_tianx') {
+            $('#' + elname).css('display', 'block').next().css('display', 'none');
+        } else if (elname == 'resume_pingj') {
+            $('#' + elname).css('display', 'block').prev().css('display', 'none');
+        }
+    })
+})
+$("#lp_page").pagination({
+    pageIndex: 2, //当前页数
+    pageSize: 2, //每页显示的数据
+    total: 100,
+    debug: true,
+    // showInfo: true, //是否显示分页信息
+    showJump: true, //是否显示跳转页
+    // showPageSizes: true, // 是否显示选择每页数量
+    pageElementSort: ['$page', '$size', '$jump', '$info']
+});
 // 头像上传
 
 var input = document.querySelector('input[type=file]'); //input 标签
@@ -468,97 +454,17 @@ function readFile() {
         result.innerHTML = '<img src="' + this.result + '" alt=""/>';
     }
 }
-
-(function() {
-    function stopPro(e) {
-        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
-
-            if (event.stopPropagation) {
-                // this code is for Mozilla and Opera 
-                event.stopPropagation();
-            } else if (window.event) {
-                // this code is for IE 
-                window.event.cancelBubble = true;
-            }
-        } else {
-            e.stopPropagation();
-        }
-    }
-    $('body').on('click', '.pingjia_topRclk', function(event) {
-        stopPro(event);
-        if ($('.pingjia_topRB').hasClass('active')) {
-            $('.pingjia_topRB').removeClass('active');
-            $(this).removeClass('actives');
-        } else {
-            $(this).siblings('div').addClass('active').end().addClass('actives');
-        }
-    });
-    $('body').on('click', '.hidexial2', function(event) {
-        stopPro(event);
-        if ($('.contqz_xiala_oryue').hasClass('active')) {
-            $('.contqz_xiala_oryue').removeClass('active');
-            $('.hidexial2 >span').removeClass('actives');
-        } else {
-            $(this).siblings('div').addClass('active').end().children('span').addClass('actives');
-        }
-    });
-    $('body').on('click', '.hidexial1', function(event) {
-        stopPro(event);
-        if ($('.contqz_xiala_oryue').hasClass('active')) {
-            $('.contqz_xiala_oryue').removeClass('active');
-            $('.hidexial1 >span').removeClass('actives');
-        } else {
-            $(this).parent().siblings('div').addClass('active').end().end().children('span').addClass('actives');
-        }
-    });
-    $('body').on('click', function() {
-        $('.contqz_xiala_oryue').removeClass('active');
-        $('.lp_xl').removeClass('active');
-        $('.pingjia_topRB').removeClass('active');
-        $('.hidexial2 span').removeClass('actives');
-        $('.hidexial1 span').removeClass('actives');
-        $('.pingjia_topRclk').removeClass('actives');
-    });
-
-
-    $('body').on('click', '.lp_xl', function(event) {
-        stopPro(event);
+// 底部性别选择
+$('.xingbie').each(function(i, el) {
+    $(el).on('click', function() {
+        $(this).siblings('button').removeClass('activexb');
+        $(this).addClass('activexb');
     })
-    $('body').on('click', '#xiala_qiw_show', function(event) {
-        stopPro(event);
-    })
-    $('body').on('click', '#xiala_qiw_show2', function(event) {
-        stopPro(event);
-    })
-    $('body').on('click', '.contqz_xiala_oryue  li', function(event) {
-        stopPro(event);
-        $(this).parent().siblings('i').text($(this).text());
-        $(this).parent().removeClass('active').siblings('p').children('span').removeClass('actives');
-    })
-    $('body').on('click', '.xiala_show  li', function(event) {
-        stopPro(event);
-        $(this).parent().siblings('div').children('i').text($(this).text());
-        $(this).parent().removeClass('active').siblings('div').children('p').children('span').removeClass('actives');
-    })
-    $('body').on('click', '.pingjia_topRB  li', function(event) {
-        stopPro(event);
-        $(this).parent().siblings('i').text($(this).text());
-        $(this).parent().removeClass('active').siblings('span').removeClass('actives');
-    })
-})()
+})
 
-
-
-
-// 侧边栏选项卡
-$('.ceb_navul li').each(function(i, el) {
-    $(el).click(function() {
-        $(this).append('<m></m>').siblings().children('m').remove().end().end().addClass('ceb_navback').siblings().removeClass('ceb_navback');
-        var elname = $(this).attr('data-navname');
-        if (elname == 'resume_tianx') {
-            $('#' + elname).css('display', 'block').next().css('display', 'none');
-        } else if (elname == 'resume_pingj') {
-            $('#' + elname).css('display', 'block').prev().css('display', 'none');
-        }
-    })
+// 时间日期插件
+$('.lp_datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    language: 'zh-CN',
+    endDate: '0d'
 })

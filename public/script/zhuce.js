@@ -22,18 +22,11 @@ chongfud(inp3, inp2);
 chongfud(inp6, inp5);
 
 
-//document.querySelector('.firm_name').onblur = function () {
-//    if (this.value == '') {
-//        this.nextElementSibling.style.display = 'block';
-//        //this.nextElementSibling.innerText = '企业名称不能为空'
-//    } else {
-//        this.nextElementSibling.style.display = 'none';
-//    }
-//}
+
 
 // 注册切换
 function liclcik(el) {
-    el.onclick = function () {
+    el.onclick = function() {
         lis[0].classList.remove('active');
         lis[0].innerHTML = '个人注册';
         lis[1].innerHTML = '企业注册';
@@ -50,7 +43,7 @@ function liclcik(el) {
 }
 //   表单验证函数
 function checkReg(obj, reg, el) {
-    obj.onblur = function () {
+    obj.onblur = function() {
         if (reg.test(this.value)) {
             //说明是合法
             this.nextElementSibling.style.display = 'none';
@@ -73,7 +66,7 @@ function checkReg(obj, reg, el) {
 }
 // 确认密码函数
 function chongfud(obj, el) {
-    obj.onblur = function () {
+    obj.onblur = function() {
         var val = this.value;
         var val2 = el.value;
         if (val2 !== '' && val == '') {
