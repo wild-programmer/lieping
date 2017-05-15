@@ -122,11 +122,16 @@
                     <span class="outsidep_xiugai"></span>
                 </div>
                 <!--基本信息-->
+                <!--基本信息-->
                 <div class="continer_content clearfix">
                     <div class="continer_content001">
                         <div class="firmUserImg1 firmUserImg">
-                            <h1>温馨提示</h1>
-                            <h2>您可以上传公司图片</h2>
+                            <div class="firmUserImg_img"></div>
+                            <div class="firmUserImg_text">
+                                <h1>温馨提示</h1>
+                                <h2>您可以上传公司图片</h2>
+                            </div>
+
                         </div>
                         <div class="firmUserImgB">
                             <div class="firmUserfile">
@@ -328,7 +333,7 @@
                 <!--状态二-->
                 <div class="continer_content2 continer_content1 clearfix" style="display:none">
                     <div class="continer_contentimgl">
-                        <div class="continer_contentimg">
+                        <div class="continer_contentimg" id="fist_imgbc">
                             <img src="../public/uploade/rongzhijia.png" alt="">
                         </div>
                         <p>
@@ -359,29 +364,7 @@
                     <span class="outsidep_xiugai"></span>
                 </div>
                 <div class="continer_content clearfix">
-                    <div class="continer_content002 continer_content001">
-                        <div class="firmUserImg2 firmUserImg">
-                            <h1>温馨提示</h1>
-                            <h2>您可以上传公司图片</h2>
-                        </div>
-                        <div class="firmUserImgB">
-                            <div class="firmUserfile">
-                                <span>上传图片</span>
-                                <input type="file" class="updata3">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="continer_content02 clearfix">
-                        <span>证件类型</span><i></i>
-                        <div class="setUp_contqz_xiala clearfix">
-                            <i>不限</i>
-                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>
-                            <div class="contqz_xiala_oryue clearfix xiala_show">
-                                <li class="lp_yearmo">年薪</li>
-                                <li class="lp_moseney">月薪</li>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="continer_content01">
                         <span>证件编号</span><i></i><input type="text" name="" value="">
                     </div>
@@ -399,57 +382,67 @@
                     </div>
                     <div class="continer_content02 clearfix" style="margin-left:51px;">
                         <span>证件有效期</span><i></i>
-                        <div class="setUp_contqz_xiala clearfix">
-                            <!--<i>年薪</i>
-                            <p class="lp_xl_showoryue xiala"> <span class="ceb_xialspan xialaspan"></span></p>-->
-                            <div class="xialT clearfix lp_xl_showoryue xiala">
-                                <i class="showdata">2011.09</i>
-                                <p class="lp_xl_showdata hidexial1"> <span class="ceb_xialspan lp_xl_showjT xialaspan"></span></p>
+                        <input type="text" name="" value="" class="lp_datepicker">
+                    </div>
+                    <div class="file_box clearfix">
+                        <div class="continer_content002 continer_content001">
+                            <div class="firmUserImg2 firmUserImg">
+                                <div class="firmUserImg_img"></div>
+                                <div class="firmUserImg_text">
+                                    <h1>温馨提示</h1>
+                                    <h2>营业执照</h2>
+                                </div>
                             </div>
-                            <div class="lp_xl clearfix contqz_xiala_oryue clearfix xiala_show">
-                                <ul class="mr_year">
-                                    <li>2017</li>
-                                    <li>2016</li>
-                                    <li>2015</li>
-                                    <li>2014</li>
-                                    <li>2013</li>
-                                    <li>2012</li>
-                                    <li>2011</li>
-                                    <li>2010</li>
-                                    <li>2009</li>
-                                    <li>2008</li>
-                                    <li>2007</li>
-                                    <li>2006</li>
-                                    <li>2005</li>
-                                    <li>2004</li>
-                                    <li>2003</li>
-                                    <li>2002</li>
-                                    <li>2001</li>
-                                    <li>2000</li>
-                                    <li>1999</li>
-                                    <li>1998</li>
-                                    <li>1997</li>
-                                    <li>1996</li>
-                                    <li>1995</li>
-                                    <li>1994</li>
-                                    <li>1993</li>
-                                    <li>1992</li>
-                                    <li>1991</li>
-                                </ul>
-                                <ul class="mr_month clearfixs">
-                                    <li><span>1月</span></li>
-                                    <li><span>2月</span></li>
-                                    <li class="mr0"><span>3月</span></li>
-                                    <li><span>4月</span></li>
-                                    <li><span>5月</span></li>
-                                    <li class="mr0"><span>6月</span></li>
-                                    <li><span>7月</span></li>
-                                    <li><span>8月</span></li>
-                                    <li class="mr0"><span>9月</span></li>
-                                    <li class="mb0"><span>10月</span></li>
-                                    <li class="mb0"><span>11月</span></li>
-                                    <li class="mr0 mb0"><span>12月</span></li>
-                                </ul>
+                            <div class="firmUserImgB">
+                                <div class="firmUserfile">
+                                    <span>上传图片</span>
+                                    <input type="file" class="updata3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="continer_content002 continer_content001">
+                            <div class="firmUserImg3 firmUserImg">
+                                <div class="firmUserImg_img"></div>
+                                <div class="firmUserImg_text">
+                                    <h1>温馨提示</h1>
+                                    <h2>其它</h2>
+                                </div>
+                            </div>
+                            <div class="firmUserImgB">
+                                <div class="firmUserfile">
+                                    <span>上传图片</span>
+                                    <input type="file" class="updata4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="continer_content002 continer_content001">
+                            <div class="firmUserImg4 firmUserImg">
+                                <div class="firmUserImg_img"></div>
+                                <div class="firmUserImg_text">
+                                    <h1>温馨提示</h1>
+                                    <h2>其它</h2>
+                                </div>
+                            </div>
+                            <div class="firmUserImgB">
+                                <div class="firmUserfile">
+                                    <span>上传图片</span>
+                                    <input type="file" class="updata5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="continer_content002 continer_content001">
+                            <div class="firmUserImg5 firmUserImg">
+                                <div class="firmUserImg_img"></div>
+                                <div class="firmUserImg_text">
+                                    <h1>温馨提示</h1>
+                                    <h2>其它</h2>
+                                </div>
+                            </div>
+                            <div class="firmUserImgB">
+                                <div class="firmUserfile">
+                                    <span>上传图片</span>
+                                    <input type="file" class="updata6">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,8 +451,42 @@
                         <button type="button" class="firmUser_qx">取消</button>
                     </div>
                 </div>
+                <!--状态2-->
                 <div class="continer_content21 continer_content1 clearfix" style="display:none">
-                    <div class="continer_contentimg">
+                    <p>
+                        证件类型：<span></span>
+                    </p>
+                    <p>
+                        证件编号：<span></span>
+                    </p>
+                    <p>
+                        证件名称： <span></span>
+                    </p>
+                    <p>
+                        法人代表： <span></span>
+                    </p>
+                    <p>
+                        注册资金：<span></span>
+                    </p>
+                    <p>
+                        成立时间：<span></span>
+                    </p>
+                    <p>
+                        详细地址：<span></span>
+                    </p>
+                    <p>
+                        证件有效期：<span></span>
+                    </p>
+                    <div class="continer_contentimg ">
+                        <img src="../public/uploade/zs1.png" alt="">
+                    </div>
+                    <div class="continer_contentimg ">
+                        <img src="../public/uploade/zs1.png" alt="">
+                    </div>
+                    <div class="continer_contentimg ">
+                        <img src="../public/uploade/zs1.png" alt="">
+                    </div>
+                    <div class="continer_contentimg ">
                         <img src="../public/uploade/zs1.png" alt="">
                     </div>
                 </div>
@@ -478,14 +505,18 @@
                         <span>手机号码</span><i></i><input type="text" name="" value=""><span style="color:#656565">仅限接收服务通知，不对外公开</span>
                     </div>
                     <div class="continer_content06 clearfix">
-                        <span>联系电话</span><i></i><input type="text" name="" value="" class="continer_content06inpt"> <span>-</span> <input type="text" name="" value="" class="continer_content06inp">
+                        <span>联系电话</span><i></i>
+                        <input type="text" name="" value="" class="continer_content06inpt input_chubie" data-checkbox="0">
+                        <span>-</span>
+                        <input type="text" name="" value="" class="continer_content06inp input_chubie data_true" data-checkbox="0">
                         <span class="checkd_1_icon">
                             <input type="checkbox" class="checkd checkdCur">
                         </span>
                         <span style="color:#656565">仅限接收服务通知，不对外公开</span>
                     </div>
                     <div class="continer_content06 clearfix">
-                        <span>电子邮箱</span><i></i><input type="text" name="" value="" class="continer_content06inp" style="margin-left:0px;">
+                        <span>电子邮箱</span><i></i>
+                        <input type="text" name="" value="" class="continer_content06inp tebie_chubie" style="margin-left:0px" data-checkbox="0">
                         <span class="checkd_1_icon">
                             <input type="checkbox" class="checkd checkdCur">
                         </span>
@@ -507,22 +538,25 @@
                 </div>
                 <div class="continer_content22 continer_content1" style="display:none">
                     <p>
-                        联系人：艾米
+                        联系人：<span></span>
                     </p>
                     <p>
-                        手机 / Mobile:15711462371
+                        手机 / Mobile：<span></span>
                     </p>
                     <p>
-                        电话 / Tel:010-82332922-8025
+                        电话 / Tel： <span></span>
                     </p>
                     <p>
-                        电子邮箱：editor@cyzone.cn
+                        电子邮箱：<span></span>
                     </p>
                     <p>
-                        公司地址：上海市闵行区田林路1036号科技绿洲三期16号楼4层(靠近合川路)
+                        公司地址：<span></span>
                     </p>
                     <p>
-                        http://www.rongzj.com/
+                        企业官网：<span></span>
+                    </p>
+                    <p>
+                        企业微博：<span></span>
                     </p>
                 </div>
             </div>
@@ -575,5 +609,6 @@
 
 </body>
 <script src="../public/script/firmUser.js"></script>
+<!--<script src="../public/script/lunbo.js"></script>-->
 
 </html>

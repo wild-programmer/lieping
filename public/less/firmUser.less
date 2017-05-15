@@ -477,15 +477,19 @@
     } 
        
     //    照片读取1
+        .continer_content001:hover .firmUserImgB_pstion{
+                    opacity: 1 !important;
+        }    
        .continer_content001{
-                margin-top: 40px;
-                margin-right: 100px;
+                margin: 0 auto;
                 margin-bottom: 30px;
+                margin-top: 40px;
                 width: 210px;
                 height: 222px;
-                float: right;
                 background-color: #EDEDED;
-                .firmUserImg{
+                float: right;
+                margin-right: 120px;
+                .firmUserImg{                   
                     text-align: center;
                     width: 100%;
                     height: 170px;
@@ -503,7 +507,13 @@
                         width: 100%;
                         height: 170px; 
                     }
-                }                
+                }         
+                .firmUserImgB_pstion{
+                    opacity: 0;
+                    position: relative;
+                    left: 0;
+                    top: -51px;
+                }   
                 .firmUserImgB{
                     height: 51px;
                     line-height: 51px;
@@ -535,29 +545,33 @@
                     }
                 }
             }
-    //    照片读取2        
-        .continer_content002{
-                margin-top: 40px;
-                margin-right: 100px;
-                margin-bottom: 30px;
-                width: 320px;
-                height: 390px;
-                float: right;
-                .firmUserImg{
-                    height: 330px;
-                    padding-top: 100px;
-                    h1{                        
-                        margin-bottom: 40px;
-                    }
-                    img{
-                        height: 330px;
+    
+    
+    
+    //    照片读取2
+
+        .file_box{
+            // width: 100%;
+            float: left;
+            padding-left: 45px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            .continer_content002{
+                float: left;
+                width: 200px;
+                height: 200px;
+                margin-right: 30px;
+                .firmUserImg {
+                    height: 148px;
+                    img {
+                        height: 100%;
                     }
                 }
-                .firmUserImgB{
-                    height: 60px;
                 }
-            }
-       
+        
+        }
+        
         .continer_content{
             border: 1px solid @bar;
             
@@ -827,12 +841,6 @@
 
   }
 // 状态2
-.continer_content22{
-    padding-left: 20px;
-    p{
-        margin-bottom: 20px;
-    }
-}
 .continer_content2{
     border-bottom: 2px solid @bar;
     .continer_contentimgl{
@@ -863,18 +871,32 @@
         }
     }
 }
+.continer_content22{
+    padding-left: 20px;
+    p{
+        margin-bottom: 20px;
+    }
+}
 .continer_content21{
     border-bottom: 2px solid @bar;
+    padding-left: 20px;
+    p{
+        margin-bottom: 20px;
+    }
     .continer_contentimg{
-        width: 290px;
-        height: 365px;
-        margin: 0 auto;
+        width: 181px;
+        height: 221px;
         margin-top: 40px;
         margin-bottom: 60px;
+        float: left;
+        margin-right: 70px;
         img{
-            width: 290px;
-            height: 365px;
+           width: 100%;
+           height: 100%;
         }
+    }
+    .continer_contentimg:last-child{
+         margin-right: 0px;
     }
 }
 
@@ -921,6 +943,9 @@
                 margin: 0 auto;
                 margin-top: 35px;
                 text-align: center;
+                .ceb_xiugai {
+                    display: none;
+                }
                 .reader_fileboxCB {
                     display: none;
                     position: absolute;
@@ -999,8 +1024,10 @@
                     height: 40px;
                     font-size: 15px;
                 }
-            }
         }
+}
+
+
 
 // 分页
 .lefnye{
@@ -1023,7 +1050,10 @@
     height: 35px;
 }
 .datepicker{
-    margin-top: 60px;
+    margin-top: 52px;
+}
+input{
+    text-indent: 30px;
 }
 .lp_datepicker{
     width: 300px;
@@ -1031,7 +1061,8 @@
     border: 1px solid @bar;
     font-size: 14px;
     text-indent: 30px;
-}            
+}  
+            
 @media (max-width: 1240px) {
     .continer {
         width: 970px;
@@ -1061,19 +1092,6 @@
  .col-sm-10padding .continer_content001{
      margin-right: 50px;
  }
- .col-sm-10padding .continer_content002{
-     margin-right: 10px;
-     margin-bottom: 0px;
-     height: 360px;
-     width: 280px;
- }
- .col-sm-10padding .continer_content002 .firmUserImg img,
- .col-sm-10padding .continer_content002 .firmUserImg{
-     height: 300px;
- }
- .col-sm-10padding .continer_content002 .firmUserImgB{
-     height: 50px;
- }
  
  .col-sm-10padding .continer_content001 .firmUserImgB .firmUserfile{
      height: 33px;
@@ -1099,5 +1117,8 @@
  .min-width{
      width: 290px !important;
  }
+ .col-sm-10padding .file_box .continer_content002{
+    width: 150px;
+    height: 180px;
+ }
 }
-
